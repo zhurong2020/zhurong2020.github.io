@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://zhurong2020.github.io</id>
+    <title>有心言者</title>
+    <updated>2024-03-16T01:42:55.111Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://zhurong2020.github.io"/>
+    <link rel="self" href="https://zhurong2020.github.io/atom.xml"/>
+    <subtitle>学习 分享 进步</subtitle>
+    <logo>https://zhurong2020.github.io/images/avatar.png</logo>
+    <icon>https://zhurong2020.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 有心言者</rights>
+    <entry>
+        <title type="html"><![CDATA[解锁数字图书馆：图解Z-Library轻松下载秘籍]]></title>
+        <id>https://zhurong2020.github.io/post/jie-suo-shu-zi-tu-shu-guan-tu-jie-z-library-qing-song-xia-zai-mi-ji/</id>
+        <link href="https://zhurong2020.github.io/post/jie-suo-shu-zi-tu-shu-guan-tu-jie-z-library-qing-song-xia-zai-mi-ji/">
+        </link>
+        <updated>2024-01-30T22:07:09.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="zlibrary简介">Zlibrary简介</h3>
+<p>在数字化浪潮中，阅读也迎来了革命性的变化。除了在纸质的书堆中挖掘知识宝藏，我们通过轻点鼠标，全世界的智慧便触手可及。在这个数字化阅读的时代，Z-Library成为了一种重要的科研工具，助力于知识的探索与发现。今天，我们简单探索一下如何使用Z-Library电子书文库。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169074&authkey=%21AKA2yF096CYrTXM&width=660" width="660" height="auto" />
+<h4 id="zlibrary使用">Zlibrary使用</h4>
+<p>想象一下，一个拥有超过22,525,200本书和84,837,643篇文章的庞大数字图书馆，而这一切，仅在你的指尖之下。这就是Z-Library，一个让知识触手可及的平台。但在你开始你的探索之旅之前，别忘了做好准备：注册Z-Library和Discord账号（Discord频道中会提供下载链接），这将是你通往广阔知识世界的钥匙。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169076&authkey=%21AGW992cL1db2PKU&width=660" width="660" height="auto" />
+<h5 id="进入">进入</h5>
+<p>输入<a href="https://z-lib.io/">Z-Library的网址</a>：https:\\z-lib.io，就能进入搜索界面<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169084&authkey=%21ACHDP4jcteSdsx4&width=660" width="660" height="auto" /></p>
+<h5 id="搜索">搜索</h5>
+<p>在Z-Library的搜索栏里，输入你感兴趣的书名、作者或ISBN。这一刻，就像是开始了一场激动人心的探索之旅。<br>
+Tip：输入的书名可以先简单一些，根据搜索结果再精确定位。</p>
+<p>选择你的目标：搜索结果犹如广袤的知识海洋，每一本书都是一座小岛。挑选正确版本的书籍，就像是在广阔的海洋中找到了你的目的地。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169085&authkey=%21AJzDf2KTYigvJUg&width=660" width="660" height="auto" />
+<p>再比如，我们来搜一本亚马逊2023年Top20书单中的第一本：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169071&authkey=%21AMq9M2blR1QRhDA&width=660" width="660" height="auto" />
+<p>看一下搜索结果：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169070&authkey=%21AACh3bg0Jldrwhw&width=660" width="660" height="auto" />
+<h5 id="复制通行证">复制“通行证”</h5>
+<p>每本书都有一个专属的编号-“Request Code”。这不仅仅是一串数字，它是进入知识世界的通行证。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169081&authkey=%21AGOZrfoVqrKAZyc&width=660" width="660" height="auto" />
+<h5 id="跨界之旅">跨界之旅</h5>
+<p>带着这串数字，点击书名下方的“Request this book”，就可以前往Discord的专区。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169078&authkey=%21AGpYitu5FelXKXg&width=592&height=368" width="592" height="368" />
+<p>点击屏幕中蓝色按钮“Accept Invite”（接受邀请），就会来到discord的专用频道：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169083&authkey=%21AB-iz1H3Vtq7wfI&width=660" width="660" height="auto" />
+<p>将刚才得的“通行证”（那串Request Code）复制并回车，马上就能看到discord机器人回复的下载链接，点击蓝色的下载链接，就来到了真正可下载的页面：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169079&authkey=%21APAMY6wagtxl0Lw&height=660" width="auto" height="660" />
+<h5 id="选择下载源">选择下载源</h5>
+<p>页面中可能会有有多个链接，比如“Download Now”或者“Mirror 1”，“Mirror 2”，可能需要尝试几次，才能找到可以下载的链接。下载完成后，就可以打开对应的下载文档了。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169069&authkey=%21AP7m8zXp-pXyXrQ&width=660" width="660" height="auto" />
+<p>我试着下载了几本书籍，打开后的效果都非常好。这时候再发送到你的kindle或者其它阅读器，就可以开始愉快阅读了，可以看到高清书籍，并含有完整的目录信息：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169089&authkey=%21AKDOC2YbsfDCA-I&height=660" width="auto" height="660" />
+<h4 id="关于知识探索">关于知识探索</h4>
+<p>我认为，探索的意义远大于下载，使用Z-Library不仅仅是下载书籍的过程，它是一次知识的探索之旅。在这个旅程中，你可能会发现新的兴趣领域，遇见志同道合的人，甚至为自己的生活注入新的思考和色彩。<br>
+如果你觉得Z-library的服务对你有帮助，还可以通过discord频道中的<a href="https://www.patreon.com/DiscordBotSupport">Patreon服务</a>来为项目提供支持。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169080&authkey=%21APLxZreM7IRaM5I&width=660" width="660" height="auto" />
+<h4 id="倡导正版和尊重版权">倡导正版和尊重版权</h4>
+<p>在享受Z-Library带来的便利时，我们也应记得版权的重要性。这些免费资源主要用于个人学习和研究。我们鼓励大家支持正版，购买书籍，以尊重和保护知识产权。</p>
+<h3 id="结语知识的工具">结语：知识的工具</h3>
+<p>Z-Library作为一个强大的知识获取工具，为我们在数字化时代的学习和探索提供了便利。让我们珍惜这样的资源，用知识点亮生活，为创造更加丰富多彩的世界贡献自己的力量。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169075&authkey=%21AHqePKZSUG2kvnY&width=660" width="660" height="auto" />
+<p>如果你对以上内容有兴趣的，欢迎留言或者email交流，email地址：books@zhurong.link。</p>
+<p>你还可以使用以下prompt，利用类似AI PDF的GPTs和ChatGPT对话，让AI直接根据刚才下载的文档给你做总结或者提纲，甚至还可以制作脑图，以下演示制作某文档中一个章节的提纲：<br>
+在ChatGPT中选择好一个合适的GPTs，比如AI PDF（现在还可以在提示中直接使用@符号）。<br>
+提前将需要分析或对话的文档上传，即登录https://myaidrive.com/网站，根据提示操作。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169090&authkey=%21AESwwMfkBrukX24&width=660" width="660" height="auto" />
+<p>通过“copy to ChatGPT”进入Prompt Editor，可以复制文档的链接，应该是像这样的：https://myaidrive.com/R4rVWNnMc8DuoDtb/Jason-W.-Eck.pdf，然后在ChatGPT中输入以下prompt：</p>
+<p>Please provide a comprehensive summary of the '1.2 Hardware' section in Chapter 1 from the following document: <a href="https://myaidrive.com/R4rVWNnMc8DuoDtb/Jason-W.-Eck.pdf">Starting Out with Programming Logic and Design, 5th Edition</a>. Highlight the key concepts, notable figures, and foundational principles it covers. If there are important terminologies or abbreviations related to hardware, kindly explain them briefly. Additionally, include any historical context or development timelines that are mentioned regarding hardware evolution. Should there be any influential individuals or founders associated with the hardware topics discussed, please list their names and contributions. Please present the summary in Markdown format and provide a download link for the file.</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169093&authkey=%21AIbiVwgNted64F4&width=660" width="660" height="auto" />
+<p>点击下载链接，通过支持markdown格式的编辑器打开，文档的预览效果如下：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169091&authkey=%21AOPNum9xbIMf6-k&height=660" width="auto" height="660" />
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169092&authkey=%21AIOcIT_EmnKgeYY&width=660" width="660" height="auto" />
+<p>如果需要其它格式甚至是脑图的，都是同样的道理。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NextChat：个性化您的ChatGPT体验 — 开源、快速部署与多元应用]]></title>
+        <id>https://zhurong2020.github.io/post/nextchatge-xing-hua-nin-de-chatgpt-ti-yan-kai-yuan-kuai-su-bu-shu-yu-duo-yuan-ying-yong/</id>
+        <link href="https://zhurong2020.github.io/post/nextchatge-xing-hua-nin-de-chatgpt-ti-yan-kai-yuan-kuai-su-bu-shu-yu-duo-yuan-ying-yong/">
+        </link>
+        <updated>2024-01-27T22:55:28.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="项目简介">项目简介</h2>
+<p style="text-indent: 2em;"> 随着ChatGPT的普及，国内用户在注册和使用方面遇到了一系列挑战。NextChat（前称ChatGPT Next Web）提供了一个优秀的解决方案，使得用户通过部署这款免费的开源程序，仅需一个OpenAI API密钥，便能够享有个人定制的ChatGPT网页应用体验。</p>
+我已根据项目要求建立了一个服务器环境，并向亲朋好友开放。
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169051&authkey=%21ANAUWq9JzLyLyok&width=660" width="660" height="auto" />
+<p>以下是关于此项目的一些核心概念及其使用方法的简要介绍。</p>
+<h3 id="chatgpt的应用场景">ChatGPT的应用场景</h3>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169050&authkey=%21AOPXuXtNCqSpyjs&width=660" width="660" height="auto" />
+<ul>
+<li><strong>教育学习</strong>：如使用ChatGPT进行语言学习的对话练习或编程问题的解答，帮助学生深入理解复杂概念。</li>
+<li><strong>工作效率</strong>：如自动化撰写和编辑邮件，生成报告摘要，提升职场效率。</li>
+<li><strong>娱乐互动</strong>：如参与角色扮演游戏，与ChatGPT共同创造故事。</li>
+<li><strong>日常生活辅助</strong>：如根据家中现有食材推荐菜谱，规划旅行等。</li>
+<li><strong>信息检索与整合</strong>：如快速获取新闻摘要或某研究领域的最新进展。</li>
+<li><strong>创意写作</strong>：如小说构思或诗歌创作的辅助。</li>
+<li><strong>技术支持与教程</strong>：如解答技术问题或提供软件使用指南。</li>
+</ul>
+<h3 id="项目特色">项目特色</h3>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169049&authkey=%21ALs9mha0kex-vrU&width=660" width="660" height="auto" />
+<p>NextChat，作为GitHub社区的热门开源项目，已获得广泛认可，具有以下亮点：</p>
+<ol>
+<li><strong>快速部署</strong>：通过Vercel实现极简部署流程。</li>
+<li><strong>跨平台兼容性</strong>：支持Windows、Linux、MacOS，客户端轻量。</li>
+<li><strong>隐私保护</strong>：所有数据仅存储于本地浏览器。</li>
+<li><strong>优质体验</strong>：响应式设计，渐进式网络应用，快速加载。</li>
+<li><strong>丰富功能</strong>：支持深色模式、Markdown语法、自动压缩聊天记录等。</li>
+</ol>
+<h3 id="项目资源">项目资源</h3>
+<p>技术熟练者可以参考项目文档自行部署。部署过程通常需要GitHub账户、Vercel账户和一个域名。项目源码可在以下地址获取：<a href="https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web">NextChat GitHub</a>。</p>
+<h3 id="部署与使用">部署与使用</h3>
+<p>遵循项目说明，用户可以轻松完成部署，或通过Vercel实现一键部署。部署后，只需在浏览器中输入配置好的域名即可访问NextChat界面，该应用还支持安装至桌面，便于直接访问。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169047&authkey=%21AJxQLylGj6qXr9E&width=256" width="256" height="auto" />
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169048&authkey=%21ACLdOtVzbhnsMag&width=256" width="256" height="auto" />
+<h2 id="设置与功能">设置与功能</h2>
+<ul>
+<li><strong>语言设置</strong>：在设置中选择“简体中文”以实时更新语言偏好。</li>
+</ul>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169043&authkey=%21AOKGItXxHCQrpHk&width=660" width="660" height="auto" />
+<ul>
+<li><strong>密码保护</strong>：输入指定密码以访问应用，注意区分大小写。</li>
+</ul>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169044&authkey=%21ABDga_3oRr8LC68&width=660" width="660" height="auto" />
+<ul>
+<li><strong>常用设置</strong>：包括切换暗黑模式、导出对话、模型选择等。</li>
+<li><strong>高级功能</strong>：通过WebDEV进行数据同步，调整模型参数等。</li>
+</ul>
+<h3 id="注意事项">注意事项</h3>
+<p>鉴于GPT-4模型对于token的高消耗率，我选择默认隐藏此模型，并推荐使用更经济的GPT-3.5-turbo模型或者Google的Gemini（目前免费）。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169454&authkey=%21ALHSOv6XmAg2UQ4&width=203&height=302" width="203" height="302" /></p>
+<p>对于希望体验GPT-4的用户，<s>可尝试我提供的PandoraNext服务</s>。2024年3月补充：非常可惜，PandoraNext项目及服务已于2024年1月30日关闭，可以参考作者的这篇博文：<a href="https://linux.do/t/topic/1051">你们赢了，但我却没有输</a>。如想使用GPT-4的好友，请联系我，目前还有其它服务器可以提供GPT-4和谷歌的Gemini服务，完成配置后，你可以通过设置菜单或者切换引擎按钮选择你需要的AI引擎：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169452&authkey=%21AE-iBJSR2khcM6U&height=660" width="auto" height="660" />
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169455&authkey=%21AEXod8AWq-dr1yI&width=660" width="660" height="auto" />
+<h2 id="总结">总结</h2>
+<pre><code>NextChat代表了在ChatGPT广泛应用的背景下，针对特定需求的创新解决方案。它不仅解决了国内用户在使用ChatGPT时遇到的注册和使用障碍，还通过开源共享，降低了技术门槛，使得个人和小团队能够快速部署和使用这一强大的AI工具。
+通过NextChat，用户可以享受到定制化的ChatGPT体验，无论是在教育学习、提升工作效率，还是在日常生活中寻求便利，NextChat都能提供灵活多样的应用场景。此外，项目的隐私保护措施和跨平台支持进一步扩大了其适用范围，使得更多人能够安全、便捷地接入AI的力量，探索其在不同领域的潜在用途。
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[云端生活体验-让人呼吸顺畅的ChatGPT]]></title>
+        <id>https://zhurong2020.github.io/post/yun-duan-sheng-huo-ti-yan-rang-ren-hu-xi-shun-chang-de-chatgpt/</id>
+        <link href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ti-yan-rang-ren-hu-xi-shun-chang-de-chatgpt/">
+        </link>
+        <updated>2024-01-07T10:46:00.000Z</updated>
+        <content type="html"><![CDATA[<p>最近在服务器上安装了一个关于Chat GPT的新项目--Pandora Next。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168932&authkey=%21ALQLDtS5knKe2bQ&width=514&height=514" width="514" height="514" />
+<p>其实项目并非全新，只是因为作者用了个新号。<a href="https://github.com/pandora-next/deploy">点这里访问该项目的github仓库</a>，<a href="https://docs.pandoranext.com/zh-CN">点这里访问项目文档</a>，懂技术的朋友可以自己查看并按照说明自己搭建服务器。<br>
+本文末提供了我已经搭建好的服务器的网址，有兴趣的朋友也可以先体验一下。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168933&authkey=%21AFlJHs5cqSk6I1Y&width=660" width="660" height="auto" />
+<p>Pandora Next主要实现了网页版ChatGPT的主要操作，通过后端优化，绕过Cloudflare，使用的速度和体验如丝般顺畅，所以作者的口号是“一个让你呼吸顺畅的ChatGPT”。</p>
+<p>如果你是ChatGPT的轻度使用者，那么可以直接使用作者提供的这个<a href="https://chat-shared3.zhile.io/">免费共享池</a>，这里有很多热心网友提供的免费共享账号。<br>
+这些账号根据颜色区分，绿色为空闲，红色为忙碌，最下方的金色为Plus账号。注意这个共享账号因为是和别人一起共享使用的，可能因为用的人比较多而受到限制。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168930&authkey=%21AKF0LZIL8iNwrbU&width=660" width="660" height="auto" />
+<p>具体使用时，只要选择一个账号并设置密码用于隔离会话即可。再提醒一下，这个网址并非OpenAI的官网地址，而且因为有限制，只能轻度使用。</p>
+<p>如果使用这种共享账号你觉得不方便，你也可直接在Pandora的界面中注册ChatGPT。目前只要输入邮箱并粘贴官方发来的验证邮件的链接地址，再按照步骤设置昵称即可完成注册。Pandora现在支持全代理的ChatGPT注册，意味着国内朋友注册ChatGPT的难度极大降低了。如果你拥有域名，使用Cloudflare的邮件路由，你甚至能拥有无限邮箱，自己做”大号商“。具体可以<a href="https://zhile.io/2023/12/09/pandoranext-introduction.html">点这里查看作者的介绍</a>。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168934&authkey=%21AEVKXLMaJozMfVw&width=524&height=439" width="524" height="439" />
+<p>最后，因为近期服务器上安装了不少应用，域名进行了重新规划。原来给大家的网址需要修改为chat2.zhurong.link，就可以继续使用ChatGPT3.5了。如果你对今天介绍的Pandora Next感兴趣，<a href="https://chat1.zhurong.link">可以点这里访问</a>并自行注册Chat GPT，亲朋好友也可以问我索要临时密码。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[云端生活初体验-打造专属的多功能家庭服务器]]></title>
+        <id>https://zhurong2020.github.io/post/yun-duan-sheng-huo-chu-ti-yan-da-zao-zhuan-shu-de-duo-gong-neng-jia-ting-fu-wu-qi/</id>
+        <link href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-chu-ti-yan-da-zao-zhuan-shu-de-duo-gong-neng-jia-ting-fu-wu-qi/">
+        </link>
+        <updated>2024-01-03T01:08:01.000Z</updated>
+        <content type="html"><![CDATA[<p>想象一下，在不到100元/年的投资中，通过购买VPS主机和域名，实现随时随地访问私人电影库或与家人共享云笔记，让科技赋予日常生活无限可能。<br>
+这是一篇很短的图文，让大家先体验一下，一台VPS主机能实现什么样的功能？为了让我们的云端生活更加便捷，我挑选了几种免费且功能强大的开源软件。</p>
+<ol>
+<li>访问你的个人主页<br>
+有了主机、域名，安装好wordpress，做好域名解析，别人就能通过域名访问你的个人主页了。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168906&authkey=%21AOnfTkd2Ym3OkY0&width=660" alt="通过WordPress搭建的个性化个人主页界面" width="660" height="auto" />
+<ol start="2">
+<li>共享Chat GPT<br>
+安装Pandora Next，让家庭成员一起使用最新的AI对话，不管是作业辅导还是日常闲聊，一个账号，全家满足。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168901&authkey=%21ALqKSrCCXdyBOb0&width=660" alt="Pandora Next应用界面，展现AI对话功能" width="660" height="auto" />
+<ol start="3">
+<li>私有化云盘系统<br>
+安装Cloudreve，为家庭成员安装一个只属于家庭的云盘系统。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168902&authkey=%21APSA_niqLNRnDTM&width=660" alt="Cloudreve的界面，展示文件存储和管理" width="660" height="auto" />
+<ol start="4">
+<li>挂接和管理云存储服务<br>
+安装Rclone，将云盘服务商提供的云盘直接挂接到服务器硬盘。微软onedrive，谷歌drive，阿里云，华为云，支持多达56种云盘。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168909&authkey=%21ACB2wy6INN-zmO0&width=660" alt="Rclone配置界面及支持的云服务商" width="660" height="auto" />
+<p>挂接好后会这样显示（注意红色框中的就是已经挂接的微软和谷歌的云盘）：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168908&authkey=%21APh-y5UQVFP5CYs&width=660" alt="挂接后的云盘在操作系统中的显示效果" width="660" height="auto" />
+<ol start="5">
+<li>轻量级、多平台管理下载任务<br>
+安装aria2插件，结合刚才的cloudreve和rclone，家庭影音系统就更完善了，你可以将需要下载的文件在cloudreve中设置为离线下载任务，下载完成后直接存储到已经挂接好的云盘中。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168912&authkey=%21AFL3sbOEvXPCdcY&width=660" alt="aria2多平台下载任务管理" width="660" height="auto" />
+<ol start="6">
+<li>分层额私有化云笔记系统<br>
+安装Trilium，实现高度自定义的知识管理解决方案。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168903&authkey=%21ANzvfhgP7kf6UEM&width=660" alt="Trilium笔记界面，展示笔记分类和编辑功能" width="660" height="auto" />
+<ol start="7">
+<li>
+<p>支持多用户的家庭影音管理<br>
+安装Jellyfin，在任何设备上管理和流式传输电影、音乐。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168904&authkey=%21ANv8u3grTRPjDQw&width=660" alt="Jellyfin媒体服务器的用户界面" width="660" height="auto" /></p>
+</li>
+<li>
+<p>对服务器进行实时性能和健康监测<br>
+安装Netdata，通过图表、警报实施监控服务器，让系统管理更简单。</p>
+</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168905&authkey=%21AJu7Sht_gNYpaHg&width=660" alt="Netdata实时监控界面，显示各项性能数据" width="660" height="auto" />
+<p>当你设置了下载任务时，可以看看网络吞吐：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168913&authkey=%21AAbnU4IsnkZaH8k&width=660" alt="展示网络吞吐量及相关数据" width="660" height="auto" />
+<p>当然也可以装一个webmin，监控并配置VPS：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168907&authkey=%21ACUc33_4lypoE9E&width=660" alt="webmin的管理界面，展示VPS配置和监控" width="660" height="auto" />
+<ol start="9">
+<li>实现Google的论文查询等功能<br>
+安装Xray和3x-ui面板，简化配置部署，使网络代理设置和使用更加直观，这个功能值得拥有。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168900&authkey=%21ALLwhu5RAXZhCpg&width=660" alt="Xray和3x-ui面板的界面，展示网络代理设置" width="660" height="auto" />
+<p>以上用到的软件全部是免费的开源软件，怎么样，你是不是有点心动了？<br>
+当然，会安装这些工具，也只是一个开始，但从此，你将开启一段全新的数字化生活旅程，让我们现在就开始吧！<br>
+如果你对哪项技术特别感兴趣，可以给我来信，我的email是：admin@zhurong.link</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[巴伦周刊公布了2024年十大股票榜单（中英文对照）]]></title>
+        <id>https://zhurong2020.github.io/post/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao/</id>
+        <link href="https://zhurong2020.github.io/post/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao/">
+        </link>
+        <updated>2024-01-01T10:48:37.000Z</updated>
+        <content type="html"><![CDATA[<p>近期在关注美股，正好看到巴伦周刊2023年底选出的10只股票，就当作是一篇英文学习的材料。<br>
+简单介绍一下，巴伦周刊是美国最具影响力的金融杂志之一，主要报道美国金融信息、市场发展和相关统计数据。周刊拥有广泛的读者群，并以深度分析、独到见解和辛辣评论而著称。<br>
+巴伦周刊每年12月都会选出10只股票，这些股票是周刊编辑部认为有望在未来一年跑赢大盘的潜力股。</p>
+<p>先来看看2022年选出的10只股票的回报：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168878&authkey=%21ADZyiRLM4FJ6u_8&width=625&height=535" width="625" height="535" /></p>
+<p>2023年12月选出的10只股票也来了，下面是一份节选，但包含了完整的股票名单和简单介绍，让我们先来看看英文：<br>
+Barron's published its top 10 stock list for 2024, which leans towards value.</p>
+<p>The list includes Alibaba Group Holding (NYSE:BABA), Alphabet (GOOGL), Barrick Gold (GOLD), Berkshire Hathaway (BRK.B), BioNTech (BNTX), Chevron Corporation (CVX), Hertz Global Holdings (HTZ), Madison Square Garden Sports (MSGS), PepsiCo (PEP), and U-Haul Holding (UHAL).</p>
+<p>Here is a breakdown for each stock:</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168881&authkey=%21AMNwQmZFBWLcyrc&width=660" width="660" height="auto" />
+<p>Alibaba Group Holding (BABA) - One of the cheapest tech-oriented companies in the world. “After dropping 18% in 2023, Alibaba's U.S.-listed shares trade for just eight times projected earnings in its current fiscal year ending in March,” the report said. “With that decline, the stock, at a recent $72, is back where it stood following its 2014 initial public offering, despite a tenfold rise in revenue and a fivefold increase in earnings.”</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168880&authkey=%21AJT_2Wk_jFbxNno&width=387&height=130" width="387" height="130" />
+<p>Alphabet Inc. (GOOGL) - It could be the best bet among the Magnificent Seven stocks, the report said, and Barron expects it to grow as fast as Microsoft (MSFT) with 15% up earnings, three times the speed of Apple’s (AAPL).</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168882&authkey=%21AOd-iv_wS4Kl83Y&width=322&height=156" width="322" height="156" />
+<p>Barrick Gold (GOLD) - The company aims to boost its mine output by 30% by the end of the decade. “It has the industry's most effective leader in CEO Mark Bristow, a swashbuckling South African and hands-on manager who visits each major mine at least three times a year.” The company has virtually no debt, and a 2.3% dividend yield, according to analyst Keith Trauner. Also, the stock trades for about 16 times 2024’s projected earnings.</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168883&authkey=%21AK-UmfLGlejOcFI&width=300&height=168" width="300" height="168" />
+<p>Berkshire Hathaway (BRK.B) - Warren Buffett has positioned Berkshire to succeed without him, the report said. Earnings for the company are growing, with Berkshire's after-tax operating profits up almost 20% in 2023. “They could hit $40 billion this year, powered by higher interest income on Berkshire's cash and strong insurance underwriting results.”</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168884&authkey=%21AFejEm2WNOGI2eg&width=600&height=69" width="600" height="69" />
+<p>BioNTech (BNTX) - Although the stock is trading at around $104, down from a peak of $447 in 2021, the company's oncology-focused pipeline “could prove more promising than some investors believe.” The company has in cash almost three-quarters of its current market value of $25B.</p>
+<p>&lt;img src=&quot;https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168885&amp;authkey=%21AGJDb1XZnGfl_g0&amp;width=212&amp;height=237&quot; width=212&quot; height=&quot;237&quot; /&gt;</p>
+<p>Chevron Corporation (CVX) - The company trades at 10.7 times the projected 2024 earnings with yields of 4.2% and plans to raise its dividend by 8% in January. “Chevron has a lower-risk growth profile than peers, trades a 15% discount to its average cash-flow multiple, and should have a total yield (plus buybacks) of about 12% after the Hess deal closes,” said Adams Funds analyst Greg Buckley.</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168886&authkey=%21ALf6l-C8gXepBHY&width=323&height=156" width="323" height="156" />
+<p>Hertz Global Holdings (HTZ) - The stock is cheap, and it trades “cheaply at 8.6 projected 2024 earnings, while its market value of $3.1B is less than half that of the somewhat larger Avis (CAR),” the report said. According to Deutsche Bank analyst Chris Woronka, this could be an “overwhelmingly attractive for patient investors.&quot;</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168887&authkey=%21AJuQfk9iASfKaes&width=310&height=162" width="310" height="162" />
+<p>Madison Square Garden Sports (MSGS) - The company owner of the New York Knicks and Rangers, which are worth $7.4B and $2.45B, respectively, could sell a minority stake in their teams, buy back a lot of the stock, or pay a dividend, “the ultimate payoff would be a sale of the entire company -- and there probably isn't much downside, given the discount to asset value,” said Jonathan Boyar, president of Boyar Research.</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168888&authkey=%21ACSZSx60CxVsdrc&width=427&height=118" width="427" height="118" />
+<p>PepsiCo (PEP) - The beverage giant expects “to deliver per-share earnings growth at the top of its high-single digit annual target in 2024 after a projected 13% gain this year, the report said. The stock trades for 20.6 times 2024's projected earnings, yields 3%, and has raised its dividend for 51 straight years.</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168889&authkey=%21AMHEU4Wgw6_1W0Y&width=428&height=118" width="428" heigt="118" />
+<p>U-Haul Holding (UHAL) - “The $12B company has steadily built a sizable self-storage business that now ranks third in the industry and could be worth $8B alone based on comparable companies,” the report said. Shares are valued at about 14.1 times earnings at $63 per share.</p>
+<p>以下是机器译文：<br>
+《巴伦周刊》（Barron's）公布了 2024 年十大股票榜单，该榜单倾向于价值型股票。<br>
+上榜股票包括阿里巴巴集团控股公司（NYSE:BABA）、Alphabet（GOOGL）、巴里克黄金公司（GOLD）、伯克希尔哈撒韦公司（BRK.B）、生物技术公司（BNTX）、雪佛龙公司（CVX）、赫兹全球控股公司（HTZ）、麦迪逊广场花园体育公司（MSGS）、百事公司（PEP）和 U-Haul 控股公司（UHAL）。</p>
+<p>以下是每只股票的明细：<br>
+阿里巴巴集团控股公司（BABA）--全球最便宜的科技型公司之一。报告称：&quot;在2023年下跌18%之后，阿里巴巴在美国上市的股票在截至3月份的本财年的预期收益仅为8倍。&quot;随着股价的下跌，阿里巴巴的股价最近跌至 72 美元，回到了 2014 年首次公开募股后的水平，尽管其收入增长了 10 倍，盈利增长了 5 倍。“</p>
+<p>Alphabet公司（GOOGL）--报道称，它可能是 &quot;华丽七股 &quot;中最好的赌注，《巴伦周刊》预计它的增长速度将不亚于微软（MSFT），盈利将增长15%，是苹果（AAPL）的三倍。</p>
+<p>巴里克黄金公司（Barrick Gold，GOLD）--该公司的目标是在本十年末将矿山产量提高 30%。&quot;该公司首席执行官马克-布里斯托（Mark Bristow）是业内最有效率的领导者，他是一位豪爽的南非人，也是一位亲力亲为的管理者，每年至少三次视察每个主要矿山。据分析师基思-特劳纳（Keith Trauner）称，该公司几乎没有债务，股息率为 2.3%。此外，该股的交易价格约为 2024 年预期收益的 16 倍。</p>
+<p>伯克希尔哈撒韦公司（BRK.B）--报道称，沃伦-巴菲特将伯克希尔定位为在没有他的情况下也能取得成功。该公司的收益正在增长，2023 年伯克希尔的税后营业利润将增长近 20%。&quot;受伯克希尔现金利息收入增加和保险承保业绩强劲的推动，今年的利润可能达到 400 亿美元&quot;。</p>
+<p>BioNTech（BNTX）--虽然该公司股价从2021年的峰值447美元跌至104美元左右，但该公司以肿瘤为重点的产品线 &quot;可能比一些投资者认为的更有前景&quot;。该公司的现金几乎占其目前 250 亿美元市值的四分之三。</p>
+<p>雪佛龙公司（CVX）--该公司 2024 年的预期收益为 10.7 倍，收益率为 4.2%，并计划在 1 月份将股息提高 8%。&quot;亚当斯基金分析师格雷格-巴克利（Greg Buckley）说：&quot;雪佛龙的增长风险低于同行，其平均现金流倍数有 15%的折扣，在赫斯交易完成后，总收益率（加上回购）应在 12%左右。</p>
+<p>赫兹全球控股公司（Hertz Global Holdings）（HTZ）--该股价格便宜，&quot;2024 年预期收益为 8.6 美元，市值为 31 亿美元，不到规模稍大的安飞士（Avis）（CAR）的一半&quot;。德意志银行（Deutsche Bank）分析师克里斯-沃伦卡（Chris Woronka）认为，这对 &quot;有耐心的投资者来说具有极大的吸引力&quot;。</p>
+<p>麦迪逊广场花园体育公司（MSGS）--纽约尼克斯队（New York Knicks）和游骑兵队（Rangers）价值分别为 74 亿美元和 24.5 亿美元，该公司的所有者可以出售其球队的少数股权、回购大量股票或派发股息，&quot;最终的回报将是出售整个公司--考虑到资产价值的折扣，可能不会有太大的负面影响，&quot;博雅研究公司（Boyar Research）总裁乔纳森-博雅（Jonathan Boyar）说。</p>
+<p>百事公司（PEP）--报告称，这家饮料巨头预计 &quot;在今年实现 13% 的预期收益后，2024 年的每股收益增长将达到其高个位数的年度目标。该股股价为 2024 年预期收益的 20.6 倍，收益率为 3%，已连续 51 年上调股息。</p>
+<p>U-Haul Holding（UHAL）--&quot;这家市值 120 亿美元的公司稳步发展了规模可观的自助仓储业务，目前在业内排名第三，根据可比公司的情况，仅此一项就价值 80 亿美元。该公司股价为每股 63 美元，市盈率约为 14.1 倍。</p>
+<p>巴伦周刊选股时会考虑公司基本面、行业前景、经济环境等因素，综合分析后来判断最有潜力的股票，具体文章和分析可以点击<a href="https://www.barrons.com/">巴伦周刊的网站</a>：https://www.barrons.com/。</p>
+<p>具体文章链接为：<a href="https://www.barrons.com/articles/alibaba-berkshire-chevron-alphabet-favorite-stocks-to-buy-b018c686?reflink=desktopwebshare_permalink">Barron’s 10 Favorite Stocks for 2024</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[云端生活入门：从小白到网络达人]]></title>
+        <id>https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-cong-xiao-bai-dao-wang-luo-da-ren/</id>
+        <link href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-cong-xiao-bai-dao-wang-luo-da-ren/">
+        </link>
+        <updated>2023-11-23T14:33:02.000Z</updated>
+        <content type="html"><![CDATA[<p>在这个数字化和网络化日益加深的时代，掌握一定的技术知识已成为每个现代人的必备技能。因此，我特别策划了这个系列文章：“云端生活入门：从小白到网络达人”，旨在帮助普通人以极低的成本享受到技术进步带来的优势。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168627&authkey=%21AL-BftXeZxnb7nw&width=660" width="660" height="auto" />
+<p>想象一下，每年仅花费RMB约100元，你就可以拥有属于自己的个人（或家庭）云服务器。在这个云服务器上，你不仅可以实现个人网站的搭建、全球域名的注册，还能搭建家庭私有云盘和私有云笔记系统。这不仅仅是技术的展示，更是对生活方式的一种升级。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168630&authkey=%21AFBVp6-hw_WilYc&width=660" width="660" height="auto" />
+<p>此外，享受云生活的乐趣远不止于此。你可以搭建一个家庭云影音系统，享受随时随地的娱乐体验。还可以通过与智能机器人的对话开启个性化的云学习之旅。还可以利用开源系统，搭建一个可以与朋友共享的AI聊天界面，体验与AI的互动乐趣。</p>
+<p>比如，你可以访问我搭建的这个网站：“chat.zhurong.link”。只要打开电脑或者手机的浏览器，输入上面的网址，就能看到对话界面了。你甚至不需要知道ChatGPT，域名，API，反代这些专用名词，只要设置好密码，就可以愉快地和AI聊天了。这个网站因为使用了API，和AI对话需要消耗token，如果亲朋好友感兴趣，可以联系我索取密码试用。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168628&authkey=%21AG3ViacOboD029M&width=660" width="660" height="auto" />
+<p>本系列预计包括近20篇文章，内容将涉及云服务器的购买、域名的申请与购买、域名和CDN的设置、个人网站的搭建，以及如何基于GitHub开源系统搭建私有云盘、云笔记、影音系统、AI（如Chat GPT）共享等。无论你是个人品牌建设者、家庭IT需求者，还是对技术有一定兴趣的普通用户，只要你愿意自学并动手实践，这个系列都将是你的一份实践指南。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168629&authkey=%21AOThz1998AfuTzs&width=660" width="660" height="auto" />
+<p>让我们一起踏上这段探索技术、提升生活的旅程，享受云端生活带来的无限可能！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[云端生活入门：用ChatGPT-4开启个性化在线学习之旅]]></title>
+        <id>https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-yong-chatgpt-4-kai-qi-ge-xing-hua-zai-xian-xue-xi-zhi-lu/</id>
+        <link href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-yong-chatgpt-4-kai-qi-ge-xing-hua-zai-xian-xue-xi-zhi-lu/">
+        </link>
+        <updated>2023-11-23T13:24:41.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="引言">引言</h3>
+<p>在人工智能飞速发展的今天，AI已成为改变我们日常生活和工作方式的关键力量。ChatGPT作为普通人首次接触的AI产品，自从2022年11月30日OpenAI公司首次向公众推出GPT-3.5起，到最新发布的多模态GPT，我们可谓见证了AI技术的巨大进步，AI也逐步迈向和我们有关的各个领域。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168640&authkey=%21AImgLob5D5bD5Ak&width=660" width="660" height="auto" /></p>
+<p>ChatGPT，全称Chat Generative Pre-trained Transformer，是一个人工智能聊天机器人程序。对普通人而言，ChatGPT可以帮助编写学术论文、创意写作、内容创作、商业写作，甚至进行学术编辑。本系列文章将探讨如何利用这些先进技术满足个人品牌建设或家庭日常IT需求，本篇将探讨AI在个性化在线教育方面的应用<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168641&authkey=%21ABSqwQ4hdDBT27E&width=660" width="660" height="auto" /><br>
+今天，我们将深入了解ChatGPT-4在个性化在线教育中的应用，并探索开源项目“Mr. Ranedeer AI Tutor”的用途。虽然直接使用该项目需要ChatGPT Plus用户权限，但通过研究作者提供的开源代码和目前的实测效果，普通用户也能为更好利用ChatGPT的能力打下基础。</p>
+<h3 id="chatgpt-4和个性化教育">ChatGPT-4和个性化教育</h3>
+<p>ChatGPT-4为教育领域带来了强大的支持，其更好的理解能力、更精确的信息处理和更高效的交互方式，为个性化教育提供了新的可能。在最新版本中，用户能够自行设计GPT模型，根据特定需求定制学习体验。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168644&authkey=%21AFKa2f_KuKNvGyc&width=660" width="660" height="auto" /></p>
+<h3 id="调教chatgpt以获取更好的结果">调教ChatGPT以获取更好的结果</h3>
+<p>虽然ChatGPT-4极其强大，但它的表现在很大程度上依赖于用户如何提问。通过提出清晰、具体的问题，可以有效引导AI提供更准确、更相关的答案。英文读者可以参考GitHub上的<a href="https://github.com/f/awesome-chatgpt-prompts">awesome-chatgpt-prompts</a>项目。中文读者则可以查看<a href="https://github.com/PlexPt/awesome-chatgpt-prompts-zh">ChatGPT 中文调教指南</a>了解更多。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168635&authkey=%21AJd7U1jH07UYFsY&width=660" width="660" height="auto" /></p>
+<h3 id="mr-ranedeer-ai-tutor项目介绍">Mr.-Ranedeer-AI-Tutor项目介绍</h3>
+<p>“Mr. Ranedeer AI Tutor”利用ChatGPT-4的深度学习和自然语言处理能力，极大地改善和个性化了教育过程。用户可以在Mr.-Ranedeer-AI-Tutor项目页面查看详细说明。如果你是ChatGPT Plus用户，可以直接体验Mr. Ranedeer的功能。</p>
+<h4 id="入口">入口</h4>
+<p>本项目的开源网址为<a href="https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/releases">Mr.-Ranedeer-AI-Tutor</a>，你可以上去查看作者的说明和最新动态。<br>
+如果你已经是ChatGPT Plus（付费）用户，你可以点击这个链接<a href="https://chat.openai.com/g/g-9PKhaweyb-mr-ranedeer">直接打开ChatGPT</a>。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168616&authkey=%21AHbTfflQSBmwTsE&width=660" width="660" height="auto" /></p>
+<p>注意，根据你自己的学习内容，你可能需要先进行一些<a href="https://chat.openai.com/g/g-0XxT0SGIS-mr-ranedeer-config-wizard">适当的配置</a>。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168609&authkey=%21ABGKnA4Av0Cze8M&width=660" width="660" height="auto" /><br>
+让我们先进入配置页面，对学习的一些要素进行设置：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168607&authkey=%21AON29ov0WC-JtAk&width=660" width="660" height="auto" /></p>
+<p>主要是根据你自己的情况设置交流语言，学习深度，学习风格，沟通风格，语气风格，推理框架。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168608&authkey=%21AAVFH9Y4e9lEk6c&width=660" width="660" height="auto" /></p>
+<p>最后将系统生成的prompt复制下来。比如这样的：“/config Language: 中文, Depth: 大学本科, Learning Style: 亲身实践, Communication Style: 正式的, Tone Style: 信息性的, Reasoning Framework: 类比推理”。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168608&authkey=%21AAVFH9Y4e9lEk6c&width=660" width="660" height="auto" /></p>
+<p>回到Mr.Ranedeer，将上述prompt黏贴并回车，然后就可以开始和机器人对话，通过定义具体的学习内容，开始学习了。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168610&authkey=%21ACa72EXRRFLF_34&width=660" width="660" height="auto" /><br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168611&authkey=%21AHa6VIZU8JYZGEk&width=660" width="660" height="auto" /></p>
+<p>比如，我希望机器人帮我制定一个学习计划，让我可以在一星期内完成PCEP的考试准备：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168613&authkey=%21AIEnKT3nyHXrnWY&width=660" width="660" height="auto" /></p>
+<p>我们看到了大纲，接下来就是开始学习：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168614&authkey=%21AMIayl8nxNWVxls&width=660" width="660" height="auto" /></p>
+<p>如果这一部分内容学完了，你可以继续：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168612&authkey=%21ALBtaJp--nloRko&width=660" width="660" height="auto" /></p>
+<p>如果想要某一部分中具体内容，请直接输入文字告诉机器人：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168615&authkey=%21AGTQUVeoPDgl4H4&width=660" width="660" height="auto" /></p>
+<p>如果涉及到代码输入，你可以先在下方直接输入（或在编辑器中完成代码编辑），然后机器人会帮助你检查，有你还有其它问题，可以直接提问：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168619&authkey=%21AFbSMXOEMogpr7Y&width=660" width="660" height="auto" /></p>
+<p>你还可以要求它出一些仿真考题，来检验你的掌握程度<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168617&authkey=%21AJKJzlYPCNVsZn8&width=660" width="660" height="auto" /><br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168620&authkey=%21AAJtjiBC2LFSu6s&width=660" width="660" height="auto" /><br>
+注意机器人不仅给出了正确答案，还对错误答案进行了点评。</p>
+<p>你还可以使用“还有什么”的问题形式，询问机器人，让它给你更多帮助<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2168606&authkey=%21AEm8lGVpdkA2y7M&width=660" width="660" height="auto" /></p>
+<p>未来展望<br>
+AI在教育领域的应用正变得越来越重要。随着技术的不断进步，我们可以预见一个更加高效、互动和个性化的教育未来。项目如“Mr. Ranedeer AI Tutor”仅是众多创新应用中的一个，展示了AI技术在教育领域的巨大潜力。</p>
+<h3 id="总结">总结</h3>
+<p>“Mr. Ranedeer AI Tutor”和ChatGPT-4的结合为我们揭开了未来教育方式的新视野。随着技术的不断发展，我们可以期待更多创新性的学习工具的出现，进一步推动个性化教育的发展。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何利用好时间管理的工具-“我的一天”+微软代办+印象笔记+forest专注森林]]></title>
+        <id>https://zhurong2020.github.io/post/ru-he-li-yong-hao-shi-jian-guan-li-de-gong-ju/</id>
+        <link href="https://zhurong2020.github.io/post/ru-he-li-yong-hao-shi-jian-guan-li-de-gong-ju/">
+        </link>
+        <updated>2022-07-14T14:47:27.000Z</updated>
+        <summary type="html"><![CDATA[<p>这几天读到了吴军《硅谷来信3》的第160封信，提到了时间管理的工具和具体的做法，主要是任务清单+计时器+子弹记录三种工具的使用和如何克服拖延症，下面的笔记分享给大家，顺便也提提自己的用法。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这几天读到了吴军《硅谷来信3》的第160封信，提到了时间管理的工具和具体的做法，主要是任务清单+计时器+子弹记录三种工具的使用和如何克服拖延症，下面的笔记分享给大家，顺便也提提自己的用法。</p>
+<!-- more -->
+<img src="https://sn3302files.storage.live.com/y4mLGj6CJNHPIyuFLr-2xFrwDoc_y2DOClb8MRXgrB1IWq-0HdZKwHjD3CtLXVnlf4ZhOFhK29PpYCmZxIyzuSyZjDWi_zHXlCthezYP5PvAxMYcAVxIsp78mA2RQibQaO9vlJl1AiVRzRhIP50b6pNC4nNo4wNt0ifL-hsrHqH3F72iujOp3k9DrAQ0MNeg31b?width=660&height=440&cropmode=none" width="660" height="440" />
+<p>一、介绍三种战术工具：任务清单+25分钟倒计时器+子弹记录</p>
+<img src="https://sn3302files.storage.live.com/y4mf1G_0M4Kz1hL1DrS99DOvR5NKyObG0-y7D-T7b7GCNyoST1dzVMzjWutOk1hAY_mXzy-_3qFqtQFRARYNsu3DVaQtfKLBFGgzR1SJ-LA91QfVcldL-DLK6TOJwbMPuhzwUDPDQI7CYAmKLhGNZcvCcUJwo-9jEtPz6TvnbkC5y6j-g9SetwzdSYJcfUY1Hx9?width=489&height=660&cropmode=none" width="489" height="660" />
+<ol>
+<li>使用任务清单工具，把每天要做的事情以清单的方式列举出来</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4m-upriJkjRskP5RWnF8Xe318z8Jlo7z6hDuLDEu0f8AqnwMjDPIMW312njOwhTkUEqKO-KMPhASJaY7NnGFVUcafiB9Tbf9cqyiQoYjFHtqaTCU9EmBH9GKjYIDSsN0VQlJvc3sbXhHJ_jik6QYAu1HJuESEQQsqhHARiSzsIyul9xbjNtTpQOsD8Mu45Hr5h?width=187&height=269&cropmode=none" width="187" height="269" />
+<p>a. 注意设置优先级，综合考虑难易程度，紧迫性，重要性，个人兴趣<br>
+b. 清单上不要超过8件事，如果是3-5分钟就能做好的小事，直接做掉<br>
+c. 事情的完成情况记录下来，每件罗列的事项要有结果</p>
+<ol start="2">
+<li>使用25分钟计时器和杂项清单</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4mpTGJBhr7qdWMy0FjI40y7SVd1sK_MBpaXB0YBSKMUUWBptPPIXYGWMdNuPY6SLKjgSRo1pTgtirGrVa0xi5KbzeJcj9ApHio9DLOY4bcUTjwpKkBxoYYaIUPYWdeE0-h7D7_W1sJAN5VtNJD_uzTqYtOti9voozoeBnJZIuueiVtfFdyfku-uy379xWfJWpq?width=218&height=231&cropmode=none" width="218" height="231" />
+<p>a. 设置一个25分钟的倒计时器，25分钟内集中精力做事情<br>
+b. 每完成一次25分钟任务，休息5分钟<br>
+c. 拿张白纸作为杂项清单（或者叫收件箱），任何其它要求，不用想，先记录下来</p>
+<ol start="3">
+<li>使用子弹记录，用符号标记清单中事项</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4mZ0mw9p1dlhnqmX1j-niu6m23vw1pEKikHM_NwQIqpvTJ3WPvR-rAlGxjjWLOGCSRP1PeDvkDUwsEhz41NG_LVQx41BLB7v2ioHjD7Xcri13jb50qVZomrRT128HUV8DbynM5EXTNvUTSBNJbqu_23h1fCi7OBKmo6BHxqY5K4wDQh1OJus6QOVOIqX4u84g0?width=660&height=437&cropmode=none" width="660" height="437" />
+<p>a. 事件的前面标记分类，比如老板安排的写个“B”，<br>
+b. 事件的后面标记结果，比如完成的打钩，未完成的打叉<br>
+c. 可以按照事件前面标记的分类集中完成，比如集中攻克老板安排的事项</p>
+<p>二、如何克服拖延症</p>
+<ol>
+<li>化整为零，细化任务</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4mXAx9hjOKzIMQ47JtvbTkyzakiYvB0qgmwlt0Jfs58zt-l9K1P_CLewfF07ZpMkOoz4DluIRhl3h3e3oaIf7qrWWB1m4Cs2GHfTai7I6jNtvfbDZ9vNZEcuEkQEmPWipcT-qduZjQ7bAp-GdburSRly0j0LZ0medWtyk1iVPxEp4AVLv9Pu45YHtcbM7szSDC?width=660&height=369&cropmode=none" width="660" height="369" />
+<p>a. 战略和战术结合，列清单是战略，行动步骤是战术<br>
+b. 复杂任务要拆分，比如家庭大扫除可以从打扫厨房，甚至清理油烟机开始<br>
+c. 工作量较大的事情，要把任务时间分为几段，每段时间完成一个小任务</p>
+<ol start="2">
+<li>
+<p>适当使用社会压力</p>
+<p>a. 可以让配偶、老板或同时给自己适当压力，督促完成任务</p>
+</li>
+</ol>
+<p>三、如何使用时间管理战术优化时间管理战略</p>
+<img src="https://sn3302files.storage.live.com/y4mpcJX-pvuL3kePzz-11tDIWq6Qvm2E2NHMEGHJukFUuKxlWwNh4gs4hk-2dpeOVEPN7rq2jcaS1AH5kNydiTSQap1-0bkz8-oD9VkVHKviMGVmU4h0A7SumzSYhOHq6xg1PQPOw6DEnEFM4DhJrlPnTI8Putc_FEBMJ9cMNIKjFBqVgvFpvfKSPMNSHPl48mH?width=660&height=258&cropmode=none" width="660" height="258" />
+<ol>
+<li>找出自己效率最高的时间，用来做最难的事情<br>
+a. 结合子弹记录，总结每天的任务清单，找到效率最高的时间<br>
+b. 锁定这个时间，把每天最重要的事情安排到这个时间段完成</li>
+<li>把一些事情交给其他人做<br>
+a. 列任务清单时要做减法，有些不得不做的事情，也可以授权别人做<br>
+b. 比较自己做同样事情消耗的时间精力，判断交给别人做是否合算</li>
+</ol>
+<p>四、我正在使用的三种工具推荐</p>
+<ol>
+<li>使用纸质版的“我的一天”（模板见文末附件）</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4m0tAjxWBt7EZxim5ei-Q_bSLfPrzl6xaHf1xygdZmn0Ad3CV7maX9oQfnGnTxgwh-sYVDSJSwGqbY4WlWWKDsdfS8w-MCt_7kN8jo0IbIedPO8-cPVcv3NZXVr7wXMt0PqQYyykpgZUdJtXONL67wEfIEhYndmPRZQfFubsY8Q-MLskvRF9P0o-ZgqDybmfO9?width=444&height=660&cropmode=none" width="444" height="660" />
+<p>a. 实现任务清单（3things），杂项清单（收件箱）和符号标记<br>
+(1). 最重要的事项应不超过3件，并预估时间花销，以25分钟为1个花销单位<br>
+(2). 其它事项不要太多，总数不超过8件<br>
+(3). 其它杂事来一件记录一件，另行安排时间完成<br>
+b. 列清单要尽量简单，纸质版更节约时间<br>
+(1). 使用随手就能拿到的单页纸或纸质笔记本记录<br>
+(2). 不使用电子版本是怕打开软件等操作浪费时间<br>
+(3). 每天安排固定时间，比如早间计划和晚上复盘<br>
+(4). 每月可以使用印象笔记拍照归档，印象高级账户支持手写的搜索</p>
+<ol start="2">
+<li>使用微软代办+印象笔记作为“外脑”</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4mjquEjk0UHLiIw4zFhT6UJGtQlxtgQZAnnevvvXqEGY6tGFWuMGj0NGLZcuTmkSt18-kfyISMZcVBJ2L4QOrnMmpl_tc7kGQxC51pNQTXm13s2M61q2zw_yD7f7EAfc5vNv4aUs61vymYI6-pFZbeiSsR5G66ZOVW3RBMF_g4XecqEyMv6GZCw699BS5yfCeq?width=366&height=227&cropmode=none" width="366" height="227" />
+<p>a. 微软的代办（to do）是个免费的轻量级时间管理工具</p>
+<img src="https://sn3302files.storage.live.com/y4mTcSvm2aAZ5L1mrzEaxoCg7yejbCc0YLagFo15n4tZBzp6U0Bi59PVIuco4zJ7ppoErR8eYfMuP-oK4OodZmC5tAlG-t1wGgISOZz1_t03EeM56lwjJ63hv-PAYw_gs-JAB-B_CVB1KLDMfCYKLE1uQo2lILISF02-yolRX_Us_tbGiXPu1IZ0SIrN8MHQWT8?width=660&height=336&cropmode=none" width="660" height="336" />
+<pre><code>  (1). 可以非常方便地添加任务（清单）
+  (2). 可以设置时间，提醒等基本要素
+  (3). 可以自动同步到微软的日历中
+</code></pre>
+<p>b. 印象笔记是个非常棒的笔记软件</p>
+<img src="https://sn3302files.storage.live.com/y4mJb53VS85ARkz_a3K6bR7ysf9yeFtVk3CVNgqxZno_rOupSZrykvtMY7vE6NM88Vms1XFWfFxo5FrD7foXyWuSU_F08g1Nh4nUxSKIsu84Ne9qGmtqbMu4-w52beBlNGcVSqtSrI0E1Ewi9UR-MXy5o4OFdPMkqwQJBecjxNa6BH9Bt3iUJgDjYunrJ3qQPsU?width=660&height=396&cropmode=none" width="660" height="396" />
+<pre><code>  (1). 随时随地获取、整理、分享笔记
+  (2). 多端同步、内容收藏、资料整理、信息共享
+  (3). 保存高价值信息、整理知识、有效协作
+</code></pre>
+<ol start="3">
+<li>使用&quot;forest专注森林&quot;番茄工作法软件</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4m2vO79JXDcxVIvxS0X5ww554CDgya9gWA72rJKmBNt80kdQOnqo2YEvBQuEdgOHiSIxwpBS9hjBX1R_e9rpDCjQ5GpevRDY7NrG-ZERCvoinON4cb2bvdMcVdu2NZnul7OmOlEEOC4AMUxFDUM7ErnE6fTIYnNZgQGnhR4fS8MJlYWRQDqxB5GO6WtxNNF6Z5?width=660&height=252&cropmode=none" width="660" height="252" />
+<p>a. 一个游戏式的番茄工作法软件--forest专注森林<br>
+b. forest帮你远离智能手机诱惑，专心于生活中每个重要时刻<br>
+c. 想要专注时，种下种子，接下来的30分钟，它将慢慢长大<br>
+d. 当你收获一片森林时，象征着每个你曾经专注的30分钟<br>
+e. 专注时间有金币奖励，奖励还可以去种真树</p>
+<p>上面介绍的工具，完全可以免费使用，比如使用纸质版“我的一天”+微软代办（免费）+印象笔记（免费账户）+免费版的forest专注森林（近期在升级中）。如果你还想使用更高级的功能，比如更多设备同时登录印象笔记，更高流量，或者需要搜索照片中的文字，需要支付相应的升级费用。</p>
+<p>好了，说了那么多，你有没有好的工具或者时间管理经验分享呢？<br>
+欢迎留言。<br>
+如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a><img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" width="256" height="200" /></p>
+<p>附件：</p>
+<ol>
+<li>
+<p><a href="https://pan.baidu.com/s/1u_7zfk8cQZT7oJn94XInPw">吴军《硅谷来信3》-时间管理有哪些工具和战术pdf 提取码：ylqg</a></p>
+</li>
+<li>
+<p><a href="https://pan.baidu.com/s/1FsTdEvuwwrYSI6hIs5GZwQ">吴军《硅谷来信3》-时间管理有哪些工具和战术音频  提取码：kxq0</a></p>
+</li>
+<li>
+<p><a href="https://pan.baidu.com/s/1zmzQ3oxc8nFc3cK4y7iPFQ">我的一天纸质模板  提取码：xo49</a></p>
+</li>
+<li>
+<p><a href="https://todo.microsoft.com/zh-cn/">微软代办（to do）官网</a></p>
+</li>
+<li>
+<p><a href="https://www.yinxiang.com/">印象笔记官网</a></p>
+</li>
+<li>
+<p><a href="https://www.forestapp.cc/">forest专注森林官网</a></p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[你离成功只差2小时-聊聊你把时间花在哪儿了？]]></title>
+        <id>https://zhurong2020.github.io/post/ni-chi-cheng-gong-zhi-chai-2-xiao-shi-liao-liao-ni-ba-shi-jian-hua-zai-na-er-liao/</id>
+        <link href="https://zhurong2020.github.io/post/ni-chi-cheng-gong-zhi-chai-2-xiao-shi-liao-liao-ni-ba-shi-jian-hua-zai-na-er-liao/">
+        </link>
+        <updated>2022-06-24T13:27:32.000Z</updated>
+        <content type="html"><![CDATA[<p>标题可能有些夸张，但看完这片短文，应该能明白我的意思。</p>
+<p>近期读了吴军《硅谷来信3》中第159篇来信，谈到了我们每天的时间花费，其中一些数据有点出乎意料，和大家分享一下，相关数据来自某记录时间花费的手机软件，用户主要来自美国。</p>
+<img src="https://sn3302files.storage.live.com/y4mzgJb83l3AmUNYNR0qFEJRCB0ctcm-xVo9hhmBC5SoJUXS12OLuZbxe0ladv7Srg8o9B7L7eoumgMJzAprv54Kg49UJ2dTEYZJLsnrrvzL_CvH2oF5myPQG5MiGRUC_q2rqwsYVOXGqy2KBp2Swi0o598vf1tMxmPIcku-AFDpf9o0i-SP6g4P6g4rQkeiu3b?width=470&height=410&cropmode=none" width="470" height="410" />
+<p>文末附了原文的PDF文档和音频文件。</p>
+<p>首先，一天24小时，睡眠、家务、吃饭消耗的时间约12小时，工作时间约10小时，这样，全天还剩余的可支配时间是约2小时。</p>
+<img src="https://sn3302files.storage.live.com/y4m8LptN_G1JtEDT6GDNyV7GWQqsCZ6h970XBUe6x9ZK9ZQb3XeYL2P4mKDMklsXNYaNkjbGNRQFzzqd0RNu72Ln7-WwXVdeol_ezni9UoYt5-UIek5KBSLeyWVHy47bUfGCiv18DVKfZ1X_XV4ekZF5SbEmPmfLU6E9gOabcjFY8PphYhraywuuU4hsf5MsXRR?width=225&height=225&cropmode=none" width="225" height="225" />
+<p>其次，每个人平均每天使用手机的时间约4小时，这还是只计算使用屏幕的时间，不含听音乐或新闻。</p>
+<img src="https://sn3302files.storage.live.com/y4m5bEWPFgJDfOdjsJzCR7UjjLYcm8BG-F_Ce6lqUbQ_XBAe3vnG7dUru-W4TxCLYwxhZRRLz9NkaFaT2Azr1Rg7N8L0zH2ZWCxdbVDEVtFjAs9tXFACjPpPWeTydwBorYdqDbm0OykJEmmFrgfYtWCBSYTpH4MyGZgeP9sit8qMFBdPU1IbYX2ibGooSrSKAeC?width=660&height=269&cropmode=none" width="660" height="269" />
+<p>其它一些主要数据包括（部分有重复），每天在电脑上花2.5小时（平均数据包含专职电脑工程师）；每周健身3小时；平均工作时间为7.6小时，如果是受过大学教育的，平均每天工作时间8.5小时，这个工作时间已排除了疫情影响；有3成美国人需要在家完成一些工作，而在我们的印象中，美国人可能是准点就下班的典范；大部分人工作时间都被碎片化，需要时不时发送邮件和短信。</p>
+<img src="https://sn3302files.storage.live.com/y4mOzXwgyp04INGazPPtn7Hhhg6Uu9Qilzzn6w2T43Fckf2TkyP9kpRCIzWRji-oaIV0m6BZ6E0Yt6mocv8lILijVI9bncmAfMxHKKXP1y8t86OUHXQZ1MjVolvEFaYfNG5rJ_EvJPNh0zISdkdMT4gVh3H8tcUY6JBnvX_eAiVGWv4VjFU8kirPzIndYy8QpCk?width=660&height=466&cropmode=none" width="660" height="466" />
+<p>最后，文章找了一些职业发展较好的人作为对照，发现这些成功人士花时间的方式和普通人并没有太大差异，但有以下三点：</p>
+<img src="https://sn3302files.storage.live.com/y4mccOEs2rV54bYdt0cA_O0RcQTmWKMPtpfGDSX-pk-4BDFPWDqEcpqMCQzRlpnf1MVSZeqQ_x1c0jhwBoGK_V-0Ug5a1v42BaXkxf4E2s7OJjg61Hlm2VThRQfGf15ESXuzZLnpm1M6Gaaw6UfwyzWaCiq3Ix8tgtB-9mDgVR9a1cElrk1k-QSbwB3wqAQcauH?width=331&height=300&cropmode=none" width="331" height="300" />
+<p>一、每天工作时间更长，达到12小时，但通勤时间比平均数据更少；</p>
+<p>二、每周锻炼时间更长，平均每天1小时；</p>
+<p>三、看屏幕时间短一些，比平均数据少约1小时。</p>
+<p>结论，普通人和职业发展好的人，时间管理上的差异就只有每天2小时。如果通过时间管理，改变生活习惯，你的生活可能会发生很大改变。</p>
+<img src="https://sn3302files.storage.live.com/y4mpHklSkZ7wQim7DJ0IwdQO-3bYQPQChyviVvodF-7b_G7kTOJQ3S8jlENL8qs9SSOSqWEjdHb7KohXlzc_wnqp06avM_rfvjTIm-VZTiN06Sl_6frF-6ZIFMwUo3deok4PS2l7H1aYWgiaKK2jzUGRAN8hy0Olt7tYf2OEWjonK_XZe0KkK9FILkur8UYhNhi?width=660&height=353&cropmode=none" width="660" height="353" />
+<p>最后之外，如何查看自己手机使用时间呢？</p>
+<p>以华为手机为例，找到“设置”，找到“健康使用手机”，就可以查看今天和过去七天的使用统计数据了。看看我今天早上截图的数据：</p>
+<img src="https://sn3302files.storage.live.com/y4mPvW0mdM9L0c5-H9Mb9EgeANqxoQiiV3MkG3cJmbNTSOPTcMxuP9yl53VZRo10sJiARgmAsTBrtGg0bpzaEn0hPNoLdcz-pbS-xqw5cGyqMWDU8cHShDf1WQCkqD4gcbE0sCIYLk6YrfEIHqbgdl_ojUx3LD4PljD6Uuz0zPUoQIkc-RswpPjmGCCatso4bFV?width=660&height=425&cropmode=none" width="660" height="425" />
+<p>敢不敢秀一下你的手机截图，并且从今天开始就少看手机多做正事呢？</p>
+<p>附件还找到了英文版的“艺术家的一天”（中文版本请自行搜索），让我们来看看这些名人如何安排自己的日常作息，上2张图先睹为快。</p>
+<img src="https://sn3302files.storage.live.com/y4m9MwFOXnE7LueE4sb9_LR1wvAgzbviWOpZ0LzviSBPo7oVHt86ZFSdD7WfNN78j5qm-DG7aUqlLI43Gt1GIaPf36lvZYWdxE5QpOzwlPlhqyfkmhN69lAW1Px3ZynTgW4M5_SGF6X8tBCeVAA66CV17VNTkqxY4E4X1EkvOEFlkghGJzEoykqxCJcC03O_kwy?width=641&height=321&cropmode=none" width="641" height="321" />
+<img src="https://sn3302files.storage.live.com/y4mES95hUEdOXjhoQ2rKHeRJqsQZnl6ZbrZn5eqqPipBK1IJA9eD8meTMbzp6rwm7OPuCSbUC1Gb8YrU8DUOzvcdTB2SKgrBVnhSkydmGW6qtFDR-G0GLZkR43Z7vw-Ci3XjIgzC7w1aNVDCO8XH8t10hntxLk5HmqGBcSrKBc0GQFwxO66wCHkVdCddGqKl0lB?width=639&height=315&cropmode=none" width="639" height="315" />
+<p>期待改变、进步。</p>
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a><img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" width="256" height="200" /></p>
+<p>附件：</p>
+<ol>
+<li><a href="https://pan.baidu.com/s/1q_ZTdBdAy9Ed6B_kZfF1Bg">PDF版《硅谷来信3》中第159篇-你把时间花在了哪些事情上？提取码：dm0w</a></li>
+<li><a href="https://pan.baidu.com/s/1YlchuUVosbo6UV3IXYWr8g">音频版《硅谷来信3》中第159篇-你把时间花在了哪些事情上？提取码：5kyd</a></li>
+<li><a href="https://pan.baidu.com/s/1ftAxjvHOdwm6DFt0KMWz9g">笔记（MD文件）-你把时间花在了哪些事情上？提取码：weu7</a></li>
+<li><a href="https://pan.baidu.com/s/1ijCSVFaN3mvQQpGaUkyo9g">CREATIVE ROUTINES(INFOWETRUST.COM) 提取码：zg4z</a></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我们为何需要USB4-普通人应该了解的USB4知识]]></title>
+        <id>https://zhurong2020.github.io/post/wo-men-wei-he-xu-yao-usb4-pu-tong-ren-ying-gai-liao-jie-de-usb4-zhi-shi/</id>
+        <link href="https://zhurong2020.github.io/post/wo-men-wei-he-xu-yao-usb4-pu-tong-ren-ying-gai-liao-jie-de-usb4-zhi-shi/">
+        </link>
+        <updated>2022-06-23T01:47:22.000Z</updated>
+        <content type="html"><![CDATA[<p>不知道你家里有没有线缆太多，桌面太乱的苦恼？反正我家电子设备虽然不多，但各种USB线真的不少。</p>
+<img src="https://sn3302files.storage.live.com/y4mvR75jPq7my7JNGheQtt4z5Z-u-rp0CfqDToPelRZfeQv4E74fJwdlqCo6tbAJUE67AQIriLYrMTPWXATtI7xgU2ntvuFuGaIU3hLW3K8SzV0cnsz8hvKX1lYfeLw4iyIllfxiKK6dYLsrStiPXmLO91zeLpcGeJoDrKXEll8m74HlSE0QnpJdoWuU1ZzAn0u?width=660&height=113&cropmode=none" width="660" height="113" />
+<p>正好近期读到了卓克老师早先的一篇文章，《更快更统一，新USB口来了》（文章PDF和音频见文末），所以来聊聊这个最新的USB标准。</p>
+<p>其实，USB4早在2019年就已经公布了标准，如果设备能支持，以后我们放电脑的桌面以后可能会只剩下一根线了。</p>
+<img src="https://sn3302files.storage.live.com/y4mxh53jSbb_1GIaLh3ThOsyTjmP0pmuE2lZwR8i6mu38GMdelTEqIdMmENaTvXYyLgA5UQECI-pU10ntVNdGrQMe_qDRLchob_5Hx8BnCpwHMpFpsKQTRAV710BxmNMHCFc_ndBF_Vf3w1WLzFVgV4wbZit20woO81ZUkk5405AQdvQkWAMzH4u7M4roS0a1as?width=660&height=133&cropmode=none" width="660" height="133" />
+<img src="https://sn3302files.storage.live.com/y4mUXifrM-l8T_NV9uHs2PgSUI5AUtOfCNcO_fc2VEALE4TNT_uOeGC7hPE6FF2l0Mqt_I-5TjdO6YuI9tZ9zarU6sghQnaZTuzwaXy6aBaK69doSSbjEbKwGV7tPqirv3jZzDZ6vQVsv0rlETZiZT-iVLSnJxYGYvlOJqpjfRPZNEjsjLm45IM4ixLofnkM92I?width=631&height=660&cropmode=none" width="631" height="660" />
+<p>今天就来简单说说USB4，我们普通用户需要了解些什么？</p>
+<p>USB4是最新一代USB的标准，传输速度可达到40Gbps，使用Type-C接口，上一张图大家比较一下：</p>
+<img src="https://sn3302files.storage.live.com/y4mpkfk8eUyEfvIFpwStpmFGLdx1dtYzvaJ7N7m2W5wQw3z9DyWR3ZqzWGFke9AVwlRJs5rpqWJ58SxTLzZX8fwIoQY-xLvBWZScO5UqXCFHPcrWOZW8WcLrThnf2AXAYlBELPiUJZi7qlmDmMljeb9uBoXSXeS9PBNdyeFwpUYRQcxdv5apYqI0NLX2fk5cnOG?width=621&height=660&cropmode=none" width="621" height="660" />
+<p>这里关于官方版本名和原名有些绕，我们只要知道USB4速度最快就行，另外注意USB和4之间没有空格，所以以后可能不会再有USB4.1，USB4.2（具体可以查看文末的《USB4规范语言使用指南》）。</p>
+<p>那么原来我们用的USB是什么标准，长什么样呢？</p>
+<p>标准的事有点说来话长，要彻底搞清楚可以自行谷歌，或者看看文末附的卓克老师的文章。顺便吐槽一下X度，放张搜索截图给大家比较一下，仅从目录就能看出词条解释是否全面。</p>
+<p>这张是X度的词条：</p>
+<img src="https://sn3302files.storage.live.com/y4mHTbznEHQx-CvK4dy3tSczXMBa1EwkiV1ewgrHViuCphqrT8ojJ9NETNdwXn1cXjXdUgAm6nb7qAyOMNntsIJZpkzITkHG73xMHBYOhREeDukLBE3BvEXev4UQnTKseUFY6lOLHgYu5suCDoyrneOtjuI7SVItVgZmSzvJAt0e-Tqy6O13zUv2MrK60jBaxzJ?width=913&height=779&cropmode=none" width="913" height="779" />
+<p>这张是X基的词条：</p>
+<img src="https://sn3302files.storage.live.com/y4mKHbZ_oczRyTRb21pO7GtKhH5xmRoeadCioNdcUUP3oDZs8v9z-9z-07YX8QuCZN2Q9wwissg3DbmE_sRK2Z3nISgDR9TFaIOknI_5zfadh9sWowYaEI3rZ9cMPJhxnsj9sJEM1Bh-rL7Fa2Gto9XxSRwfVnrsaPniMwZTUW8WqiiSMu-m8Q-Pl6ZusIYqNTc?width=855&height=872&cropmode=none" width="855" height="872" />
+<p>真心为X度和认证词条的西北XXXX大学的专家着急。</p>
+<p>我们家里的USB线和相关端口，可以从“长相”上看出区别，对应的接口标准是这样的：</p>
+<img src="https://sn3302files.storage.live.com/y4mcEET2j6ZwoJugu7bySu41KbbijxIET3nMUsBj746RX249j285RKON9r2_5geMi1EgYA76FHjLP0ZR79bAKN3pUuNbMVUr4eZv9EL9UI7_COzT2HDw1c1d7MgZnK8TNk2MpNmKh_76GdnaOJRlkMv7x8gHrHbvpJCBmRibLWlqh5xbTfnvRFIKGB3zFFa9m-K?width=660&height=70&cropmode=none" width="660" height="70" />
+<p>具体哪个接口是什么标准，能达到什么速度，可参考下面这个图：</p>
+<img src="https://sn3302files.storage.live.com/y4mk02_SkStPMLqjn6l5631aWdybQfd2b9tqjPCzwkNFHHgEbUtgf2j_icHdzPNNXCiqzIHs2cwdUGWvi5heQyQdJ1q62iTdz9HUj5wtNKEHXDM9yti3WSEFT10KmtkRJsEGDD2fXpovRLD5D4ctVPRXRNGYY6MypKYg0wsYWVI5MdRxZz1-WB5LEVyQwWI6d7S?width=545&height=559&cropmode=none" width="545" height="559" />
+<p>有点凌乱了吧？如果厂商做得不规范，到底需要哪根USB连接线，你可能还会用到这个表：</p>
+<img src="https://sn3302files.storage.live.com/y4mMgXIOVZZH9OVMOv2WGkh6W8chFj3HrhJTF3QjssojKQDIIvur6NmzLkR4gUlf_Le0U1xAkBolEvcI6Qw22ESjOcbeuTW3JOWd5F-G6OQ4ZHhsc-6WIUA1rYKy7C_Lo9OlmoftHyfnUr4al-hJgphgJLpi1xUwBibjp2HjAfbo8fL1rFdbSF0oDWWLf1Emljh?width=660&height=429&cropmode=none" width="660" height="429" />
+<p>所以，以前电脑或者笔记本接口需要很多：</p>
+<img src="https://sn3302files.storage.live.com/y4moCZfAmpbXvwzgDGUiL475duWwYBUd32apxGELtXSnAIv7Z0bZbV9lOo9QuGqkIKPwpd2OV1ikerXhWVA3QGw0qJ5GoY5Rpo5iq9NxsrjXl677YR5f_oNQecKKOmugG7Kb9zkmYNpVkN7_NeLJRFoXEhKuA4af6Yg-j233fEZ4OhPzwHjAY6xMJ_78sJ7gCAI?width=660&height=198&cropmode=none" width="660" height="198" />
+<p>上面这个图只是笔记本一个侧面的接口，另一侧可能还有接口！</p>
+<p>如果以后能用USB4会怎么样呢，大概会长这样：</p>
+<img src="https://sn3302files.storage.live.com/y4mRUl4ibfZLTrCq00XwKeZfd7HRp_c4PyTqUPTp9L0js-5b6Lcv3-VW0mMa4nC-yV-dZjVBgKnkHhECHSjjucJKVVR_0bfSCk05xJ-BySRlD8waEQZ5lqdTrQdw33wOhw2X5YHFhFYEWwNsDJeLXQCjJYRoKW5oywyPXNTS2ABg0g3YZC4tVm5mWlPrs_SIST0?width=660&height=130&cropmode=none" width="660" height="130" />
+<p>对了，你get到了，就是用一个Type-C接口解决所有数据传输，甚至可能包括电源。</p>
+<img src="https://sn3302files.storage.live.com/y4mxh53jSbb_1GIaLh3ThOsyTjmP0pmuE2lZwR8i6mu38GMdelTEqIdMmENaTvXYyLgA5UQECI-pU10ntVNdGrQMe_qDRLchob_5Hx8BnCpwHMpFpsKQTRAV710BxmNMHCFc_ndBF_Vf3w1WLzFVgV4wbZit20woO81ZUkk5405AQdvQkWAMzH4u7M4roS0a1as?width=660&height=133&cropmode=none" width="660" height="133" />
+<p>当然，它的标准也比较复杂，不过那是专家的事，我们看看就行：</p>
+<img src="https://sn3302files.storage.live.com/y4mI78pyEtSrFJOe54wtPq4SftFkiy-2fp5uFkSKzw-QfNrjUfl2Zpst3ianvaAwt4-ucvxcouNxEJv9bjkjOutXeQuMP-WTJDkucLLMUOQdZCdKTNg2ZfL9G4_sPcmh2AWppthalOM98cx7vkf86wKhIwOyAogZTlR_SvGO8s8VOc_dExfTw90lbRCBBNcmhqO?width=660&height=495&cropmode=none" width="660" height="495" />
+<p>对我们用户来说，简单干净，方便使用。如果你还想使用老设备，而最新购买的电脑上又只有USB4，也可以利用扩展坞来解决，像这样的：</p>
+<img src="https://sn3302files.storage.live.com/y4mQe43VHdIKoCsWQ8xhs3b566Pco-FLK4gmpJIy19SRze6fCfE-dU6VkjygTEhA2nTO3j6_T19UQPdeeaxWBXOG2T0BKqZWcfJo7kgikcBoHgljY6J5SGP7pVc_yYEarpdaFdDJYLR8ydOA9IxQhzOjymtjfKCw8hrw4sO_00xP3xGEvw3k55CA6WXwyS0Eqkx?width=660&height=435&cropmode=none" width="660" height="435" />
+<p>当然最新的技术，也意味着可能还没有规模生产，价格也会略贵。我上IT之家截了张图，大家可以感受一下，支持240W供电的USB4，大约440元。</p>
+<img src="https://sn3302files.storage.live.com/y4m64AmHEkAyTcqfrgwmHHldNiTEEf1qZoPKX-bynT9ShEUjPMmXwqa5ls8CnRsQVYB9dISec12ktlIB9ne4FF-nlnkqewML8NKcTGhMFEJNxn7umvxk6zVtjs0c6-Sjo8xprE0EEO05b9ZSo1aoCOCESPdpYhfSBKoFCdaZMVkrsKSoNXqN19yX2zJtBfSlEX7?width=789&height=886&cropmode=none" width="789" height="886" />
+<p>好了，总结一下，今天介绍了最新的USB4标准，普通人应该知道：</p>
+<ol>
+<li>最新的USB标准是USB4，注意字母和数字间没有空格；</li>
+<li>USB4标准使用Type-C接口，速率最高可达40Gbps;</li>
+<li>如果设备支持，以后电脑可能只需要一根USB4线。</li>
+</ol>
+<p>另外附件里提供一些资料给爱好学习的同学，大家有什么想法的，也可以给我留言。</p>
+<p>附件：</p>
+<p>附件一-<a href="https://pan.baidu.com/s/1UFGezQGhKLwdtjI-VeGiyQ">卓克《科技参考》更快更统一，新USB口来了(提取码：cvm7)</a></p>
+<p>附件二-卓克文章的音频(提取码：6o67)<br>
+<audio src="https://pan.baidu.com/s/1r-4TvhgrH5yg3o7Lvq1YSA"></audio></p>
+<p>附件三- <a href="https://pan.baidu.com/s/1FPz9PKG6mE9IquDHkJr_Cw">USB4规范语言使用指南(提取码：agxx)</a></p>
+<p>附件四- <a href="https://pan.baidu.com/s/1ACrd7ISa0l55k6TTBsW3RQ">USB4 Electrical Test Specifications(提取码：588a)</a></p>
+<p>附件五- <a href="https://pan.baidu.com/s/109QoNiU7eGQMHIvJMI_KIQ">USB4 Specification 20220331(提取码：vz64)</a></p>
+]]></content>
+    </entry>
+</feed>
