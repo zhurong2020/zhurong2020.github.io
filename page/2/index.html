@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1753387984182">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="学习 分享 进步">
+    
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1753387984182" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/vps-guan-li-zhi-nan-zhang-wo-putty-yu-winscp-de-xie-tong-mo-fa/">
+                  <h2 class="post-title">基础篇4-掌握PuTTY与WinSCP的协同魔法</h2>
+                </a>
+                <div class="post-date">
+                  2024-04-26
+                </div>
+                <div class="post-abstract">
+                  <p>在管理VPS时，Putty和WinSCP是最重要的二个工具，帮助Windows用户实现远程登录VPS和文件传输。本文涉及这两个工具的功能介绍、下载、安装和配套使用案例，另外文末还附上了Linux Ubuntu下的常用命令。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/vps-guan-li-zhi-nan-zhang-wo-putty-yu-winscp-de-xie-tong-mo-fa/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/vps-guan-li-zhi-nan-zhang-wo-putty-yu-winscp-de-xie-tong-mo-fa.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/shen-ru-liao-jie-racknerd-vpsgong-neng-guan-li-yu-you-hua/">
+                  <h2 class="post-title">基础篇3-深入了解RackNerd VPS功能及管理</h2>
+                </a>
+                <div class="post-date">
+                  2024-04-17
+                </div>
+                <div class="post-abstract">
+                  <p>已经购买了RackNerd的同学，请跟着本文，继续学习如果通过RackNerd网站，来完成日常VPS状态的查看和实现一些简单管理。如果你还在犹豫，请先找到并阅读前一篇《云端启航：轻松拥有自己的VPS，开启你的云端之旅》，年仅10.99美元起，即可开启专属的云端生活。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/shen-ru-liao-jie-racknerd-vpsgong-neng-guan-li-yu-you-hua/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/shen-ru-liao-jie-racknerd-vpsgong-neng-guan-li-yu-you-hua.webp')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/tong-zhi-xin-wan-ju-shang-xian-la-kuai-lai-tan-suo-geng-da-de-ai-shi-jie/">
+                  <h2 class="post-title">体验篇6-使用Lobe Chat探索更大的AI世界</h2>
+                </a>
+                <div class="post-date">
+                  2024-04-16
+                </div>
+                <div class="post-abstract">
+                  <p>介绍Lobe Chat——一个革命性的平台，让你随心所欲切换不同的大语言模型（LLM），每个模型都赋予你不同的超能力。点击文中链接，还可以直接体验Lobe Chat的魔法，开启你的AI多元宇宙之旅！如果你热爱技术，还可以通过我们的付费咨询服务，学习如何自建这样的平台。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/tong-zhi-xin-wan-ju-shang-xian-la-kuai-lai-tan-suo-geng-da-de-ai-shi-jie/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/tong-zhi-xin-wan-ju-shang-xian-la-kuai-lai-tan-suo-geng-da-de-ai-shi-jie.webp')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/qing-song-shang-shou-yong-kai-yuan-zi-tuo-guan-xiang-mu-da-zao-ni-de-shu-zi-wang-guo/">
+                  <h2 class="post-title">体验篇2-用开源自托管项目打造你的数字王国</h2>
+                </a>
+                <div class="post-date">
+                  2024-04-15
+                </div>
+                <div class="post-abstract">
+                  <p>如果你已经购买了VPS，那么通过安装配置开源项目，就能实现自托管，从而构建属于自己的云生活。本文简单介绍开源、自托管的定义，并通过几个已经搭建成功的开源项目截图，介绍这些开源项目能实现的功能。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/qing-song-shang-shou-yong-kai-yuan-zi-tuo-guan-xiang-mu-da-zao-ni-de-shu-zi-wang-guo/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/qing-song-shang-shou-yong-kai-yuan-zi-tuo-guan-xiang-mu-da-zao-ni-de-shu-zi-wang-guo.webp')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu/">
+                  <h2 class="post-title">基础篇2-轻松拥有自己的VPS，开启你的云端之旅</h2>
+                </a>
+                <div class="post-date">
+                  2024-04-15
+                </div>
+                <div class="post-abstract">
+                  <p>这是《云端生活入门：从小白到网络达人》系列文章的第一篇，主要介绍VPS、主机等相关概念。并通过操作选购RackNerd的VPS套餐，手把手教会你开启云端生活的最重要的一步。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu.webp')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/jie-suo-shu-zi-tu-shu-guan-tu-jie-z-library-qing-song-xia-zai-mi-ji/">
+                  <h2 class="post-title">解锁数字图书馆：图解Z-Library轻松下载秘籍</h2>
+                </a>
+                <div class="post-date">
+                  2024-01-29
+                </div>
+                <div class="post-abstract">
+                  <p>Z-Library是一个庞大的数字图书馆，是数字化阅读时代的有效利器。你可以免费注册账号，下载电子文件前还需要开通Discord账号。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/jie-suo-shu-zi-tu-shu-guan-tu-jie-z-library-qing-song-xia-zai-mi-ji/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/jie-suo-shu-zi-tu-shu-guan-tu-jie-z-library-qing-song-xia-zai-mi-ji.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/nextchatge-xing-hua-nin-de-chatgpt-ti-yan-kai-yuan-kuai-su-bu-shu-yu-duo-yuan-ying-yong/">
+                  <h2 class="post-title">体验篇5-NextChat个性化您的ChatGPT体验</h2>
+                </a>
+                <div class="post-date">
+                  2024-01-25
+                </div>
+                <div class="post-abstract">
+                  <p>NextChat是一个支持一键部署的可定制的Chat GPT类网页应用，支持集成OpenAI的GPT-3,GPT-4，Google的Gemini Pro等大语言模型，部署完成后，你可以在电脑或者手机的浏览器中直接访问页面，并和指定的大语言模型进行对话。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/nextchatge-xing-hua-nin-de-chatgpt-ti-yan-kai-yuan-kuai-su-bu-shu-yu-duo-yuan-ying-yong/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/nextchatge-xing-hua-nin-de-chatgpt-ti-yan-kai-yuan-kuai-su-bu-shu-yu-duo-yuan-ying-yong.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ti-yan-rang-ren-hu-xi-shun-chang-de-chatgpt/">
+                  <h2 class="post-title">体验篇4-让人呼吸顺畅的ChatGPT-Pandora（项目已停止）</h2>
+                </a>
+                <div class="post-date">
+                  2024-01-05
+                </div>
+                <div class="post-abstract">
+                  <p>这是一个曾经非常热门的项目，因为有了这个项目，部分加快了LLM类应用如ChatGPT在国内的普及，尽管已经停止运营，谨以此文感谢作者的贡献。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ti-yan-rang-ren-hu-xi-shun-chang-de-chatgpt/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/yun-duan-sheng-huo-ti-yan-rang-ren-hu-xi-shun-chang-de-chatgpt.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-chu-ti-yan-da-zao-zhuan-shu-de-duo-gong-neng-jia-ting-fu-wu-qi/">
+                  <h2 class="post-title">体验篇1-打造专属的多功能家庭服务器</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-31
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-chu-ti-yan-da-zao-zhuan-shu-de-duo-gong-neng-jia-ting-fu-wu-qi/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/yun-duan-sheng-huo-chu-ti-yan-da-zao-zhuan-shu-de-duo-gong-neng-jia-ting-fu-wu-qi.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao/">
+                  <h2 class="post-title">巴伦周刊公布了2024年十大股票榜单（中英文对照）</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-30
+                </div>
+                <div class="post-abstract">
+                  <p>巴伦周刊去年选出的股票，平均回报约为31%，这次又选出了10只股票，让我们来看看有哪些公司。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-cong-xiao-bai-dao-wang-luo-da-ren/">
+                  <h2 class="post-title">基础篇1-云端生活入门：从小白到网络达人</h2>
+                </a>
+                <div class="post-date">
+                  2023-11-22
+                </div>
+                <div class="post-abstract">
+                  <p>在这个数字化不断深入的时代背景下，每个人都需要掌握一些技术知识，这已经变成了现代生活的一个新常态。针对这一现象，我精心策划了“云端生活入门：从小白到网络达人”系列文章，目的是以极具性价比的方式，带领大家享受到科技发展的红利。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-cong-xiao-bai-dao-wang-luo-da-ren/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/yun-duan-sheng-huo-ru-men-cong-xiao-bai-dao-wang-luo-da-ren.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-yong-chatgpt-4-kai-qi-ge-xing-hua-zai-xian-xue-xi-zhi-lu/">
+                  <h2 class="post-title">体验篇3-用ChatGPT-4开启个性化在线学习之旅</h2>
+                </a>
+                <div class="post-date">
+                  2023-11-22
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-yong-chatgpt-4-kai-qi-ge-xing-hua-zai-xian-xue-xi-zhi-lu/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/yun-duan-sheng-huo-ru-men-yong-chatgpt-4-kai-qi-ge-xing-hua-zai-xian-xue-xi-zhi-lu.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/ru-he-li-yong-hao-shi-jian-guan-li-de-gong-ju/">
+                  <h2 class="post-title">如何利用好时间管理的工具-“我的一天”+微软代办+印象笔记+forest专注森林</h2>
+                </a>
+                <div class="post-date">
+                  2022-07-13
+                </div>
+                <div class="post-abstract">
+                  <p>这几天读到了吴军《硅谷来信3》的第160封信，提到了时间管理的工具和具体的做法，主要是任务清单+计时器+子弹记录三种工具的使用和如何克服拖延症，下面的笔记分享给大家，顺便也提提自己的用法。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/ru-he-li-yong-hao-shi-jian-guan-li-de-gong-ju/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ru-he-li-yong-hao-shi-jian-guan-li-de-gong-ju.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/wo-men-wei-he-xu-yao-usb4-pu-tong-ren-ying-gai-liao-jie-de-usb4-zhi-shi/">
+                  <h2 class="post-title">我们为何需要USB4-普通人应该了解的USB4知识</h2>
+                </a>
+                <div class="post-date">
+                  2022-06-22
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/wo-men-wei-he-xu-yao-usb4-pu-tong-ren-ying-gai-liao-jie-de-usb4-zhi-shi/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/wo-men-wei-he-xu-yao-usb4-pu-tong-ren-ying-gai-liao-jie-de-usb4-zhi-shi.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/ni-chi-cheng-gong-zhi-chai-2-xiao-shi-liao-liao-ni-ba-shi-jian-hua-zai-na-er-liao/">
+                  <h2 class="post-title">你离成功只差2小时-聊聊你把时间花在哪儿了？</h2>
+                </a>
+                <div class="post-date">
+                  2022-06-21
+                </div>
+                <div class="post-abstract">
+                  <p>根据统计数据，普通人和职业发展好的人，时间管理上的差异就只有每天2小时，而每天手机的平均使用时间是4小时，如果通过时间管理，改变生活习惯，你的生活可能会发生很大改变。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/ni-chi-cheng-gong-zhi-chai-2-xiao-shi-liao-liao-ni-ba-shi-jian-hua-zai-na-er-liao/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ni-chi-cheng-gong-zhi-chai-2-xiao-shi-liao-liao-ni-ba-shi-jian-hua-zai-na-er-liao.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/gei-xue-xi-tuo-shui-cong-ji-bi-ji-kai-shi/">
+                  <h2 class="post-title">给学习“脱水” 从记笔记开始</h2>
+                </a>
+                <div class="post-date">
+                  2022-06-19
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/gei-xue-xi-tuo-shui-cong-ji-bi-ji-kai-shi/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/gei-xue-xi-tuo-shui-cong-ji-bi-ji-kai-shi.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/guan-yu-ben-wang-zhan-ti-gong-de-xue-xi-zi-yuan-de-shuo-ming/">
+                  <h2 class="post-title">关于本网站提供的学习资源的说明</h2>
+                </a>
+                <div class="post-date">
+                  2022-06-19
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/guan-yu-ben-wang-zhan-ti-gong-de-xue-xi-zi-yuan-de-shuo-ming/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/guan-yu-ben-wang-zhan-ti-gong-de-xue-xi-zi-yuan-de-shuo-ming.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/chong-xin-an-zhuang-qun-hui-nasds216sedsm7bao-mu-ji-jiao-cheng/">
+                  <h2 class="post-title">重新安装群晖NAS(DS216SE)DSM7“保姆级”教程</h2>
+                </a>
+                <div class="post-date">
+                  2022-06-13
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/chong-xin-an-zhuang-qun-hui-nasds216sedsm7bao-mu-ji-jiao-cheng/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/chong-xin-an-zhuang-qun-hui-nasds216sedsm7bao-mu-ji-jiao-cheng.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/gao-kao-sheng-ru-he-tian-bao-zhi-yuan-ru-he-zhao-dao-zi-ji-xin-yi-de-zhuan-ye/">
+                  <h2 class="post-title">高考生如何填报志愿，如何找到自己心仪的专业</h2>
+                </a>
+                <div class="post-date">
+                  2022-06-03
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/gao-kao-sheng-ru-he-tian-bao-zhi-yuan-ru-he-zhao-dao-zi-ji-xin-yi-de-zhuan-ye/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/gao-kao-sheng-ru-he-tian-bao-zhi-yuan-ru-he-zhao-dao-zi-ji-xin-yi-de-zhuan-ye.jpeg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/lesslessde-dao-tou-tiao-greatergreater-guan-yu-zhi-ye-sheng-ya-san-jie-duan-he-zhong-shen-jiao-yu-ping-tai/">
+                  <h2 class="post-title">职业生涯三阶段和“终身教育平台”介绍</h2>
+                </a>
+                <div class="post-date">
+                  2022-05-30
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/lesslessde-dao-tou-tiao-greatergreater-guan-yu-zhi-ye-sheng-ya-san-jie-duan-he-zhong-shen-jiao-yu-ping-tai/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/lesslessde-dao-tou-tiao-greatergreater-guan-yu-zhi-ye-sheng-ya-san-jie-duan-he-zhong-shen-jiao-yu-ping-tai.jpeg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/de-dao-app-dan-sheng-liu-zhou-nian-liao-tui-jian-xue-xi-mian-fei-de-pin-kong-shou-ce-80/">
+                  <h2 class="post-title">得到app诞生六周年了-推荐学习免费的品控手册8.0</h2>
+                </a>
+                <div class="post-date">
+                  2022-05-25
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/de-dao-app-dan-sheng-liu-zhou-nian-liao-tui-jian-xue-xi-mian-fei-de-pin-kong-shou-ce-80/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/de-dao-app-dan-sheng-liu-zhou-nian-liao-tui-jian-xue-xi-mian-fei-de-pin-kong-shou-ce-80.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/you-wto-guan-yu-xin-guan-yi-miao-zhi-shi-chan-quan-zui-xin-jin-zhan-de-xin-wen-xiang-dao-de/">
+                  <h2 class="post-title">由WTO关于豁免新冠疫苗知识产权最新进展想到的</h2>
+                </a>
+                <div class="post-date">
+                  2022-05-23
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/you-wto-guan-yu-xin-guan-yi-miao-zhi-shi-chan-quan-zui-xin-jin-zhan-de-xin-wen-xiang-dao-de/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/you-wto-guan-yu-xin-guan-yi-miao-zhi-shi-chan-quan-zui-xin-jin-zhan-de-xin-wen-xiang-dao-de.jpeg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/wen-shi-me-shuo-qi-wang-hai-zi-chao-guo-zi-ji-shi-bu-qie-shi-ji-de-du-wu-jun-lesslesshuo-gu-lai-xin-greatergreater/">
+                  <h2 class="post-title">为什么说期望孩子超过自己是不切实际的？</h2>
+                </a>
+                <div class="post-date">
+                  2022-05-20
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/wen-shi-me-shuo-qi-wang-hai-zi-chao-guo-zi-ji-shi-bu-qie-shi-ji-de-du-wu-jun-lesslesshuo-gu-lai-xin-greatergreater/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/wen-shi-me-shuo-qi-wang-hai-zi-chao-guo-zi-ji-shi-bu-qie-shi-ji-de-du-wu-jun-lesslesshuo-gu-lai-xin-greatergreater.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/neng-li-he-ren-pin-na-ge-geng-chong-yao-du-wu-jun-lesslesshuo-gu-lai-xin-greatergreater/">
+                  <h2 class="post-title">能力和人品哪个更重要</h2>
+                </a>
+                <div class="post-date">
+                  2022-05-16
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/neng-li-he-ren-pin-na-ge-geng-chong-yao-du-wu-jun-lesslesshuo-gu-lai-xin-greatergreater/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/neng-li-he-ren-pin-na-ge-geng-chong-yao-du-wu-jun-lesslesshuo-gu-lai-xin-greatergreater.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/photoshop-zi-xue-xi-lie-si-yi-chu-xiu-zheng-he-tian-jia-xiao-guo-chu-xue-zhe/">
+                  <h2 class="post-title">Photoshop官方教程（初学者）-PS自学系列（4/4）-移除、修整和添加效果</h2>
+                </a>
+                <div class="post-date">
+                  2022-05-11
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/photoshop-zi-xue-xi-lie-si-yi-chu-xiu-zheng-he-tian-jia-xiao-guo-chu-xue-zhe/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/photoshop-zi-xue-xi-lie-si-yi-chu-xiu-zheng-he-tian-jia-xiao-guo-chu-xue-zhe.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+    <a href="https://zhurong2020.github.io/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+    <a href="https://zhurong2020.github.io/page/3/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
