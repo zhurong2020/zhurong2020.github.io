@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>使用网格交易工具轻松进行仓位管理和自动化交易 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="探索网格交易策略的魅力！本文介绍一款开源的网格交易工具，帮助投资者轻松实现自动化交易和智能仓位管理。该工具支持多种资金分配方式，可获取实时股票价格，并能与证券账户API集成实现自动下单。
+文章详细讲解了网格交易的原理、优缺点，以及如何使用这..." />
+    <meta name="keywords" content="投资,股票" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">使用网格交易工具轻松进行仓位管理和自动化交易</h2>
+            <div class="post-date">2024-08-23</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/shi-yong-wang-ge-jiao-yi-gong-ju-qing-song-jin-xing-cang-wei-guan-li-he-zi-dong-hua-jiao-yi.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>探索网格交易策略的魅力！本文介绍一款开源的网格交易工具，帮助投资者轻松实现自动化交易和智能仓位管理。该工具支持多种资金分配方式，可获取实时股票价格，并能与证券账户API集成实现自动下单。<br>
+文章详细讲解了网格交易的原理、优缺点，以及如何使用这款工具创建个性化的交易计划。无论您是交易新手还是经验丰富的投资者，都能从中获益。立即下载体验，开启您的智能交易之旅！</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BD%91%E6%A0%BC%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5">什么是网格交易策略？</a><br>
+*
+<ul>
+<li><a href="#%E7%BD%91%E6%A0%BC%E4%BA%A4%E6%98%93%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9">网格交易的优缺点</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BD%91%E6%A0%BC%E4%BA%A4%E6%98%93%E5%B7%A5%E5%85%B7%E7%AE%80%E4%BB%8B">网格交易工具简介</a>
+<ul>
+<li><a href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E8%89%B2">功能特色</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%BD%91%E6%A0%BC%E4%BA%A4%E6%98%93%E5%B7%A5%E5%85%B7">如何使用网格交易工具</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B">示例</a>
+<ul>
+<li><a href="#%E5%8F%AF%E7%94%A8%E8%B5%84%E9%87%9110000%E5%85%83%E7%AD%89%E9%87%91%E9%A2%9D%E6%96%B9%E5%BC%8F%E5%88%863%E6%AC%A1%E8%B4%AD%E4%B9%B0%E8%82%A1%E7%A5%A8">可用资金10000元，等金额方式分3次购买股票</a></li>
+<li><a href="#%E5%8F%AF%E7%94%A8%E8%B5%84%E9%87%9150000%E5%85%83%E4%BF%9D%E7%95%9910%E7%9A%84%E8%B5%84%E9%87%91%E5%89%A9%E4%BD%99%E8%B5%84%E9%87%91%E4%BD%BF%E7%94%A8%E7%AD%89%E6%AF%94%E4%BE%8B%E6%96%B9%E5%BC%8F%E5%88%863%E6%AC%A1%E8%B4%AD%E4%B9%B0%E8%8B%B9%E6%9E%9C%E5%85%AC%E5%8F%B8aapl%E8%82%A1%E7%A5%A8">可用资金50000元，保留10%的资金，剩余资金使用等比例方式分3次购买苹果公司（AAPL）股票</a></li>
+<li><a href="#%E5%8F%AF%E7%94%A8%E8%B5%84%E9%87%91100000%E5%85%83%E4%BF%9D%E7%95%9920%E8%B5%84%E9%87%91%E5%89%A9%E4%BD%99%E8%B5%84%E9%87%91%E4%BD%BF%E7%94%A8%E7%BA%BF%E6%80%A7%E5%8A%A0%E6%9D%83%E6%96%B9%E5%BC%8F%E5%88%8610%E6%AC%A1%E8%B4%AD%E4%B9%B0%E4%BA%A4%E6%98%93%E6%8C%87%E4%BB%A4%E4%B8%AD%E7%9A%84%E8%82%A1%E7%A5%A8">可用资金100000元，保留20%资金，剩余资金使用线性加权方式分10次购买交易指令中的股票</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%90%8E%E7%BB%AD%E5%86%85%E5%AE%B9%E9%A2%84%E5%91%8A">后续内容预告</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5">下载链接</a></li>
+<li><a href="#%E9%99%84%E7%BE%8E%E5%9B%BD%E5%AF%8C%E9%80%94moomoo%E5%BC%80%E6%88%B7%E9%93%BE%E6%8E%A5">附：美国富途Moomoo开户链接</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="引言">引言</h2>
+<p>在股票交易过程中，我深刻体会到仓位控制和交易纪律的重要性。因此，我开发了一款基于网格交易策略的仓位管理工具，名为<strong>网格交易工具</strong>。这款软件已经开源在 <a href="https://github.com/znhskzj/grid-trading-plan-calculator">GitHub</a>，可以自由下载使用。</p>
+<figure data-type="image" tabindex="1"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170462&amp;authkey=%21AO-mwAE2cB0KLGY&amp;height=660" alt="网格交易工具" loading="lazy"></figure>
+<h2 id="什么是网格交易策略">什么是网格交易策略？</h2>
+<p>网格交易策略是一种通过在不同价格水平上分批买入和卖出来应对市场波动的策略。该策略的核心思想是在价格下跌时买入，在价格上涨时卖出，从而在波动的市场中获利。这种策略特别适合于震荡市场，能够平滑价格波动带来的风险，同时在市场反弹时锁定收益。</p>
+<figure data-type="image" tabindex="2"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKY_iK4Yy-4ZWLiTJg?embed=1&amp;width=660" alt="网格交易原理" loading="lazy"></figure>
+<h4 id="网格交易的优缺点">网格交易的优缺点</h4>
+<ul>
+<li><strong>优点</strong>：适合震荡市场，可以通过价格波动获利；自动化程度高，易于管理；无需预测市场方向。</li>
+<li><strong>缺点</strong>：在单边市场（持续上涨或下跌）中可能导致损失；需要较大的初始资金以分散风险。</li>
+</ul>
+<h2 id="网格交易工具简介">网格交易工具简介</h2>
+<p><strong>网格交易工具</strong>是一款易于使用的软件，帮助用户创建和管理网格交易策略。它提供了直观的图形界面，用户可以输入资金总额、初始价格、止损价格、网格数量以及资金分配方式，生成个性化的网格交易计划。</p>
+<figure data-type="image" tabindex="3"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170455&amp;authkey=%21AJ4Skn4xhQ7DUxg&amp;height=660" alt="网格交易工具界面" loading="lazy"></figure>
+<h3 id="功能特色">功能特色</h3>
+<ol>
+<li><strong>多种资金分配方式</strong>：支持等金额、等比例和线性加权的资金分配方式。</li>
+<li><strong>实时股票价格获取</strong>：可从Yahoo Finance和Alpha Vantage获取实时股票价格数据。</li>
+<li><strong>配置保存与导出</strong>：支持保存用户配置文件，并导出交易计划为CSV格式。</li>
+<li><strong>交易指令解析</strong>：能解析用户输入的交易指令并生成对应的交易计划。</li>
+<li><strong>自动化交易支持</strong>：与证券账户API集成（目前是Moomoo），设置后可实现根据购买计划自动下单。</li>
+</ol>
+<h2 id="如何使用网格交易工具">如何使用网格交易工具</h2>
+<ol>
+<li><strong>下载安装</strong>：访问 <a href="https://github.com/znhskzj/grid-trading-plan-calculator/releases">GitHub Releases</a> 页面，下载最新的可执行文件，双击运行即可。</li>
+<li><strong>输入交易参数</strong>：在工具界面上，输入可用资金、股票价格范围、网格数量等参数。</li>
+<li><strong>选择资金分配方式</strong>：选择等金额、等比例或线性加权分配方式。</li>
+<li><strong>生成网格交易计划</strong>：点击“计算购买计划”按钮，工具会自动生成并显示交易计划。</li>
+<li><strong>保存和加载配置</strong>：使用用户配置文件（userconfig.ini），可保存常用设置并在下次启动时自动加载。</li>
+</ol>
+<h3 id="示例">示例</h3>
+<h4 id="可用资金10000元等金额方式分3次购买股票">可用资金10000元，等金额方式分3次购买股票</h4>
+<p>假设你有10000元，目标购买股票价格为50元，止损价格为30元，网格数量为3。选择等金额分配方式并点击“计算购买计划”后，工具会在提示区域显示网格交易计划，包括每个网格的买入价格、数量和分配的资金。</p>
+<figure data-type="image" tabindex="4"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170458&amp;authkey=%21AOVFWgcBnJJaxaw&amp;width=660" alt="网格交易计划举例1" loading="lazy"></figure>
+<h4 id="可用资金50000元保留10的资金剩余资金使用等比例方式分3次购买苹果公司aapl股票">可用资金50000元，保留10%的资金，剩余资金使用等比例方式分3次购买苹果公司（AAPL）股票</h4>
+<p>假设你有50000元，目标购买苹果公司（AAPL）股票，点击左侧的苹果股票代码：AAPL，工具会联网查询到AAPL目前的股价，并设定止损价格，再次点击“保留10%计算”，工具就会再提示区域显示网格交易计划，包括每个网格的买入价格、数量和分配的资金。</p>
+<figure data-type="image" tabindex="5"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170464&amp;authkey=%21AHqTW5ag9VbNZ5Q&amp;height=660" alt="网格交易计划举例2" loading="lazy"></figure>
+<h4 id="可用资金100000元保留20资金剩余资金使用线性加权方式分10次购买交易指令中的股票">可用资金100000元，保留20%资金，剩余资金使用线性加权方式分10次购买交易指令中的股票</h4>
+<p>假设你有100000元，目标是根据交易指令，分10次购买股票。先将具体的交易指令输入或者粘贴到“交易指令”位置，比如“UPST 支撑39.2，压力40.7，止损38.6”，然后调整其它参数如初始资金、网格数量、分配方式，点击“保留20%计算”按钮后，工具就会再提示区域显示网格交易计划，包括每个网格的买入价格、数量和分配的资金。</p>
+<figure data-type="image" tabindex="6"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170465&amp;authkey=%21AKVtO0GjP40V7vA&amp;height=660" alt="网格交易计划举例3" loading="lazy"></figure>
+<p>####### 如果你已经设置了特定证券账户的参数，可以点击“按标的计划下单”，直接生成下单交易<br>
+假设你已经完成了证券账户的初始设置，目前本软件对接的是Moomoo，后续视情况会添加其它证券客户端的API支持，点击“按标的计划下单”按钮，软件会自动将计划下单到证券账户中。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170466&amp;authkey=%21AFPxkxb-sWoBf_Y&amp;height=660" alt="网格交易计划举例4" loading="lazy"><br>
+文章最后有我目前正在使用的券商-富途Moomoo的开户链接和简单介绍。</p>
+<h2 id="后续内容预告">后续内容预告</h2>
+<p>在接下来的系列文章中，我们将深入探讨网格交易策略的原理、使用场景和进阶技巧。敬请期待！</p>
+<h2 id="下载链接">下载链接</h2>
+<ul>
+<li><a href="https://github.com/znhskzj/grid-trading-plan-calculator/releases/download/v1.5.7/Grid.Trading.Tool-1.5.7.exe">网格交易工具 v1.5.7</a></li>
+</ul>
+<p>希望这款工具能帮助大家更好地管理仓位，实现轻松的自动化交易。如果你有任何问题或建议，欢迎在GitHub上与我们联系。</p>
+<h2 id="附美国富途moomoo开户链接">附：美国富途Moomoo开户链接</h2>
+<p>Futu Holdings Ltd.是一家领先的数字化金融科技公司，专注于为用户提供覆盖多个市场的全数字化在线券商服务，继而变革投资体验。2019年3月8日，富途（NASDAQ: FUTU）正式登陆美国纳斯达克交易所。富途通过自主研发的一站式数字化金融服务平台富途牛牛和moomoo，提供面向C端的市场数据、资讯、社交等服务，旗下子公司富途证券等港股美股券商提供面向C端的港股、美股、A股通及新加坡的股票交易和清算、融资融券、财富管理等服务，并以用户为中心构建完善的金融科技生态系统，连接用户、投资者、企业、证券分析师、媒体和意见领袖。<br>
+其它相关介绍可以上网查询，下面提供一个开户链接，通过我的链接开户并确认的，不但可以享受8.1% APY，还可以领取高达15支免费股票，另外还将获得我录制的本软件对接Moomoo的视频教程，希望对大家有所帮助。<br>
+<a href="https://j.moomoo.com/01hjgY">富途Moomoo开户链接</a></p>
+<!-- more -->
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/VI3oOVxe0w/" class="tag">
+                    投资
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/csH7KUJGVb/" class="tag">
+                    股票
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/liao-tian-ji-qi-ren-xiao-mi-jue-promptrang-ai-geng-dong-ni/">
+                  <h3 class="post-title">
+                    聊天机器人小秘诀：Prompt，让AI更懂你
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

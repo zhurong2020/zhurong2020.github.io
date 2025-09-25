@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>如何在Gridea博客上搭建Valine评论系统 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="2022年的劳动节，我终于替换了自己博客网站的评论系统。
+
+这里记录一下遇到的问题，方便查询和同道避坑。
+我的博客是使用的Gridea系统搭建的，它默认提供的两个评论系统是Gitalk和Disqus。Gitalk需要github账号登录，对..." />
+    <meta name="keywords" content="Gridea" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">如何在Gridea博客上搭建Valine评论系统</h2>
+            <div class="post-date">2022-05-02</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ru-he-zai-gridea-bo-ke-shang-da-jian-valine-ping-lun-xi-tong.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>2022年的劳动节，我终于替换了自己<a href="https://zhurong2020.github.io">博客网站</a>的评论系统。</p>
+<img src="https://sn3302files.storage.live.com/y4mF-AmLNfx1ytPxIpmlcR3ovbQEoNB-MJ3dbcI1CRTBkprtdSxK_gMfzHOifE2dli5W7KzVIcR9WhpwAftmAe_q5cgAiFGvBqLaV9XRfuQXwpW8x8UbUfBX65dEDH3bw0C3iDNol9Imczc0L5pIt0_0qyqe0vRqe-oKP7x1jyHBQNTXQkoJA789EqU0Q7_UdQ_?width=660&height=315&cropmode=none" width="660" height="315" />
+<p>这里记录一下遇到的问题，方便查询和同道避坑。</p>
+<p>我的博客是使用的Gridea系统搭建的，它默认提供的两个评论系统是Gitalk和Disqus。Gitalk需要github账号登录，对于没有github账号的用户来说就不方便了，而disqus国内也不可用。通过Google搜索后，发现有前辈推荐使用Valine评论系统。</p>
+<p>Valine是一款基于LeanCloud的快速、高效的无后端评论系统。</p>
+<p>官网地址是：<a href="https://valine.js.org">点击进入Valine官网</a>。</p>
+<p>下面简单介绍一下如何在Gridea博客上搭建Valine并配置：</p>
+<ol>
+<li>
+<p>首先需要注册<a href="https://www.leancloud.cn/">LeanCloud</a>；</p>
+</li>
+<li>
+<p>注册完成后创建应用；</p>
+</li>
+<li>
+<p>再进入控制台，“设置”-“应用凭证”，保存“appid”和“appkey”。这里需要注意看看REST API服务器的地址是否能访问，我就遇到了“华北”的不能访问，在“华东”可以访问（需要重新注册华东的账号），见下面截图；</p>
+<img src="https://sn3302files.storage.live.com/y4mrsDoJXNrQEa8nzg03tMHJaJqo6xTZmRbSLPy-XLz0VExB2dMGhOMIbFjzE1TLRb0vV9dAot7-2_LJTnuLkLC89q-yVwjp1QEnMALc_GpqLx2wdaWMXHE2rPmCIup9zriuOG25Fleht61hZ-1msZ4rBlByBFSHISsS-fEWjWcQQOQ11NPEbgtH3d6RAQndhdj?width=660&height=599&cropmode=none" width="660" height="599" />
+</li>
+<li>
+<p>在“数据存储”的“结构化数据”，自己创建一个“Comment”的class，创建好就像下图；</p>
+</li>
+</ol>
+ <img src="https://sn3302files.storage.live.com/y4mmPpjIXgcZPu5iYpiATwFnrADXSFhnkjiRfdZJT-kXV4fpq6tai3R3rmrSXMKBw7CNqcpj7lhFttFq-QBaYAwicLZpK8fYlkR0jiX3QkneAA2lBB-6bSuEY7-MwjEUFAiNG0GlyXzP_Bbh9IbWU8-9Jt6W7_Aow701cVfcW8mj2QfxPuJZGSSmQJ0ibgsbD3f?width=660&height=479&cropmode=none" width="660" height="479" />
+<ol start="5">
+<li>找到你自己使用的Gridea主题和Gridea的存盘路径，查看主题和路径的方法见下图；</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4mhlPphqAiRQFFjY5Ft-A6U5Qkj3OTRXqEZeOM-1a5Yc6Ti50aW74xC-qq8x4MYXs7bkpjlj5C0mINxvYOYkBw56QS_fuzJ_Qe_ePO_d91PrPPTfvLes3sYCaC04ig3y3hdF7sGVUo9nK-WvMFRMgZeChoG-ssinqOkkZoMSXHv1244gdSMLAR6EF5YYuEP8oT?width=660&height=296&cropmode=none" width="660" height="296" />
+<ol start="6">
+<li>找到这个主题对应的head.ejs文件如下图：</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4mUq1W7BncOwSDwzdL-RC8QQYTR1ZN9bfaJAJqY3a6zTYNV4_ILF4Ik8l-xRVTs0m93mHE5Z6XoT-ZHKUCVxLu7V2rjQcaFg655LtAQxOfbSvRqFyrS6PnMkwBHUZA9y7qHNRkCGk7UI6xnAAxiatiZUTujrmLeToG--RPAYh-2W_gCEN_7rj_YzeshztWJB7T?width=640&height=334&cropmode=none" width="640" height="334" />
+<p>加入下面截图中引号内的内容；</p>
+   <img src="https://sn3302files.storage.live.com/y4mX8UlAbrQgrFpd3HICauZlxiDRJMWb3GSyey6wAA8ddG0geXD6l7nu29UkGsIuBMc5su_xgAmNzfmiNcsf_f03F61E9cwQNPXO772NXAFOz6Tv_F07-4Y4JgOdj8ca7qXEr6jXIz5kLCgKW_qZ5nB-ujtcE71HBXHexgkP_Vsh2NwPTuyPqHDyV51RTGQ_iib?width=660&height=58&cropmode=none" width="660" height="58" />
+<ol start="7">
+<li>同样，找到post.ejs（应该在head.ejs文件的上一层目录中）并修改，加入下面引号内的内容（特别注意不要加appid前后的尖括号；</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4m65T0b9P-r8Rob-Q22lruvAL2AliifWQTkbNQpgNxCTRVDHgAZFbC-dA-fa1NCx2h8xYNGxnN3WNhzW07MiZ2VIDn3hdzmgT83Uq-wxqNOgSXtc1mBtJ2YrbZvTy1vFvKb2nO_fPFuIxNfoATsh6BK0xFbpTlCZbN4snb7ru79Wy3-7f-rxIbMXCS9M71X9X-?width=505&height=332&cropmode=none" width="505" height="332" />
+<ol start="8">
+<li>最后在gridea中将原来配置的评论关掉，如下图，就好了。</li>
+</ol>
+<img src="https://sn3302files.storage.live.com/y4mUEF8WtAnoAPJPLCT6BcSRo6xWnhHwbPqFe7p5TASRX3jC7s0ZnsAiuca7UBvfbEK6qpiW1cEHn1RxRFuDtCobcXOo8CQ3vRxwe9LR86y3-IkndEC7HZEnwsPj-y_Bz0G03cMmWMtiVRKFoBNqqj28e8RuDYbb927zvWPf8w6ah-geYtYy_Ia39VSnOyXVRn6?width=660&height=316&cropmode=none" width="660" height="316" />
+<p>赶快去试试吧，有什么想法的，欢迎来网站留言！</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/h-GSADBF6/" class="tag">
+                    Gridea
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/lao-zhao-pian-xiu-fu-xiao-guo-zen-me-yang-4-ge-zai-xian-wang-zhan-xiao-guo-bi-jiao/">
+                  <h3 class="post-title">
+                    老照片修复效果怎么样-4个在线修复网站效果对比
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

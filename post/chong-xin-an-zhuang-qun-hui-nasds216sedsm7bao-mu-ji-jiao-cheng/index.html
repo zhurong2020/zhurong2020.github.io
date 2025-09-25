@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>重新安装群晖NAS(DS216SE)DSM7“保姆级”教程 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="近期入手了一个群晖的NAS-DS216se，正好家里还有几个闲置的笔记本硬盘，重装DSM的时候记录了一遍过程，分享给大家参考。
+说明一下，家里原来有台DS212J，所以已经在电脑端安装了Synolog Assistant（以下简称SA）。以..." />
+    <meta name="keywords" content="个人" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">重新安装群晖NAS(DS216SE)DSM7“保姆级”教程</h2>
+            <div class="post-date">2022-06-13</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/chong-xin-an-zhuang-qun-hui-nasds216sedsm7bao-mu-ji-jiao-cheng.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>近期入手了一个群晖的NAS-DS216se，正好家里还有几个闲置的笔记本硬盘，重装DSM的时候记录了一遍过程，分享给大家参考。</p>
+<p>说明一下，家里原来有台DS212J，所以已经在电脑端安装了Synolog Assistant（以下简称SA）。以下安装步骤基本只要按提示点击确认。</p>
+<p>装好硬盘，连上网络后，使用SA，直接发现了未安装DSM的新NAS。</p>
+<img src="https://sn3302files.storage.live.com/y4m6z6PKvRVg-tfgLW3mEClu9cHSGsy2vdY4HzeelN0KhhM9v2y-63U2Wst8fNaQlX2nKi41AWVAHr3bpxLwhGI3Hzf7NPC0ie8LRwCeqZEaQUM_sTAUuloyh3SfmBsgKOPvCBmblMCmS9RI0TAknCjiTzu4kS17rQjOuxyaDkhaxvy4RXCLuj-5HwI15XCtK3a?width=660&height=160&cropmode=none" width="660" height="160" />
+<p>在SA中双击这台没有安装DSM的NAS，开始出现安装向导：</p>
+<img src="https://sn3302files.storage.live.com/y4mpnLCyYPphoHIzcnkS125x5CZw6kV7Bi2_a7PAo52mTtN3JtE5UD5nZmsExwcJR0ste7zjaFC_fwC8nyPBE7h_3dPUEPCnahoSVgoVxfA4iUNdPDFmBVCfbxOOQGTFi7Zqq3BCcsT4BaLklc18KJ3P7j-Biff7n3xY6fFBNNXZriQjAohBPwQi5Lrod70OuOw?width=415&height=528&cropmode=none" width="415" height="528" />
+<p>点击设置</p>
+<img src="https://sn3302files.storage.live.com/y4mzXU4PIrJAB3K651EEYJYjnEUiBWw0KC3tifHb98cG9pWURZKjz3gABpS2E0pHhwMCT3J_0bETdUf-VSAUuo90kOymGTMOM5fA5miyRd_c1qaCDsdCCif1ej_QCd4iFYGzdETLN5rQKjJ0rYGTFpN3J4IoRxTB_r1j11D6jHzgRuz-6_3vbzknojtsAIU8UDn?width=660&height=395&cropmode=none" width="660" height="395" />
+<p>点击“立即安装”</p>
+<img src="https://sn3302files.storage.live.com/y4mowen0JSlpgLQ0kfBfZhdzf-lD-KPi3T4qZ85Se4LJ_Y2RSx7zzdAp7TDMcQZEqUWEsiDAi00CajRhuGbISw_nQxhVBzJTezlJtpqoEOr3a652diPvxlogFSAygt0bORIkzjbaV3dQ0HHRxdb4X9zibKYeuOGZuXilcvEFo1zXOMo4H0FxP4y-W7LSZeCI-fL?width=660&height=332&cropmode=none" width="660" height="332" />
+<img src="https://sn3302files.storage.live.com/y4mD2G4_Bzzp4tUahYoJNAQdlJ6af05vCunVlLLyzXc9vr9WEDaIW0LEEthg1zgfU6YbEVYIM-TIHtPYxr-FI_P4ictHd_pcoujhmaAK8ej0trP-b2D5y-R2e75S_RjC6EvEyqsirBN1m0bZHO_ud5nCl29SUZbMpoSQmzIWVEsmDBo0XyAApw3Gdk3JAyA_7Oe?width=551&height=556&cropmode=none" width="551" height="556" />
+<p>如果出现以下错误，可以点击“手动安装”：</p>
+<img src="https://sn3302files.storage.live.com/y4mj0isjjzPO-XGFt0TbctnQKZY8_4saVWYQEYfh7GiBNBtYvDLCDoHkConrTOILsGn9L_eat0fTSN3VWA_OCHU3X2E5JRHwF9PkO67Be8tmCeV_N_E9I9b1bNpWXKOrPU9nPjxq9DqLugTU_vfzhac5lzdJIK5djOk5lgo5Pd0xyWEaTRSGAB8xqEI_vtqvAS1?width=660&height=435&cropmode=none" width="660" height="435" />
+<p>系统自动会转到群晖主页，并根据NAS型号找到对应的DSM系统：</p>
+<img src="https://sn3302files.storage.live.com/y4m9dn4NfOXl0SLBTpHwTmqSDWwx2w9jmN6UDHq29sfRNYTQW3swVUzRuTBJYdFRhQjggMmujUIWSGK0eUpvGRuukBz6ANlS7-LB2g6U3zffXSD2RLl0Kl3RcLS2zDZhphArJG-uC8tDv5S2xlv7Nvzo32FtjoDayElhyF73GUGyxJUbhQ7rWjjioiW51zUjjae?width=660&height=402&cropmode=none" width="660" height="402" />
+<p>点击下载，完成后，回到刚才画面，选择下载的文件：</p>
+<img src="https://sn3302files.storage.live.com/y4maDLOCxGZfj7TDYWWEsBzX9RSeavKA2HdLLy9FKsfqqmvk9WL9gg11nDIFOtW6vcgmkeX542K1e9AJhwyA040FQdzqqb6m0k86Xd_CBiYbF44Qyal3SrRLqvwOGKOh1G8sJZ3ZJtlUsl9bGKMK1VfGU9vdMXiDQmNfwgEpbL6ti9SGn7tK1x5zEDbFSBJNT8W?width=660&height=454&cropmode=none" width="660" height="454" />
+<img src="https://sn3302files.storage.live.com/y4my_ALiYW2Pt39bfiHoNF1fgo-I-FHcgC9mJlbXBnO_1pYcOe5QQhjPBgYquKOj5v9ARvRBn_UY4nuubY7TEWDBZ6o61a5MPUR22DuWhGcOE9xwHjyKCo7W_qWICEceTuVBDIytc-unUxl3TUBhKgRA5dgdnufsve6NB3qFooQvEdNc8hCQwQ5cqQzAgKTZxFs?width=660&height=450&cropmode=none" width="660" height="450" />
+<p>按系统提示点击：</p>
+<img src="https://sn3302files.storage.live.com/y4mmJlysmzrD_jSZU1OSU45ed2F4tdS8yydPIXtvU33xZ_jlqYiCH0QQKW9DECfhcom5zaEkIu5nVsYjZl_9s8nDwFK0DFiHH3evro6iJLSZKPHyD-S3_V4R3pUagJOapLBjiKYYjKZsmniaOoEX53hIdo7YeBUDMoWU_WjSOZ9ehdySb4fyLsU_VypYbc45DJk?width=611&height=525&cropmode=none" width="611" height="525" />
+<p>选择安装类型：</p>
+<img src="https://sn3302files.storage.live.com/y4m5HH4kywH3D95-ZN6M31oU7AYuVjyLZ4U7FhG5pas8XH0mNF-uPeFzBcKNvWEZXPVBglnWgzUk_JzKv9zK49ehq5dDBnT9a76FVE4jne5RJpCmN7MAztU-91av2VcNaS7IjJ2ITD1MTou-_eo32if1-uuKHYsghwDwVH8JvS7l0UfUo4Aolj9C7-EcJKJo6uo?width=660&height=321&cropmode=none" width="660" height="321" />
+<p>确认“立即安装”：</p>
+<img src="https://sn3302files.storage.live.com/y4m92en_pRFxp8wPjStUpjP8Urf1_6acDe2W0lOjv4wl2tYaUFygK_Q7caNG6ykTOOenH3xscfKIUKXU794uPFIyCY82z4303LMMBTJnvUAZ_psodHbHXrYUfmjIpyUd6aiCIgaYDbEpW5IzUgNwMm_F4AbQ_sYMfqQjUCwK_-baYI7ZP-7bceJKjRwZawXxyVd?width=660&height=427&cropmode=none" width="660" height="427" />
+<p>开始安装：</p>
+<img src="https://sn3302files.storage.live.com/y4m2_se5a2SihTaYZWyL2gKJyBs74YtjhQHOTKFddv4Ql2e0RlSzySousAtb7YamjeVyvzpx4FTWN2CHVmvqjdP2eAiuwXX5yZGEz4KG8Kcoh8YNAeoiWfPkT5pRXI3s60csoKl-Lk-UsDdtEXMRJ3WKHd7qh-MnciK3sKZbhIIu8Sgn9kDpZiMkgtMzl2EaFFR?width=578&height=549&cropmode=none" width="578" height="549" />
+<p>期间会有重启、安装套件等的提示：</p>
+<img src="https://sn3302files.storage.live.com/y4m2Wl6w4rNqe7QQXpaKbuphyTqHFgtg8T8h17djhOmNb6yNhlDnWAgh2CnXp8L6LdQAUcKEDsnQeh3_nar1nfIeXSxKQgkbt07_7TKQxvN1ZbLFzfNp2snVNK0WFxK-e4mv56wWTtciiGFKRamA8N-bSrdIMJP8557ZgpgT9NsRBgPLp91MdghPcrJGAjYUjeq?width=563&height=521&cropmode=none" width="563" height="521" />
+<img src="https://sn3302files.storage.live.com/y4m_djVxhLjcCaLVqAHHmrIFjJQijFQk6C_GVq4eFHAKn6nrSBTymjQXpecnnY3rmKKEuP4YXi43C5Oj3WV1sHi5LIVhlSlzb2Ez3EVD0ljnfnuU3ZORpXpCH2RBpi5xboKmq0zPy7aMUyAV6G-pfML2RS0rTB37EiqV7iunZkuLa4ajzSIxUU_7xK1ZSDsjLgx?width=619&height=366&cropmode=none" width="619" height="366" />
+<p>安装完成后，点击“开始”配置NAS:</p>
+<img src="https://sn3302files.storage.live.com/y4mjmSK3WDHNydwtZOoPCE9lRDJ3K0Mu-zyeui47kEAO2L5AQOIKDiz-Ef88DpD0wsMhldlre3HX-iinKOPOTFiN8xmsrnaE_QRQmMyTq-INLyrepjsWackO7yubCFYRg_Fs0DJnT3DQN7p6GJLZ-TSRJpvWNVZzVu2qSpm6cJ7_B0q8IbQH4ri90Y7J8c17G_w?width=489&height=457&cropmode=none" width="489" height="457" />
+<p>按系统提示的步骤，先创建管理员账户：</p>
+<img src="https://sn3302files.storage.live.com/y4mcojjphXkqMb0N1nivoiI0u8YmHxf1R5huajrmdv3KUyGcWGxymxSHh3kKMtdMPtYv6D36Tph9QoXP6jzlJbnOtAKkRFdWessh2jyGNbrZYbAuyDgeon7B3iHtf7JjQUmfe_ZQnCBI0mu3YpFmLJ0G4xpjlHxC3zGsZvNlDPLww72EhrdgetfF3xItleuaIGq?width=660&height=371&cropmode=none" width="660" height="371" />
+<p>配置更新选项等：</p>
+<img src="https://sn3302files.storage.live.com/y4mzoMwWZtV-D5pD8ApObg8kLGUnQ60t8indQxEp8iPf8ImFa5ebzOPFr5f7Y7OQmsk9zC4XaPaipSK5jDfXMEv-aAM5DKumWCWaZkESANVvkONOi68l8Yr5tiW69cN1rGsqYM4fgnpgOKqVhfSv8lbo5GnxyPkiNYMixePBEXhW53dCHiJEY3-UFjouWLQIOi1?width=660&height=372&cropmode=none" width="660" height="372" />
+<p>创建Synology账户，如果已有账户可以跳过：</p>
+<img src="https://sn3302files.storage.live.com/y4mzaiGU_cKt0nyhL0mUG4tfO8IKMLxt4qYuqCN-Fm43FNkW0nmgDzpTgU4kgunifU1nTGMOzzHr3qlMUeBtM4okIXdae_UXZpbmKv1MN7BigH3Cd8JjXICdwF0Ofx0I1Y-eTgpPJtcOq1ycSCDaMJIlrzwDIp6W-U5vjdA8ZOVs26Oa5okUbtjY51-gygy-Uyq?width=660&height=373&cropmode=none" width="660" height="373" />
+<p>如果出现错误，可以稍等下再试：</p>
+<img src="https://sn3302files.storage.live.com/y4mqCPO6darYEnH_TlbcBXTbkp4L9lP49Ogb13OCUp5zgt1apmo_wq1TNJbj3hiT0Hgt_tjzXFyd_TAvtV7uSQ2sXec1fj0k0fuHrIt-NH0bM5JRszetP4pYVIAEpTJffMrORlbnz86_rbhwBAwLx92gYCK2rJ6PUOKSTmpKb4b9AimbmSMNrT5X7JQyzhDFrKz?width=590&height=289&cropmode=none" width="590" height="289" />
+<p>收集个人信息的设备分析选项：</p>
+<img src="https://sn3302files.storage.live.com/y4mhfhfklVv3lrmTDuLagHYBZ0kAiTjhaHNYurThH7ci2BEfxf5bqgQBS16HWchj8GO0_SX2CYGKW4ZyyZjvHKb0JHIjjLwTVdqujbVCzmlmPYc7VgxUsliDjEN0hHna7uPLFaw8fOzCoRON-gmM5copl-jaI9HB4PByhi--gUj4Ob608rmKdG4j2fUxPSDRZ9E?width=660&height=371&cropmode=none" width="660" height="371" />
+<p>完成后，可以看到画面了，现在开始配置存储：</p>
+<img src="https://sn3302files.storage.live.com/y4mqHlwruv1pT0SFqhomqSnhWwsfACwxnABd1QfKz5HBFL466pudFLqRzs5ucN32gYw8Px0vtdynNAIQ6gV7xuH2HJTPhvgrdDkezgV7JcAbc3-UYzGdKjN9BTFlyQH1W1FOvkPTui5SyHq9yNPkW5o-YYD_5maZvz-wBdbwjq0lf7aIZZGM_CCMdtLRY8rFQea?width=660&height=322&cropmode=none" width="660" height="322" />
+<p>选择RAID类别，不清楚RAID概念请自行上网搜索。</p>
+<p>这个配置需要注意，特别关注数据安全的，应该选择SHR或者RAID，如果只是一般应用的，可以选择&quot;BASIC&quot;，这样可以充分用足所有磁盘容量：</p>
+<img src="https://sn3302files.storage.live.com/y4mPBR-bLbViQfMq19JylMaa22MODhUhaBfvmYS_E8xF4Af1YwVYaegWks7tpWfeYZuj9wQksAVhikOaftiqdLHHuvILu90zTvJtzv5s0ThmEXgqLmv5-Z895ErAc8Lz7Mc8k2-3OaqwF4htTX--jZTIZbNf7laNSzqRxocuq7JFVrOt4f2ulNNBZBgqLK-XChp?width=660&height=351&cropmode=none" width="660" height="351" />
+<p>如果安装了多个硬盘的，选择一个硬盘：</p>
+<img src="https://sn3302files.storage.live.com/y4mQH3f-eTnojzlrHRl-ogKUUWpVHW2iQfK0UEHnDekcULNkZjOhbJCjhxVwdammjmwJ-0-hEU42e2PsNzTxtOIV8D6EYEZMMEl3KsC63dYM-6v6WAL5LtcP_n6Y6OEp4EVaIbdEH2o47aZcQ1p2Ed3ptdzexaaQCnBGcDZxQWHEUatmBMq-MQaRR0i1AGQikD4?width=660&height=450&cropmode=none" width="660" height="450" />
+<p>可能会提示硬盘并非Synology兼容，没关系，继续：</p>
+<img src="https://sn3302files.storage.live.com/y4me16WlWjVf1ktAIKVuWidhYB3v6BXx5H733UGUMpHvmgmzi1X9JUUev1goY-3VpaA1vhJI75DFwEt5TGZlW5oN4lgnO_6gRfniDGczVDy9dWBGdaxrh0zmazsiCOfzOy2q2yqtDEFro8GvqbAnGF_VCHx4bAc_7Pzn7Gn7PKGNnKuIWSVwKp55w-Ntw0wk_fh?width=660&height=454&cropmode=none" width="660" height="454" />
+<p>硬盘检查部分，如果确认硬盘没问题的，可以选择跳过检查。如果执行检查，视硬盘容量，可能比较耗时。我的200G的硬盘，检查用了约3小时。</p>
+<img src="https://sn3302files.storage.live.com/y4mYsxBzrkCYc_KoDl3m6BK77gtYYBx_LPbRRc9i-u_28lmjnYQh0PLAoJqT9uxm6ydQZi-si8ZBtrOGOXFeMaMPbQq7w0Dfu45QYSbnmqcbX3WNPGpyR7STjyvxQgO-DEPSn05aFSmk5Bb_G_Dd6LsuBr_SgyK1YmD_vW3atSE3pOhTth5TGfR7G1XZRHIe81M?width=660&height=449&cropmode=none" width="660" height="449" />
+<p>配置存储空间容量，注意第四行需要输入，可以点击右面的“最大化”按钮：</p>
+<img src="https://sn3302files.storage.live.com/y4mmHPJELxe2ZXTK1Dyv1AYJpbHxQp8rJR1dxMNgjaZ99E4icYogoUmntclRiCBUfB97M5JE2m01x0xs7I_AuI8cmOmvi2eRllyL7UBap30jnO2NtaVhy4P88GLvk2KZmgRmJqS2FshqeNTp0h4wnh1HVaXn4s65puy7nwb0qlr7aByQ12ZRCOCHHyz2GoPBctF?width=660&height=453&cropmode=none" width="660" height="453" />
+<img src="https://sn3302files.storage.live.com/y4mRyZoHV6V3mXoqu7Kfh8BJ29kos-2sRXCi8i9ahfMw9mMYq0pL-Ah-rxdlRIo-eF7P5VtCc_5ZZOaBUscYbIBLKhuq8Oo-67hKboB6DAMOMzvXQprubGSAuGx1i-_Z_H1EUdAnmOAr1RLHKG01BwmPEad4YzBY1JJQgJQtSQ-rU1d0Q3a6GouXbjFk6OxbaIZ?width=660&height=444&cropmode=none" width="660" height="444" />
+<p>反复确认中：</p>
+<img src="https://sn3302files.storage.live.com/y4mU40tyYuqp1utATrE1zsiLD7ogFacHMLldFc354AgBvtjeRvAv9-BpUD9r27iicXQHetX9k268_WISrBbfC_-sEJdMmIbNbHjBM1X1uFcd1FVw3D0XjsthXHvkNh14Op-ZDXGlriF5YauL64rq4GokeyIjaEdv74M2JprJlcKKNXYrD4R8PnJ0H_MBrN79fYx?width=660&height=453&cropmode=none" width="660" height="453" />
+<p>这是最后一步确认：</p>
+<img src="https://sn3302files.storage.live.com/y4m0bbuavxnkxXRRoBPij4tcIsC9ToyrBX_-dsYCYo-MT7rtAkK8C-UrOBo5DNyqRM8h__D4nsbC_VYk4YaGpibvtZb_xI0-9tuznVGRstnL8a9pXlzvR4gKiNuJgJztfqJsl5eSMrd0hShEmPqzwDNLkdMQgUkYgnfhiYMexwKvTi9_4NW-HJIQSVAFCx7l-wU?width=660&height=449&cropmode=none" width="660" height="449" />
+<p>如果刚才选择执行检查的，这个步骤比较耗时，完成后就大功告成了！</p>
+<img src="https://sn3302files.storage.live.com/y4mqsBXmlex6rZkG4ocOVP_b5a3aXYiJ40px21RIXRgciE4xvEbwI3jUWg1jbrHTKhTq1a9qbxJcj2enF-AUJEN4mQJu8XmEwZBgJnNcq8yOs9s4_z-A2rL0vse5Asv-BtYUSdyqgNa_uoEafo_aocd84Lv99sFRk10ykMJ4CujDJi6_nuTzDL6YooU8OWh0GBg?width=660&height=216&cropmode=none" width="660" height="216" />
+<img src="https://sn3302files.storage.live.com/y4mfCs_S_ewkYCCwixVMZIMa0yU6r3JnkLBPA0GrREbi0--yXL3Vj6PwfsD6B4rlXJW7FgI5KArdE_IQFuwlkT83lT8jDeQrmyOwNbugR7HCfIsW9NHnfnL-RXv3yOmLHrfegbf4yTxHKZeBalMFOy2apj53RNJHjJEQjqmjHo-IHFSFWhbahWdizh4ivXBIPho?width=660&height=143&cropmode=none" width="660" height="143" />
+<p>全部完成后，就可以开始你的家庭云(NAS)之旅了。</p>
+<img src="https://sn3302files.storage.live.com/y4mJXcwaKfu-mwd8cjEeA_8GNjEgNA9Qpg-vq9y5TWVyGe_gKdP5HN08dZWPuySXpDHvImhh1BNa41uN2LGooMODT6-elI-v87PR3F4WzTorxZ1CPIJztFEowDJ7GSfSML81LHFvb0KQ8L-svhyEN0OIi-lko43nikpgr6Kqa_T-ddtz2hwGLNfLouuVtCWjcXF?width=660&height=358&cropmode=none" width="660" height="358" />
+<p>如果你也在使用群晖或者其它NAS产品的，欢迎留言交流。</p>
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/_5VL4sIV2/" class="tag">
+                    个人
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/gao-kao-sheng-ru-he-tian-bao-zhi-yuan-ru-he-zhao-dao-zi-ji-xin-yi-de-zhuan-ye/">
+                  <h3 class="post-title">
+                    高考生如何填报志愿，如何找到自己心仪的专业
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

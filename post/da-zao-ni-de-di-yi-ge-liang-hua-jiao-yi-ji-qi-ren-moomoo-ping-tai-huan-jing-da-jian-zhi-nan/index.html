@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>打造你的第一个量化交易机器人 - Moomoo平台环境搭建指南 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="量化交易，听上去是不是有点高大上？其实不然，量化交易就是通过计算机程序来执行交易策略，实现自动化交易。在券商软件、AI等工具的帮助下，我们普通人也可以快速搭建自己的量化交易系统。
+本文将介绍如何在券商软件Moomoo平台上搭建量化交易环境，..." />
+    <meta name="keywords" content="投资,股票,AI" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">打造你的第一个量化交易机器人 - Moomoo平台环境搭建指南</h2>
+            <div class="post-date">2024-11-24</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>量化交易，听上去是不是有点高大上？其实不然，量化交易就是通过计算机程序来执行交易策略，实现自动化交易。在券商软件、AI等工具的帮助下，我们普通人也可以快速搭建自己的量化交易系统。<br>
+本文将介绍如何在券商软件Moomoo平台上搭建量化交易环境，让我们一起来看看吧！</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%B9%B6%E4%B8%8D%E5%A4%8D%E6%9D%82">引言：量化交易并不复杂</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9moomoo%E5%B9%B3%E5%8F%B0">为什么选择Moomoo平台</a></li>
+<li><a href="#%E5%B9%B3%E5%8F%B0%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85">平台下载与安装</a></li>
+<li><a href="#%E8%B4%A6%E6%88%B7%E5%BC%80%E9%80%9A%E6%B5%81%E7%A8%8B">账户开通流程</a></li>
+<li><a href="#%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">量化交易环境配置</a>
+<ul>
+<li><a href="#moomoo%E9%BB%98%E8%AE%A4%E7%9A%84%E9%87%8F%E5%8C%96%E9%85%8D%E7%BD%AE">Moomoo默认的量化配置</a>
+<ul>
+<li><a href="#%E6%88%91%E7%9A%84%E7%AD%96%E7%95%A5">我的策略</a></li>
+<li><a href="#%E6%96%B0%E5%BB%BA%E7%AD%96%E7%95%A5">新建策略</a>
+<ul>
+<li><a href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AD%96%E7%95%A5">可视化策略</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E7%AD%96%E7%95%A5">代码策略</a></li>
+<li><a href="#%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E7%AD%96%E7%95%A5">导入导出策略</a></li>
+<li><a href="#%E6%A3%80%E6%9F%A5%E7%AD%96%E7%95%A5">检查策略</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%AD%96%E7%95%A5">运行策略</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%B1%95%E6%9C%9B">总结与展望</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<blockquote>
+<p>免责声明：本文仅供学习交流使用，不构成任何投资建议。作者非专业人士，提醒读者：量化交易存在风险，投资需谨慎，请结合个人风险承受能力做出决策。</p>
+</blockquote>
+<h2 id="引言量化交易并不复杂">引言：量化交易并不复杂</h2>
+<p>本文介绍使用Moomoo的量化交易功能，搭建自己的量化交易系统。量化交易并不是高深的金融理论，也不需要高级的编程技能，只需要一台电脑、一个券商账户和一些基本的策略设计能力。通过量化交易，我们可以实现自动化交易，摆脱盯盘的烦恼，让交易更加规范、理性。</p>
+<h2 id="为什么选择moomoo平台">为什么选择Moomoo平台</h2>
+<p>Moomoo作为富途控股旗下的独立品牌，是一家在纳斯达克上市的全球性金融机构，截至2024年9月已拥有2400万全球用户，管理着892亿美元的客户资产。</p>
+<ul>
+<li>专业级数据支持：覆盖37,000多家上市公司</li>
+<li>完整的量化工具链：提供150多种分析工具</li>
+<li>活跃的交易社区：900万个投资想法分享</li>
+<li>教育资源丰富：2000多个教育课程</li>
+<li>API支持完善：适合搭建自动化交易系统</li>
+</ul>
+<h2 id="平台下载与安装">平台下载与安装</h2>
+<p><a href="https://www.moomoo.com/us/download?_ga=2.238948544.1312958802.1732547078-1229011274.1729781230&amp;d=usNavbarViewMoreVersions&amp;global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A61%7D">下载地址</a><br>
+请选择适合自己的版本，下载并安装，因为要使用量化策略，建议在电脑端下载windows版本。</p>
+<h2 id="账户开通流程">账户开通流程</h2>
+<p>可以访问<a href="https://j.moomoo.com/01hjgY">富途Moomoo开户链接</a>进行开户，按照页面提示提交开户申请。</p>
+<p>注意在提交申请时，使用下面截图中的第二个选项-其它区域：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKd_qXZYEd6UCbk5dA?embed=1&amp;width=660" alt="富途Moomoo开户页面" loading="lazy"><br>
+接下来的画面中输入自己的真实信息：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKd-uKtz-FoVvOynWA?embed=1&amp;width=660" alt="富途Moomoo开户信息填写" loading="lazy"></p>
+<p>入金目前支持三种方式，如果没有美国境内的银行账户的话，仅能使用Wire银行电汇这一方式。<br>
+通过App获取收款信息，复制这些信息，在银行主动发起电汇转账。</p>
+<h2 id="量化交易环境配置">量化交易环境配置</h2>
+<p>不需要额外安装开发环境，比如Python，不需要安装API，也不需要安装依赖，只需要在Moomoo平台上进行简单的配置即可。<br>
+以下画面均为Windows版本的Moomoo平台，Mac版本的操作类似。<br>
+找到量化交易入口，在左侧功能的最下方，点击<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgGxU3w-FqxSV7qXA?embed=1&amp;height=660" alt="Moomoo量化交易入口" loading="lazy"></p>
+<h3 id="moomoo默认的量化配置">Moomoo默认的量化配置</h3>
+<p>第一次点击Moomoo的量化功能时，系统会跳出一个向导，引导用户熟悉量化功能的使用，请按照提示进行操作。</p>
+<p>你需要知道的操作包括：策略分类，新建策略，导入导出策略，检查策略（语法），运行策略（回测和实盘），查看策略运行结果。<br>
+下面我们将逐一介绍这些操作。</p>
+<h4 id="我的策略">我的策略</h4>
+<p>点击量化功能并完成系统的向导后，你会看到如下界面：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgHTuex9O5PPWEQvw?embed=1&amp;width=278&amp;height=238" alt="我的策略" loading="lazy"></p>
+<h4 id="新建策略">新建策略</h4>
+<p>点击上图右上角的“+”号，能看到两种不同类型的策略：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgFLuBZObIpT4Vp0Q?embed=1&amp;width=281&amp;height=130" alt="新建策略" loading="lazy"><br>
+这两种策略是可视化策略和代码策略，对应不同的量化策略设计实现方式，第一种是可视化编码，第二种是代码编码。</p>
+<h5 id="可视化策略">可视化策略</h5>
+<p>第一种可视化策略：有点像是智能选股的操作，如果你有自己的想法，比较熟悉证券软件的操作，完全可以根据自己的想法设计量化策略。<br>
+可视化策略就是在屏幕中央通过两种不同类型的卡片和逻辑关系来设计策略，这种方式适合于不懂编程的用户，但是需要对证券市场有一定的了解。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgA4ez-mQy0j0AQUg?embed=1&amp;width=272&amp;height=671" alt="卡片分类" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgCK2owEndCfVPRtg?embed=1&amp;width=276&amp;height=554" alt="卡片属性" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgKKNbPDR3n75wEiw?embed=1&amp;width=660" alt="逻辑关系" loading="lazy"></p>
+<h5 id="代码策略">代码策略</h5>
+<p>第二种代码策略：需要自己开发代码实现量化逻辑，我们就选择这种。<br>
+不要害怕，现在有了ChatGPT等工具的帮助，没有编程基础，也完全能自己开发，何况我已经做好了一个基础版本的网格交易量化策略。以后如果有志同道合的伙伴，我们还能互相交流。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgJan3QSWUHJJesJA?embed=1&amp;width=660" alt="代码结构" loading="lazy"></p>
+<h5 id="导入导出策略">导入导出策略</h5>
+<p>代码策略可以自己编写，也可以导入别人的代码，这里我们选择导入，在新建策略的右面有一个导入按钮。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgFLuBZObIpT4Vp0Q?embed=1&amp;width=281&amp;height=130" alt="导入代码" loading="lazy"><br>
+如果自己编写了策略，希望分享给别人，可以右键点击策略名称，选择导出：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgDCZ2Pt1B2FIrv0w?embed=1&amp;width=297&amp;height=270" alt="导出代码" loading="lazy"></p>
+<h5 id="检查策略">检查策略</h5>
+<p>在导入策略或者自己新建策略后，真正测试前，需要检查策略的语法是否正确，点击画面右上角的“检查策略”按钮：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgFLuBZObIpT4Vp0Q?embed=1&amp;width=281&amp;height=130" alt="检查策略" loading="lazy"><br>
+如果没有语法问题，会弹出一个提示框，提示“检查通过”，否则会提示错误信息，并需要逐个修复错误。</p>
+<h5 id="运行策略">运行策略</h5>
+<p>检查通过后，就可以运行策略了，点击画面右上角的“运行策略”按钮，注意在“实盘运行”之前，一定要进行“历史回测”：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgEyM52LSq3NK6bDw?embed=1&amp;width=286&amp;height=144" alt="运行策略" loading="lazy"><br>
+历史回测中，会有一些选项需要设置，比如回测的时间范围、回测的标的、回测的资金等，这些都是需要根据自己的策略来设置的。<br>
+这些我们将在下一篇文章中详细介绍，当你多次回测得到了满意的结果后，就可以进行实盘运行了。</p>
+<h2 id="总结与展望">总结与展望</h2>
+<p>通过本文的介绍，我们看到量化交易并不是遥不可及的&quot;高科技&quot;。借助Moomoo平台提供的便捷工具，即使是普通投资者，也能轻松搭建自己的量化交易系统。告别烦人的盯盘，不再被情绪所困扰，让投资决策更理性、执行更规范。</p>
+<p>这仅仅是开始。在接下来的系列文章中，我们将深入探讨：</p>
+<ul>
+<li>如何运用网格交易策略构建稳健的量化交易系统</li>
+<li>策略参数如何优化设置</li>
+<li>回测技巧及实盘运行注意事项</li>
+<li>交易策略的持续优化与风险控制</li>
+</ul>
+<p>量化交易不是&quot;黑魔法&quot;，而是一种工具。通过合理运用这个工具，我们可以在投资的道路上走得更稳、更远。</p>
+<p>让我们继续前行，在下一篇文章中，我们将通过具体案例，一步步实现属于自己的量化交易策略！</p>
+<blockquote>
+<p>重要提醒：量化交易虽然可以帮助我们克服情绪困扰，但也存在其特有的风险。建议读者在尝试量化交易时，从小规模开始，在对策略充分验证后再逐步扩大规模。切记：任何投资都要量力而行，严格控制风险。</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/VI3oOVxe0w/" class="tag">
+                    投资
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/csH7KUJGVb/" class="tag">
+                    股票
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/1sEGD1rJY/" class="tag">
+                    AI
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-cong-mei-ri-cheng-pan-dao-qing-song-zi-dong-hua/">
+                  <h3 class="post-title">
+                    打造你的第一个量化交易机器人：从每日盯盘到轻松自动化
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

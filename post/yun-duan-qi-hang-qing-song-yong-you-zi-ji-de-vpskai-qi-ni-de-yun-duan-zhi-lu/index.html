@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>基础篇2-轻松拥有自己的VPS，开启你的云端之旅 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="这是《云端生活入门：从小白到网络达人》系列文章的第一篇，主要介绍VPS、主机等相关概念。并通过操作选购RackNerd的VPS套餐，手把手教会你开启云端生活的最重要的一步。
+
+
+
+
+
+
+引言
+What &amp; Why-什么是主机、VPS..." />
+    <meta name="keywords" content="云生活" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">基础篇2-轻松拥有自己的VPS，开启你的云端之旅</h2>
+            <div class="post-date">2024-04-15</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu.webp')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>这是《云端生活入门：从小白到网络达人》系列文章的第一篇，主要介绍VPS、主机等相关概念。并通过操作选购RackNerd的VPS套餐，手把手教会你开启云端生活的最重要的一步。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a></li>
+<li><a href="#what-why-%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%BB%E6%9C%BA-vps%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8vps">What &amp; Why-什么是主机、VPS，为什么要用VPS</a>
+<ul>
+<li><a href="#%E4%B8%BB%E6%9C%BA%E5%8F%8A%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E5%95%86">主机及主机服务商</a></li>
+<li><a href="#%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E5%8F%8Avps">主机服务及VPS</a></li>
+<li><a href="#%E4%B8%BA%E4%BD%95%E9%80%89%E6%8B%A9vps%E5%85%A5%E9%97%A8">为何选择VPS入门</a></li>
+</ul>
+</li>
+<li><a href="#%E6%88%91%E6%8E%A8%E8%8D%90%E7%9A%84%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E5%95%86-racknerd%E5%8F%8Avps%E5%85%A5%E9%97%A8%E9%85%8D%E7%BD%AE">我推荐的主机服务商-RackNerd及VPS入门配置</a>
+<ul>
+<li><a href="#%E5%85%A5%E9%97%A8vps%E9%85%8D%E7%BD%AE%E6%8E%A8%E8%8D%90">入门VPS配置推荐</a></li>
+</ul>
+</li>
+<li><a href="#h2-id1%E8%B4%AD%E4%B9%B0vps%E8%BF%87%E7%A8%8B%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4h2"><h2 id="1">购买VPS过程（实际操作步骤）</h2></a></li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+<li><a href="#%E9%99%84%E5%BD%95">附录</a>
+<ul>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5">资源链接</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h3 id="引言">引言</h3>
+<p>在这个数字化和网络化日益深入的时代，掌握关键技术知识已成为现代人的一种必备能力。《云端生活入门：从小白到网络达人》系列文章将引导您逐步走入技术世界，从基本概念入手，带你了解云端生活的原理，并通过动手实践，完成个人网站搭建、安装开源应用、定制家庭云功能等。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169762&authkey=%21ACQqWwcwo_DyaCs&width=660" width="660" height="auto" />
+<p>本系列将涉及以下主题：</p>
+<ul>
+<li><strong>网站托管</strong>：如何使用VPS托管个人或商业网站，并完成WordPress网站的搭建。</li>
+<li><strong>开发和测试环境</strong>：重新安装Linux系统，配置LNMP，使用SSH登录，并部署应用。</li>
+<li><strong>私人云存储</strong>：借助Cloudreve和Rclone，创建一个跨平台、多用户的文件存储系统。</li>
+<li><strong>游戏服务器</strong>：如果你的VPS配置允许，可以尝试搭建Minecraft或其他游戏的私服。</li>
+<li><strong>其他用途</strong>：介绍开源应用Xray、Webmin、NextChat、Trilium等软件的使用。</li>
+</ul>
+<p>如果你只是想跟随操作步骤实现特定功能，可以直接跳转到操作部分，比如这篇文章主要介绍VPS以及<a href="#1">如何购买RackNerd VPS</a>。</p>
+<h3 id="what-why-什么是主机-vps为什么要用vps">What &amp; Why-什么是主机、VPS，为什么要用VPS</h3>
+<h4 id="主机及主机服务商">主机及主机服务商</h4>
+<p>我们的系列文章旨在通过现代技术帮助普通人实现“云端生活”，即在一个24小时在线的服务器上，安装并运行各种开源程序，通过网络随时随地访问这些服务。我们常说的主机服务商，如国外的谷歌、亚马逊、微软，国内的阿里、腾讯、华为等，就是提供这类主机服务的公司。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169763&authkey=%21ABY9nJwQ4mFitvo&width=660" width="660" height="auto" />
+<h4 id="主机服务及vps">主机服务及VPS</h4>
+<p>主机服务商通常提供多种主机服务，如共享主机、虚拟私人服务器（VPS）、专用服务器和云托管等，每种服务适合不同的需求和客户。对于个人用户，VPS因其独特的性价比，提供了类似专用服务器的体验，但成本更低，是理想的云端入门选择。</p>
+<h4 id="为何选择vps入门">为何选择VPS入门</h4>
+<p>选择VPS的理由在于其平衡性：VPS比共享主机提供更多控制权和性能，而成本又低于专用服务器和高端云托管服务。对于初学者，VPS是理想的学习和实践平台，因为它结合了经济性、灵活性和足够的资源，让用户可以在学习过程中有充分的实践机会。</p>
+<h3 id="我推荐的主机服务商-racknerd及vps入门配置">我推荐的主机服务商-RackNerd及VPS入门配置</h3>
+<p>RackNerd是一家成立于2019年的主机服务商，以其高性能、低成本的VPS方案著称，非常适合入门用户。以下是一些推荐的配置方案：</p>
+<h4 id="入门vps配置推荐">入门VPS配置推荐</h4>
+<p>年付10.99美元的VPS，适合初学者和基础用户：</p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=838">年付10.99美元的VPS套餐</a>。</p>
+<p>年付23.88美元的VPS，适合需要搭建个人网站或探索开源应用的用户：</p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=840">年付23.88美元的VPS套餐</a>。</p>
+<p>年付37.38美元的VPS，适合有更高性能需求的用户，如搭建家庭云盘、影音系统或游戏私服：</p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=829">年付37.38美元的VPS套餐</a>。</p>
+<h3 id="h2-id1购买vps过程实际操作步骤h2"><h2 id="1">购买VPS过程（实际操作步骤）</h2></h3>
+<ol>
+<li>选择套餐：首先定位自己的需求，选择下面适合自己的套餐:</li>
+</ol>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=838">10.99美元套餐</a></p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=840">23.88美元套餐</a></p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=829">37.38美元套餐</a></p>
+<p>请注意，如果您选择的是其它服务商提供的VPS，本系列的所有文章内容仅供参考。</p>
+<p>点击上述链接，会跳转到Racknerd的购物车页面，如果您想使用中文的，在View Cart的按钮旁边可以直接选择“中文”，当然你也可以使用浏览器的翻译功能，我们之后的介绍都以英文的为主，如果阅读英文有困难的小伙伴，请自行摸索是否有中文界面或使用浏览器翻译功能进行调整。</p>
+<ol start="2">
+<li>确认配置：如果你想跟着本系列的文章，一步一步完成多个家庭应用的搭建，建议至少选择23.88美元的套餐（土豪请随意），点击链接后，应该是类似这样的画面：</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169752&authkey=%21AERnB9d1Fj51XRE&width=672&height=512" width="672" height="512" />
+<p>这就是你选择的VPS的基本配置，2核（CPU）2.5G（RAM）38G（SSD）6000G（月带宽）1G（连接速度）1个IPv4（唯一的公网IP地址），另外还有用于管理VPS的控制面板，允许选择全球多个数据中心，付费周期是年付23.88美元。</p>
+<p>如果你想调整部分参数（含硬件配置），下面的画面提供了可选参数：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169753&authkey=%21AHpUXvHhEiJri8o&width=660" width="660" height="auto" />
+<p>如果您是中国国内的用户，我建议只调整这2个参数：Operating System（操作系统）和Location（机房位置），其中Operating System选择Ubuntu 22.04 64 Bit，Location选择San Jose CA。查看一下Order Summary，合计金额应该还是23.88美元，点击Continue，来到了确认页面：</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169754&authkey=%21AEiX0TN_1fWZO6Y&width=660" width="660" height="auto" />
+<ol start="3">
+<li>填个人信息：点击绿色的Checkout按钮，填入个人信息，注意页面中已经有China相关选项，应该可以填写自己的真实地址：</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169755&authkey=%21AM-9-N_LC5iYB7Y&width=660" width="660" height="auto" />
+<ol start="4">
+<li>付款：最后Payment Details（付款）中，可以选择你喜欢的付款方式，也包括了支付宝和银联卡。</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169756&authkey=%21AMvAFGXQR9HsDsU&width=256" width="256" height="auto" />
+<p>最后，点击“I have read and agree to the Terms of Service”和Complete Order就好了。</p>
+<ol start="5">
+<li>查收邮件：之后你会收到多封RackNerd发来的欢迎邮件，告诉你如何登录自己的账户，如何获得支持，订单支付情况，发票，特别注意其中有一封邮件是有关KVM VPS Login Information，请保存其中的root password：</li>
+</ol>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169757&authkey=%21AGLUlL290GCeduY&width=602&height=550" width="602" height="550" />
+<p>好的，至此，购买VPS的步骤就完成了，你已经拥有了一台完全可控的可以24小时访问的服务器，后续我们将探讨如何管理这台VPS，并利用免费的开源项目，完成私有云存储、家庭影院、代理服务器、共享ChatGPT等各种实用功能，这样就能构建一个7*24小时可用的，家庭或者小范围的私有云端服务，让我们来看几个使用这台VPS搭建的应用画面：</p>
+<p>使用开源项目Cloudreve，免费搭建私有化云存储方案：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169759&authkey=%21AJT5Ob6Yn3mr32E&width=660" width="660" height="auto" /></p>
+<p>使用开源项目Trilium，免费搭建个人笔记（知识库）系统：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169787&authkey=%21AFNG1KbHDKcNFmo&width=660" width="660" height="auto" /></p>
+<p>使用开源项目NextChat，免费搭建共享ChatGPT或Gemini：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169761&authkey=%21AHEM9bf9PGrkDp4&width=660" width="660" height="auto" /></p>
+<p>使用开源项目Jellyfin，免费搭建家庭影音系统：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169758&authkey=%21AKeo9Fx-noX8k-g&width=660" width="660" height="auto" /></p>
+<p>今天我们完成了对主机、主机服务商，VPS的初步认识，并且通过RackNerd网站完成了用户注册购买的流程。</p>
+<h3 id="结论">结论</h3>
+<p>通过选择购买RackNerd VPS，您已经迈出成为网络达人的第一步。接下来的文章将介绍如何管理和优化您的VPS，确保您可以最大限度地利用这项技术。</p>
+<h3 id="附录">附录</h3>
+<h4 id="faq">FAQ</h4>
+<ul>
+<li>
+<p>购买VPS套餐时，如果浏览器页面显示out of stock，那么说明这款优惠套餐卖完了，你可能需要自行<a href="https://my.racknerd.com/aff.php?aff=7454">在RackNerd中选购</a></p>
+</li>
+<li>
+<p>上面提到的VPS的具体配置中，Location其实指的是机房位置，一般选择离中国国内比较近的美国西海岸的机房，速度可能会快一些。</p>
+</li>
+<li>
+<p>在付款页面，RackNerd目前支持多种付款方式：PayPal、信用卡、支付宝、加密货币等，一般选择支付宝即可，勾选【同意服务条款】，点击【Complete Order】完成订单，在跳转页面用支付宝扫码付款即可完成购买：</p>
+</li>
+<li>
+<p>建议购买至少 1GB 内存配置的 VPS ，以获得更好的使用体验。如果考虑有个人建站及多种应用搭建需求的，至少应选择2GB双核以上的配置，经济条件较好的最好能选择4GB以上的配置。</p>
+</li>
+<li>
+<p>国内用户，在购买成功之后，最好能通过客户端ping测试一下VPS的IP地址，如果分到了被墙的 IP，可以在购买后 72 小时内免费更换 (点击 Change IP 按钮自助更换)，之后更换一次 IP 需支付 3 美元。</p>
+</li>
+<li>
+<p>如果你发现购买的VPS不能满足应用安装的需求，可以通过ticket的方式向RackNerd说明，如果沟通顺畅，那么可以贴补差价来更换配置更好的VPS。我当时第一次选了内存不到1G的VPS，后来发现Ubuntu22操作系统和部分开源项目都需要至少1G内存，通过沟通，在首次购买10天后成功支付差价更换了新的VPS套餐。</p>
+</li>
+</ul>
+<h4 id="资源链接">资源链接</h4>
+<p>其实主机服务商有很多，都各有特色，如果希望多了解一些，你也可以自己上网探索，以下是一些常用的主机服务商链接：</p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454">价格实惠的RackNerd</a></p>
+<p><a href="https://bandwagonhost.com/aff.php?aff=74873">国内线路优化的Bandwagon搬瓦工</a></p>
+<p><a href="https://www.vultr.com/?ref=9408843">可免费更换IP的Vultr</a></p>
+<p><a href="https://azure.microsoft.com/zh-cn">微软Azure</a></p>
+<p><a href="https://aws.amazon.com/cn/">亚马逊Amazon</a></p>
+<p><a href="https://cloud.tencent.com/">腾讯云</a></p>
+<p><a href="https://cn.aliyun.com">阿里云</a></p>
+<p>好了，今天就到这里，如果您按照上述步骤购买了RackNerd VPS，欢迎分享您的经验。如果您对VPS还有疑问，欢迎您加入我们的“云端生活交流群”，和其它小伙伴一起学习交流。另外您希望我下一篇写什么内容，也欢迎在评论区留言。</p>
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a></p>
+<img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" width="256" height="200" />
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/huSSbzfX6/" class="tag">
+                    云生活
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/jie-suo-shu-zi-tu-shu-guan-tu-jie-z-library-qing-song-xia-zai-mi-ji/">
+                  <h3 class="post-title">
+                    解锁数字图书馆：图解Z-Library轻松下载秘籍
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

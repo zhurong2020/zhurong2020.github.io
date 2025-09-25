@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>基础篇3-深入了解RackNerd VPS功能及管理 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="已经购买了RackNerd的同学，请跟着本文，继续学习如果通过RackNerd网站，来完成日常VPS状态的查看和实现一些简单管理。如果你还在犹豫，请先找到并阅读前一篇《云端启航：轻松拥有自己的VPS，开启你的云端之旅》，年仅10.99美元起..." />
+    <meta name="keywords" content="云生活" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">基础篇3-深入了解RackNerd VPS功能及管理</h2>
+            <div class="post-date">2024-04-17</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/shen-ru-liao-jie-racknerd-vpsgong-neng-guan-li-yu-you-hua.webp')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>已经购买了RackNerd的同学，请跟着本文，继续学习如果通过RackNerd网站，来完成日常VPS状态的查看和实现一些简单管理。如果你还在犹豫，请先找到并阅读前一篇《云端启航：轻松拥有自己的VPS，开启你的云端之旅》，年仅10.99美元起，即可开启专属的云端生活。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a></li>
+<li><a href="#racknerd-%E7%9A%84%E7%BD%91%E7%AB%99%E5%8F%8Aweb%E7%AB%AF%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2%E4%BB%8B%E7%BB%8D">RackNerd 的网站及Web端管理界面介绍</a>
+<ul>
+<li><a href="#%E4%B8%BB%E9%A1%B5%E5%86%85%E5%AE%B9">主页内容</a></li>
+<li><a href="#%E7%94%A8%E6%88%B7%E4%BA%A7%E5%93%81%E4%BF%A1%E6%81%AF%E9%9D%A2%E6%9D%BF">用户产品信息面板</a></li>
+<li><a href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF">用户管理面板</a></li>
+<li><a href="#control-panel%E9%AB%98%E7%BA%A7%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2">Control Panel（高级管理界面）</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%93%E8%AF%AD">结语</a></li>
+<li><a href="#%E5%89%8D%E6%96%87%E5%9B%9E%E7%9C%8B">前文回看</a>
+<ul>
+<li><a href="#%E4%BA%91%E7%AB%AF%E5%90%AF%E8%88%AA%E8%BD%BB%E6%9D%BE%E6%8B%A5%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84vps%E5%BC%80%E5%90%AF%E4%BD%A0%E7%9A%84%E4%BA%91%E7%AB%AF%E4%B9%8B%E6%97%85">云端启航：轻松拥有自己的VPS，开启你的云端之旅</a></li>
+<li><a href="#%E4%BA%91%E7%AB%AF%E7%94%9F%E6%B4%BB%E5%88%9D%E4%BD%93%E9%AA%8C-%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%AE%B6%E5%BA%AD%E6%9C%8D%E5%8A%A1%E5%99%A8">云端生活初体验-打造专属的多功能家庭服务器</a></li>
+<li><a href="#%E6%96%B0%E7%8E%A9%E5%85%B7%E4%B8%8A%E7%BA%BFlobe-chat">新玩具上线：Lobe Chat</a></li>
+<li><a href="#%E4%BA%91%E7%AB%AF%E5%90%AF%E8%88%AA%E8%BD%BB%E6%9D%BE%E6%8B%A5%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84vps%E5%BC%80%E5%90%AF%E4%BD%A0%E7%9A%84%E4%BA%91%E7%AB%AF%E4%B9%8B%E6%97%85-2">云端启航：轻松拥有自己的VPS，开启你的云端之旅</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h3 id="引言">引言</h3>
+<p>在之前的文章中，我们已经了解了关于VPS的基本概念，跟着操作的同学可能已经购买了适合自己的RackNerd VPS服务器，欢迎大家在留言区贴出购买心得。本文将介绍RackNerd 网站的一些基本功能，主要是涉及到Web端的VPS管理，能够帮助已购买VPS的同学更好地管理和优化服务器，充分利用其性能与特性。</p>
+<h3 id="racknerd-的网站及web端管理界面介绍">RackNerd 的网站及Web端管理界面介绍</h3>
+<figure data-type="image" tabindex="1"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169827&amp;authkey=%21ACxnpt4Azmv_Jgo&amp;width=660" alt="RackNerd Homepage" loading="lazy"></figure>
+<h4 id="主页内容">主页内容</h4>
+<ul>
+<li>通过浏览器访问www.racknerd.com，可以看到RackNerd的主页布局，除了特色业务、折扣信息，你还能看到其提供不同类型的主机及服务，如果以后需要独立服务器、服务器托管等服务，可以按需选择。</li>
+<li>点击右上角的MY ACCOUNT，输入注册时提供的电子邮箱和密码即可登录。</li>
+</ul>
+<h4 id="用户产品信息面板">用户产品信息面板</h4>
+<p>登录后，仪表盘集中展示了账户信息、服务状态和支持与帮助等选项。</p>
+<figure data-type="image" tabindex="2"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169823&amp;authkey=%21ADK8msLV8Y4W2Ts&amp;width=660" alt="User Dashboard" loading="lazy"></figure>
+<ul>
+<li>“SERVICES”模块允许您深入了解和管理已购买的服务详情。</li>
+<li>切换不同语言，请点击页面右上方的“English”。</li>
+<li>若需技术支持，可点击“Open Ticket”创建服务工单。</li>
+<li>如尚未拥有域名，可利用左下方的“Register a New Domain”进行注册或转移。</li>
+</ul>
+<h4 id="用户管理面板">用户管理面板</h4>
+<p>在产品/服务详情页面，您可以查看VPS的实时状态、账单信息、带宽使用和其它配置信息。</p>
+<figure data-type="image" tabindex="3"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169825&amp;authkey=%21AC5Kp4mXs5D9Qjg&amp;width=660" alt="VPS Management" loading="lazy"></figure>
+<ul>
+<li>监控服务器状态是否为“Active”及查看账单详情。</li>
+<li>查看服务器IP地址、带宽用量和配置信息。</li>
+<li>通过点击“Control Panel”进入VPS的高级控制界面。</li>
+<li>申请更换VPS的IP地址可通过点击“Change IP”操作（注意，购买后72小时内免费更换，之后每次更换将收费3美元）。</li>
+</ul>
+<h4 id="control-panel高级管理界面">Control Panel（高级管理界面）</h4>
+<p>进入Control Panel后，输入你之前收到的RackNerd邮件中提供的用户名和密码，用户名类似“vmuser123456”，进入后会有更为高级的管理界面，用户可以在这里配置系统监控、安全设置等高级功能。</p>
+<figure data-type="image" tabindex="4"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169826&amp;authkey=%21AIlU4rAZ359-NgY&amp;width=660" alt="Control Panel" loading="lazy"></figure>
+<ul>
+<li>在系统重装选项中，您可以在AlmaLinux、CentOS、Debian、Fedora、Rocky Linux、Ubuntu等操作系统中选择合适的版本进行安装。</li>
+<li>更改密码，确保Root/Admin和VNC密码的安全性。</li>
+<li>系统状态监控，帮助您简单了解系统在特定时间段内的运行情况。我们将在后续文章中介绍如何使用Webmin和Netdata进行更高级的系统管理。</li>
+</ul>
+<p>我们接下来将介绍如何使用Putty和WinSCP这些工具来管理您的VPS。</p>
+<h3 id="结语">结语</h3>
+<p>至此，我们已详细介绍了从VPS购买到Web端管理的全过程，您现在可以开始尝试管理自己的VPS，为未来的云端操作打下坚实的基础。随着《云端生活入门》系列的持续推进，期待您成为越发熟练的VPS管理及云端应用专家。</p>
+<h3 id="前文回看">前文回看</h3>
+<p>还没有行动的同学们，可以回看前一篇文章：</p>
+<h4 id="云端启航轻松拥有自己的vps开启你的云端之旅"><a href="https://zhurong2020.github.io/post/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu/">云端启航：轻松拥有自己的VPS，开启你的云端之旅</a></h4>
+<p>或者再看看这篇文章，介绍了拥有VPS，到底能做什么？</p>
+<h4 id="云端生活初体验-打造专属的多功能家庭服务器"><a href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-chu-ti-yan-da-zao-zhuan-shu-de-duo-gong-neng-jia-ting-fu-wu-qi/">云端生活初体验-打造专属的多功能家庭服务器</a></h4>
+<p>想要看看近期特别火的LLM（大语言模型）对话平台，可以去这个网址体验：</p>
+<h4 id="新玩具上线lobe-chat"><a href="https://chat-preview.lobehub.com/chat">新玩具上线：Lobe Chat</a></h4>
+<p>如果你心动了，也想自己DIY，请按自己的需求，点击以下任一购买链接：</p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=838">年付10.99美元的RackNerd VPS</a></p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=840">年付23.88美元的RackNerd VPS</a></p>
+<p><a href="https://my.racknerd.com/aff.php?aff=7454&amp;pid=829">年付37.38美元的RackNerd VPS</a></p>
+<p>不清楚怎么选VPS，可以看我上一篇文章：</p>
+<h4 id="云端启航轻松拥有自己的vps开启你的云端之旅-2"><a href="https://zhurong2020.github.io/post/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu/">云端启航：轻松拥有自己的VPS，开启你的云端之旅</a></h4>
+<p>好了，今天就到这里。如果您对今天讨论的Web端管理RackNerd VPS还有疑问，欢迎您加入我们的“云端生活交流群”，您可以添加以下微信，等待确认后会拉你入群，记住先查看群公告完成群代办遵守群规定，之后就可以和其他伙伴愉快交流了。我们将聚合一些志同道合的朋友，以便在知识探索的路上互相帮助，互相成就。另外您希望我下一篇写什么内容，也欢迎在评论区留言。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169811&authkey=%21ABRiiNUJymdww3o&height=256" width="auto" height="256" />
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a>。</p>
+<img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" width="256" height="200" />
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/huSSbzfX6/" class="tag">
+                    云生活
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/tong-zhi-xin-wan-ju-shang-xian-la-kuai-lai-tan-suo-geng-da-de-ai-shi-jie/">
+                  <h3 class="post-title">
+                    体验篇6-使用Lobe Chat探索更大的AI世界
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>量化交易机器人的参数设置与实战指南-从回测到实盘的完整攻略 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="使用Moomoo软件中提供的量化交易功能，我们可以轻松定制自己的量化策略，从而实现自动交易机器人。
+本文就将从下载和导入自定义策略开始，一步一步介绍Moomoo的量化框架，如何编码，核心代码结构，如何调整参数，回测操作以及最后的实盘运行。
+..." />
+    <meta name="keywords" content="投资,股票,AI" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">量化交易机器人的参数设置与实战指南-从回测到实盘的完整攻略</h2>
+            <div class="post-date">2024-11-25</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/liang-hua-jiao-yi-ji-qi-ren-de-can-shu-she-zhi-yu-shi-zhan-zhi-nan-cong-hui-ce-dao-shi-pan-de-wan-zheng-gong-lue.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>使用Moomoo软件中提供的量化交易功能，我们可以轻松定制自己的量化策略，从而实现自动交易机器人。<br>
+本文就将从下载和导入自定义策略开始，一步一步介绍Moomoo的量化框架，如何编码，核心代码结构，如何调整参数，回测操作以及最后的实盘运行。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a></li>
+<li><a href="#%E7%AD%96%E7%95%A5%E4%B8%8B%E8%BD%BD-%E5%AF%BC%E5%85%A5%E4%B8%8E%E7%BB%93%E6%9E%84%E8%A7%A3%E6%9E%90">策略下载、导入与结构解析</a>
+<ul>
+<li><a href="#%E7%AD%96%E7%95%A5%E4%B8%8B%E8%BD%BD">策略下载</a></li>
+<li><a href="#%E7%AD%96%E7%95%A5%E5%AF%BC%E5%85%A5">策略导入</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84">代码结构</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90">代码解析</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BD%91%E6%A0%BC%E4%BA%A4%E6%98%93%E9%80%BB%E8%BE%91">网格交易逻辑</a>
+<ul>
+<li><a href="#%E5%9F%BA%E7%A1%80%E4%BB%B7%E6%A0%BC%E8%AE%BE%E7%BD%AE">基础价格设置</a></li>
+<li><a href="#%E7%BD%91%E6%A0%BC%E6%95%B0%E9%87%8F%E8%AE%BE%E7%BD%AE">网格数量设置</a></li>
+<li><a href="#%E4%BA%A4%E6%98%93%E9%80%BB%E8%BE%91">交易逻辑</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B3%E9%94%AE%E5%8F%82%E6%95%B0%E8%A7%A3%E9%87%8A">关键参数解释</a>
+<ul>
+<li><a href="#%E5%8F%82%E6%95%B0%E7%BA%A6%E6%9D%9F">参数约束</a>
+<ul>
+<li><a href="#%E6%9C%80%E5%A4%A7%E6%8C%81%E4%BB%93">最大持仓</a></li>
+<li><a href="#%E7%BD%91%E6%A0%BC%E6%95%B0%E9%87%8F">网格数量</a></li>
+<li><a href="#%E7%BD%91%E6%A0%BC%E5%8C%BA%E9%97%B4">网格区间</a></li>
+<li><a href="#%E5%8D%95%E7%BD%91%E6%A0%BC%E6%8C%81%E4%BB%93%E4%B8%8A%E9%99%90">单网格持仓上限</a></li>
+<li><a href="#%E6%AF%8F%E6%AC%A1%E4%BA%A4%E6%98%93%E6%95%B0%E9%87%8F">每次交易数量</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AD%96%E7%95%A5%E5%9B%9E%E6%B5%8B%E5%85%A8%E6%94%BB%E7%95%A5">策略回测全攻略</a>
+<ul>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">回测环境配置</a>
+<ul>
+<li><a href="#%E9%80%89%E6%8B%A9%E8%B4%A6%E6%88%B7">选择账户</a></li>
+<li><a href="#%E8%A7%A6%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AE%BE%E7%BD%AE">触发条件设置</a></li>
+<li><a href="#%E6%A0%87%E7%9A%84%E9%80%89%E6%8B%A9%E8%A6%81%E7%82%B9">标的选择要点</a></li>
+<li><a href="#%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7">参数优化技巧</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E7%BB%93%E6%9E%9C%E5%88%86%E6%9E%90">回测结果分析</a>
+<ul>
+<li><a href="#%E7%AD%96%E7%95%A5%E6%94%B6%E7%9B%8A">策略收益</a></li>
+<li><a href="#%E6%A0%87%E7%9A%84%E4%BA%A4%E6%98%93%E6%83%85%E5%86%B5">标的交易情况</a></li>
+<li><a href="#%E8%B5%84%E4%BA%A7%E8%B5%B0%E5%8A%BF%E5%92%8C%E8%BF%90%E8%A1%8C%E6%97%A5%E5%BF%97">资产走势和运行日志</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA%E4%B8%8E%E5%88%86%E6%9E%90">回测数据导出与分析</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%8E%E5%9B%9E%E6%B5%8B%E5%88%B0%E5%AE%9E%E7%9B%98">从回测到实盘</a>
+<ul>
+<li><a href="#%E5%AE%9E%E7%9B%98%E8%BF%90%E8%A1%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">实盘运行注意事项</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%96%E7%95%A5%E8%B0%83%E4%BC%98%E6%A1%88%E4%BE%8B">策略调优案例</a>
+<ul>
+<li><a href="#%E5%88%9D%E5%A7%8B%E8%B5%84%E9%87%911000%E7%BE%8E%E5%85%83%E6%AF%8F%E6%AC%A12%E8%82%A1%E5%8D%95%E7%BD%91%E6%A0%BC%E4%B8%8A%E9%99%908%E8%82%A1%E6%80%BB%E6%94%B6%E7%9B%8A383103826%E7%BE%8E%E5%85%83%E6%9C%9F%E6%9C%AB%E6%8C%81%E8%82%A12%E8%82%A1%E4%BA%A4%E6%98%9315%E6%AC%A1%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4368%E5%A4%8F%E6%99%AE%E6%AF%94%E7%8E%87287">初始资金1000美元，每次2股，单网格上限8股，总收益3.83%（1038.26美元），期末持股2股，交易15次，最大回撤3.68%，夏普比率2.87。</a></li>
+<li><a href="#%E5%88%9D%E5%A7%8B%E8%B5%84%E9%87%911000%E7%BE%8E%E5%85%83%E6%AF%8F%E6%AC%A15%E8%82%A1%E5%8D%95%E7%BD%91%E6%A0%BC%E4%B8%8A%E9%99%9015%E8%82%A1%E6%80%BB%E6%94%B6%E7%9B%8A958109576%E7%BE%8E%E5%85%83%E6%9C%9F%E6%9C%AB%E6%8C%81%E8%82%A15%E8%82%A1%E4%BA%A4%E6%98%9315%E6%AC%A1%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4889%E5%A4%8F%E6%99%AE%E6%AF%94%E7%8E%87297">初始资金1000美元，每次5股，单网格上限15股，总收益9.58%（1095.76美元），期末持股5股，交易15次，最大回撤8.89%，夏普比率2.97。</a></li>
+<li><a href="#%E5%88%9D%E5%A7%8B%E8%B5%84%E9%87%9110000%E7%BE%8E%E5%85%83%E6%AF%8F%E6%AC%A150%E8%82%A1%E5%8D%95%E7%BD%91%E6%A0%BC%E4%B8%8A%E9%99%90150%E8%82%A1%E6%80%BB%E6%94%B6%E7%9B%8A9581095813%E7%BE%8E%E5%85%83%E6%9C%9F%E6%9C%AB%E6%8C%81%E8%82%A150%E8%82%A1%E4%BA%A4%E6%98%9315%E6%AC%A1%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4889%E5%A4%8F%E6%99%AE%E6%AF%94%E7%8E%87353">初始资金10000美元，每次50股，单网格上限150股，总收益9.58%（10958.13美元），期末持股50股，交易15次，最大回撤8.89%，夏普比率3.53。</a></li>
+<li><a href="#%E5%88%9D%E5%A7%8B%E8%B5%84%E9%87%9110000%E7%BE%8E%E5%85%83%E6%AF%8F%E6%AC%A120%E8%82%A1%E5%8D%95%E7%BD%91%E6%A0%BC%E4%B8%8A%E9%99%90100%E8%82%A1%E6%80%BB%E6%94%B6%E7%9B%8A23541235415%E7%BE%8E%E5%85%83%E6%9C%9F%E6%9C%AB%E6%8C%81%E8%82%A1180%E8%82%A1%E4%BA%A4%E6%98%93148%E6%AC%A1%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A42024%E5%A4%8F%E6%99%AE%E6%AF%94%E7%8E%87379">初始资金10000美元，每次20股，单网格上限100股，总收益23.54%（12354.15美元），期末持股180股，交易148次，最大回撤20.24%，夏普比率3.79。</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93%E5%B1%95%E6%9C%9B">总结展望</a>
+<ul>
+<li><a href="#%E7%AD%96%E7%95%A5%E4%BC%98%E5%8A%BF">策略优势</a></li>
+<li><a href="#%E5%B1%80%E9%99%90%E6%80%A7">局限性</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91">优化方向</a></li>
+<li><a href="#%E5%90%8E%E7%BB%AD%E8%A7%84%E5%88%92">后续规划</a></li>
+<li><a href="#%E8%A1%8C%E5%8A%A8%E5%BB%BA%E8%AE%AE">行动建议</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<blockquote>
+<p>免责声明：本文仅供学习交流使用，不构成任何投资建议。作者非专业人士，提醒读者：量化交易存在风险，投资需谨慎，请结合个人风险承受能力做出决策。</p>
+</blockquote>
+<h2 id="引言">引言</h2>
+<p>在量化交易的世界里，策略的实现往往是最具挑战性的环节。本文将详细介绍如何使用Moomoo平台的量化功能，从策略的导入、参数设置、回测分析，直到最终的实盘部署，为读者提供一个完整的实战指南。本文采用一个基于网格交易的策略作为示例，深入讲解每个环节的关键点和注意事项。</p>
+<figure data-type="image" tabindex="1"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKggBMsGtCBVVX3m9A?embed=1&amp;width=660" alt="量化交易机器人" loading="lazy"></figure>
+<h2 id="策略下载-导入与结构解析">策略下载、导入与结构解析</h2>
+<h3 id="策略下载">策略下载</h3>
+<p>本文使用的网格交易策略已在GitHub开源，读者可以直接访问<a href="https://github.com/znhskzj/moomoo_custom_strategies/tree/main/strategies/strategy_v3">网格交易策略</a>仓库获取完整代码。该策略主要针对具有一定波动性且适合长期持有的美股标的进行自动化交易。<br>
+如果你想自行选择其它的美股标的，需要符合网格交易的特点和一些条件，具体可以参考<a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-cong-mei-ri-cheng-pan-dao-qing-song-zi-dong-hua/">打造你的第一个量化交易机器人：从每日盯盘到轻松自动化</a>。</p>
+<h3 id="策略导入">策略导入</h3>
+<p>打开Moomoo软件（假定你已经完成软件下载、安装和开户入金），在Moomoo的量化功能中导入该策略，导入的方法可以查看<a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan/">打造你的第一个量化交易机器人 - Moomoo平台环境搭建指南</a>。</p>
+<h3 id="代码结构">代码结构</h3>
+<p>代码的结构大致如下：</p>
+<pre><code class="language-python">class Strategy(StrategyBase):
+
+    def initialize(self): # 初始化
+        self.trigger_symbols()
+        self.custom_indicator()
+        self.global_variables()
+
+    def trigger_symbols(self):  # 定义运行标的
+        self.运行标的1 = declare_trig_symbol()
+
+    def global_variables(self):  # 定义全局变量
+        pass
+
+    def custom_indicator(self):  # 
+        pass
+
+    def handle_data(self):  # K线推送、Tick推送、固定时间间隔、指定时刻，这4种事件会触发handle_data()函数
+        pass
+</code></pre>
+<p>这是一个简单的策略结构，其中<code>initialize</code>函数是初始化函数，<code>trigger_symbols</code>函数是定义运行标的，<code>global_variables</code>函数是定义全局变量，<code>custom_indicator</code>函数是定义自定义指标，<code>handle_data</code>函数是处理数据的函数。<br>
+我们只要知道在Moomoo中自定义量化策略大致就是这样的结构，就可以了。因为具体每个功能的实现，都可以利用AI完成。我们下一篇将介绍如何利用类似ChatGPT等AI工具，自动生成量化策略代码。</p>
+<h3 id="代码解析">代码解析</h3>
+<p>按照上面的代码结构，我已经将网格交易策略的代码写好了，你只需要知道上面是代码的结构，之后的各个功能都从“def xxx”开始，格式上需要遵守一定的对齐规范，就可以了。<br>
+比如下面的代码：</p>
+<pre><code class="language-python">def _is_new_period(self, current_time):
+        &quot;&quot;&quot;判断是否是新的交易周期&quot;&quot;&quot;
+</code></pre>
+<p>就代表一个叫做<code>_is_new_period</code>的函数，这个函数的功能是判断是否是新的交易周期。至于下面具体的代码实现，我们可以都交给AI去完成。<br>
+因为Moomoo的量化功能是基于Python的，所以我们需要遵守Python的代码规范，比如缩进、注释等。建议安装一个Python的代码编辑器，比如VSCode，这样可以更方便的编写代码。<br>
+根据我目前的流程，大致先使用AI生成代码，复制到VSCode中检查排版，上传到Github进行版本管理，之后复制到Moomoo的量化功能中检查语法，最后回测并实盘运行，下一篇文章我将具体介绍整个流程。</p>
+<figure data-type="image" tabindex="2"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgeNFuTRytlaqLueA?embed=1&amp;width=660" alt="股票交易" loading="lazy"></figure>
+<h2 id="网格交易逻辑">网格交易逻辑</h2>
+<p>这个自定义策略基本按照网格交易的逻辑进行，简单说，就是在一个价格区间内，低买高卖，然后在价格波动的过程中，不断的买卖，从而获取利润。</p>
+<h3 id="基础价格设置">基础价格设置</h3>
+<p>以标的的价格作为基础价格，之后根据网格数量再计算每个网格的价格。</p>
+<h3 id="网格数量设置">网格数量设置</h3>
+<p>当标的的基础价格确定后，以基础价格为中心，上下设置一定数量的网格，每个网格的间距是标的金额的百分比，如3%。</p>
+<h3 id="交易逻辑">交易逻辑</h3>
+<p>当标的的价格在网格的价格区间内波动时，就会自动低买高卖，从而获取利润。<br>
+比如，如果标的Mara的（基础）价格是20元，参数设置为10个网格，网格间距是3%。<br>
+那么我们就以20元为中心，在20元的价格上下各设置5个网格，每个网格间距是20*3% = 0.6元。<br>
+在20元的价格附近的网格是19.4元和20.6元，当Mara的价格下跌到19.4元，会自动买进，然后当价格回到20元，会自动卖出，这样就完成了一次网格交易。</p>
+<h2 id="关键参数解释">关键参数解释</h2>
+<p>目前针对标的Mara，主要有以下一些关键参数：</p>
+<ul>
+<li>initial_capital: 初始资金，默认10000美元</li>
+<li>max_total_position: 最大总持仓限额，默认500股</li>
+<li>min_order_quantity: 每次交易数量，默认20股</li>
+<li>position_limit: 单网格持仓上限，默认80股</li>
+<li>time_interval: 交易时间间隔(分钟)，默认60分钟</li>
+<li>grid_percentage: 统一的网格间距和盈利标准，3%（按Mara Holdings股价为约0.6美元）</li>
+<li>grid_num: 网格数量，默认10个</li>
+<li>max_capital_usage: 最大资金使用率，默认90%</li>
+<li>max_order_timeout: 订单超时时间(秒)，默认300秒</li>
+</ul>
+<h3 id="参数约束">参数约束</h3>
+<p>因为在确定标的（基础价格）的情况下，初始资金、最大持仓、每次交易数量、单网格持仓上限、交易时间间隔、网格间距、网格数量、最大资金使用率、订单超时时间等参数都是有约束的，所以我们在设置这些参数时，需要遵守这些约束。</p>
+<h4 id="最大持仓">最大持仓</h4>
+<p>最大持仓是指单个标的的最大持仓数量，如果超过这个数量，就不再买入。<br>
+比如当初始资金为10000美元，Mara现价为20美元时，最大持仓应该为500股。</p>
+<h4 id="网格数量">网格数量</h4>
+<p>网格数量是指在基础价格上下设置的网格数量，比如10个。</p>
+<h4 id="网格区间">网格区间</h4>
+<p>网格区间是指每个网格的间距，比如3%。<br>
+当Mara价格为20元时，10个网格，网格间距为3%，那么整个网格可以覆盖的价格区间就是17元到23元。</p>
+<h4 id="单网格持仓上限">单网格持仓上限</h4>
+<p>单网格持仓上限是指每个网格的最大持仓数量，如果超过这个数量，就不再买入。<br>
+这个参数的设置是为了防止在一个网格内过多的买入，导致风险过大，如果价格始终在某个网格波动，也可以通过不同周期的多次买入创造更多盈利机会。<br>
+当最大持仓为500股，网格数量为10个时，每个网格的最大持仓就是50股。</p>
+<h4 id="每次交易数量">每次交易数量</h4>
+<p>每次交易数量是指每次最小买入或卖出的数量，这个数量应该是最大持仓的约数，比如20股。<br>
+当每个网格最大持仓为80股时，如果每个网格的买入数量为20股，那么单个网格最多可以买4次。</p>
+<h2 id="策略回测全攻略">策略回测全攻略</h2>
+<p>以下使用图文详细展示如何进行策略回测，以及参数优化等操作。</p>
+<h3 id="回测环境配置">回测环境配置</h3>
+<p>首先，我们需要在Moomoo中配置回测环境，这个环境包括账户选择、触发条件设置、标的选择要点、参数优化技巧等。</p>
+<h4 id="选择账户">选择账户</h4>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgTmYb7gWqdgY9UeQ?embed=1&amp;width=595&amp;height=653" alt="回测第一步" loading="lazy"><br>
+账户选择“xxxx-证券”，回测区间先选得小一点，比如如果是想要日线交易的，先选择2-3天进行测试，没有问题再选择更长的时间。初始资金根据自己的情况设置，比如10000美元。</p>
+<h4 id="触发条件设置">触发条件设置</h4>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgWnXZ6M_uAbqF_Qw?embed=1&amp;width=595&amp;height=653" alt="回测第二步" loading="lazy"><br>
+触发条件选择“即时行情触发运行”。</p>
+<h4 id="标的选择要点">标的选择要点</h4>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgVebPWZo13eOiaaA?embed=1&amp;width=597&amp;height=653" alt="回测第三步" loading="lazy"><br>
+标的你可以自己选择，选择的原则见前文所述，这里以Mara为例，后面的周期可以先选择“每根日K线运行一次”，注意这个周期需要和下一步的参数一致。</p>
+<h4 id="参数优化技巧">参数优化技巧</h4>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgX9mkHEibRg92ysA?embed=1&amp;width=597&amp;height=652" alt="回测第四步" loading="lazy"><br>
+这里的参数需要根据自己的情况设置，比如网格数量、网格间距、每次交易数量等，这些参数的设置需要遵守前文所述的约束。注意这里的交易周期需要和上一步的周期一致，比如日线就应该是1440（分钟）。</p>
+<h3 id="回测结果分析">回测结果分析</h3>
+<p>上述参数全部选择好，系统会跳出参数预览界面，让你再看一遍所有参数：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgYwl-TVXbpahTFfg?embed=1&amp;width=597&amp;height=652" alt="回测参数预览" loading="lazy"><br>
+确认后，点击“开始运行”，这时候量化策略就会根据你的参数进行回测，回测完成后，会出现回测结果。</p>
+<h4 id="策略收益">策略收益</h4>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgSRCZluZIhYQZ2NQ?embed=1&amp;width=660" alt="回测结果1" loading="lazy"><br>
+这个画面中分为三部分，最上方的部分为策略的收益情况，主要查看“总收益”，“最大回撤”。<br>
+总收益代表整个回测周期的收益情况，最大回撤代表整个回测周期的最大回撤情况，这两个指标是评估策略优劣的重要指标。</p>
+<h4 id="标的交易情况">标的交易情况</h4>
+<p>中间的部分是交易情况，其中标的的K线会标注出策略的买入卖出点，可以看到策略的交易情况。<br>
+其中B代表买入，S代表卖出，T代表该周期有买入和卖出。</p>
+<h4 id="资产走势和运行日志">资产走势和运行日志</h4>
+<p>最下方的部分是资产走势和运行日志。<br>
+资产走势是策略的资产曲线，可以看到策略的收益情况，你可以和买入并持有标的的收益进行比较。<br>
+运行日志包括订单情况、策略运行日志，注意这部分将在下一篇文章中详细介绍，这里只是简单的展示。</p>
+<h3 id="回测数据导出与分析">回测数据导出与分析</h3>
+<p>仔细分析回测的订单历史和运行日志，能够看清楚整个策略的运行情况，从而更好的优化策略。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgUCvzwETOXqzQMrQ?embed=1&amp;width=660" alt="回测数据导出" loading="lazy"><br>
+注意这部分支持导出，你可以将这些数据导出到Excel中，然后利用AI进行更详细的分析并以此优化策略。</p>
+<h2 id="从回测到实盘">从回测到实盘</h2>
+<p>完成了策略回测，我们就可以将策略投入实盘运行了，这里需要注意的是，实盘运行和回测是有区别的，因为实盘运行涉及到真实的资金，所以需要更加谨慎。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKgZgsV0p3zUPj3nSQ?embed=1&amp;width=597&amp;height=652" alt="实盘运行" loading="lazy"><br>
+实盘也需要经过回测时的四个步骤，账户选择、设置触发条件、选择标的（含周期）、修改策略参数，这里不再赘述，只是需要注意实盘运行时，需要更加谨慎，因为涉及到真实的资金。</p>
+<h3 id="实盘运行注意事项">实盘运行注意事项</h3>
+<ul>
+<li>确保策略在回测中表现稳定</li>
+<li>准备充足的资金缓冲</li>
+<li>设置合理的风险控制参数</li>
+<li>定期检查策略运行状态</li>
+<li>监控持仓和盈亏情况</li>
+<li>及时调整策略参数</li>
+</ul>
+<h2 id="策略调优案例">策略调优案例</h2>
+<p>以下三个案例，针对美股Mara，回测时间11月1日至11月25日，日线交易，网格10个，网格间距3%（约0.6元）。</p>
+<h3 id="初始资金1000美元每次2股单网格上限8股总收益383103826美元期末持股2股交易15次最大回撤368夏普比率287">初始资金1000美元，每次2股，单网格上限8股，总收益3.83%（1038.26美元），期末持股2股，交易15次，最大回撤3.68%，夏普比率2.87。</h3>
+<figure data-type="image" tabindex="3"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgba46CnSqdhTT60g?embed=1&amp;width=660" alt="策略1" loading="lazy"></figure>
+<h3 id="初始资金1000美元每次5股单网格上限15股总收益958109576美元期末持股5股交易15次最大回撤889夏普比率297">初始资金1000美元，每次5股，单网格上限15股，总收益9.58%（1095.76美元），期末持股5股，交易15次，最大回撤8.89%，夏普比率2.97。</h3>
+<figure data-type="image" tabindex="4"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgcPy4upzVJJKwPhw?embed=1&amp;width=660" alt="策略2" loading="lazy"></figure>
+<h3 id="初始资金10000美元每次50股单网格上限150股总收益9581095813美元期末持股50股交易15次最大回撤889夏普比率353">初始资金10000美元，每次50股，单网格上限150股，总收益9.58%（10958.13美元），期末持股50股，交易15次，最大回撤8.89%，夏普比率3.53。</h3>
+<figure data-type="image" tabindex="5"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKga5PSl5Qg5GyzIwg?embed=1&amp;width=660" alt="策略3" loading="lazy"></figure>
+<p>如果调整其它参数，比如将回测周期按30分钟线交易，就会有很大的差异：</p>
+<h3 id="初始资金10000美元每次20股单网格上限100股总收益23541235415美元期末持股180股交易148次最大回撤2024夏普比率379">初始资金10000美元，每次20股，单网格上限100股，总收益23.54%（12354.15美元），期末持股180股，交易148次，最大回撤20.24%，夏普比率3.79。</h3>
+<figure data-type="image" tabindex="6"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgdkP7ZkBDDSYtR0g?embed=1&amp;width=660" alt="策略4" loading="lazy"></figure>
+<h2 id="总结展望">总结展望</h2>
+<p>本文主要介绍了如何使用Moomoo的量化功能，导入自定义策略，然后进行回测和实盘运行。</p>
+<h3 id="策略优势">策略优势</h3>
+<ul>
+<li>自动化执行，减少人为干预</li>
+<li>系统化的交易决策</li>
+<li>适应性强，可根据市场状况调整参数</li>
+</ul>
+<h3 id="局限性">局限性</h3>
+<ul>
+<li>震荡市表现优异</li>
+<li>单边趋势市可能表现不佳</li>
+<li>需要合理控制单个网格的持仓量</li>
+<li>防止过度积累风险</li>
+</ul>
+<h3 id="优化方向">优化方向</h3>
+<ul>
+<li>引入机器学习优化网格参数</li>
+<li>开发自适应网格间距算法</li>
+<li>整合多个技术指标增强交易信号</li>
+<li>添加市场趋势判断模块</li>
+<li>开发动态止损机制</li>
+<li>完善资金管理策略</li>
+</ul>
+<h3 id="后续规划">后续规划</h3>
+<p>下一步计划探索如何利用人工智能技术优化策略开发流程，同时注意量化交易是一个需要不断学习和优化的过程。通过本文介绍的网格交易策略实现，读者可以构建自己的初始量化交易系统。建议在实盘之前，进行充分的回测和参数优化，并始终保持对市场的敬畏之心。</p>
+<figure data-type="image" tabindex="7"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKgfN5Yoic6SDJlN1A?embed=1&amp;width=660" alt="轻松交易" loading="lazy"></figure>
+<h3 id="行动建议">行动建议</h3>
+<ul>
+<li>从小资金开始，逐步熟悉策略特性</li>
+<li>持续记录和分析交易数据</li>
+<li>定期检查和优化策略参数</li>
+<li>建立完整的风险控制体系</li>
+<li>保持学习和改进的心态<br>
+通过不断的实践和优化，相信每个投资者都能找到适合自己的量化交易之路。</li>
+</ul>
+<blockquote>
+<p>重要提醒：量化交易虽然可以帮助我们克服情绪困扰，但也存在其特有的风险。建议读者在尝试量化交易时，从小规模开始，在对策略充分验证后再逐步扩大规模。切记：任何投资都要量力而行，严格控制风险。</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/VI3oOVxe0w/" class="tag">
+                    投资
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/csH7KUJGVb/" class="tag">
+                    股票
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/1sEGD1rJY/" class="tag">
+                    AI
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan/">
+                  <h3 class="post-title">
+                    打造你的第一个量化交易机器人 - Moomoo平台环境搭建指南
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

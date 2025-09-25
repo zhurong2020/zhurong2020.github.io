@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>零成本打造云端生活：免费域名注册与Cloudflare托管全攻略 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="在数字时代，拥有一个独立域名是迈向云端生活的重要一步。本文详细介绍了如何在 us.kg 上申请免费域名，使用 GitHub 账号进行 KYC 验证，并将域名托管至 Cloudflare。通过遵循本文的步骤，您可以零成本地获取自己的专属域名，..." />
+    <meta name="keywords" content="开源,云生活,免费" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">零成本打造云端生活：免费域名注册与Cloudflare托管全攻略</h2>
+            <div class="post-date">2024-12-26</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ling-cheng-ben-da-zao-yun-duan-sheng-huo-mian-fei-yu-ming-zhu-ce-yu-cloudflare-tuo-guan-quan-gong-lue.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>在数字时代，拥有一个独立域名是迈向云端生活的重要一步。本文详细介绍了如何在 us.kg 上申请免费域名，使用 GitHub 账号进行 KYC 验证，并将域名托管至 Cloudflare。通过遵循本文的步骤，您可以零成本地获取自己的专属域名，并利用 Cloudflare 的服务提升网站性能和安全性。请持续关注我们的后续文章，获取更多相关教程和资讯。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a>
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8E%E5%85%8D%E8%B4%B9-%E6%88%91%E7%9A%84%E8%A7%82%E7%82%B9%E6%98%AF">关于免费-我的观点是：</a></li>
+</ul>
+</li>
+<li><a href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">前期准备</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4">操作步骤</a></li>
+<li><a href="#1-%E6%B3%A8%E5%86%8C-uskg-%E8%B4%A6%E5%8F%B7">1. 注册 us.kg 账号</a></li>
+<li><a href="#2-%E9%80%9A%E8%BF%87-github-%E8%BF%9B%E8%A1%8C-kyc-%E9%AA%8C%E8%AF%81">2. 通过 GitHub 进行 KYC 验证</a></li>
+<li><a href="#3-%E7%94%B3%E8%AF%B7%E5%B9%B6%E6%B3%A8%E5%86%8C%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D">3. 申请并注册免费域名</a></li>
+<li><a href="#4-%E5%B0%86%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1%E5%88%B0-cloudflare">4. 将域名托管到 Cloudflare</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99">使用域名搭建个人网站</a>
+<ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E4%BD%BF%E7%94%A8-github-pages-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99">方法一：使用 GitHub Pages 搭建静态网站</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84-vps-%E4%B8%8A%E4%BD%BF%E7%94%A8-wordpress-%E6%90%AD%E5%BB%BA%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99">方法二：在自己的 VPS 上使用 WordPress 搭建动态网站</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94faq">常见问题解答（FAQ）</a></li>
+<li><a href="#%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB">延伸阅读</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<figure data-type="image" tabindex="1"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKoyV4l4G12Rw4-Kjw?e=rrhmtm" alt="" loading="lazy"></figure>
+<h2 id="引言">引言</h2>
+<p>独立域名不仅是个人网站、博客、品牌建设的重要工具，更是数字化时代的身份象征。通过本文，您将学习如何：</p>
+<ol>
+<li>
+<p>在us.kg上注册免费的独立域名。</p>
+</li>
+<li>
+<p>使用GitHub账号完成KYC验证。</p>
+</li>
+<li>
+<p>将域名托管至Cloudflare，提升网站性能和安全性。</p>
+</li>
+</ol>
+<p>拥有域名后，您可以：</p>
+<ol>
+<li>
+<p>使用域名访问个人主页，为您的内容提供更专业的呈现。</p>
+</li>
+<li>
+<p>将系列文章介绍的开源工具（如私人云盘、家庭影音系统、在线笔记系统等）通过反向代理绑定至域名，实现便捷访问。</p>
+</li>
+<li>
+<p>结合Cloudflare的CDN服务，加速网站加载速度并提升安全性。</p>
+</li>
+<li>
+<p>配置独立子域名为不同服务提供专属入口，例如 cloud.example.com 访问私人云盘，media.example.com 访问影音系统。</p>
+</li>
+</ol>
+<p>无论是零基础用户，还是技术爱好者，都可以通过本教程轻松实现零成本搭建云端生活。</p>
+<figure data-type="image" tabindex="2"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKo0GkLWckoESOtcJA?embed=1&amp;width=660" alt="" loading="lazy"></figure>
+<h3 id="关于免费-我的观点是">关于免费-我的观点是：</h3>
+<p>在选择免费服务时，需谨慎考虑其潜在的隐性成本。正如经济学家所指出的，免费的东西往往质量不高，可能存在隐私泄露、服务不稳定等问题。因此，如果您计划长期使用某项服务，建议在免费与付费之间找到平衡，选择最适合自己的方案。然而，对于短期尝试或体验新服务，免费或试用版本仍是不错的选择。关键在于明确自身需求，做出理性的选择。</p>
+<h2 id="前期准备">前期准备</h2>
+<p>在开始之前，请确保您已完成以下准备工作：</p>
+<ol>
+<li>
+<p><strong>GitHub 账号</strong>：如果您还没有，请前往 <a href="https://github.com/">GitHub</a> 注册，详细注册教程可以参考<a href="https://zhurong2020.github.io/post/github-ru-men-kai-yuan-shi-jie-de-di-yi-bu/">Github使用指南：打开云端写作新世界</a>。</p>
+</li>
+<li>
+<p><strong>Cloudflare 账号</strong>：前往 <a href="https://www.cloudflare.com/">Cloudflare</a> 注册一个免费账号。</p>
+</li>
+<li>
+<p><strong>个人真实信息</strong>：在 us.kg 注册时，请使用您的真实姓名、地址和联系方式，以确保账号的合法性和安全性。</p>
+</li>
+<li>
+<p><strong>域名名称</strong>：提前想好您希望注册的域名，可以多想几个备用选项，以备域名已被注册的情况。</p>
+</li>
+</ol>
+<h2 id="操作步骤">操作步骤</h2>
+<h2 id="1-注册-uskg-账号">1. 注册 us.kg 账号</h2>
+<ol>
+<li>
+<p><strong>访问 us.kg 官方网站</strong>：打开 <a href="https://register.us.kg/">register.us.kg</a>，点击页面底部的“Sign Up”进行注册。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoJVwa_qLk_abPkdw?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>填写注册信息</strong>：输入您的法定全名、邮箱地址、电话号码和详细地址。请确保所填信息的真实性。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoUmkiXOfHKHjV44w?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoVi1V1JNsuvTZFzw?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>验证邮箱</strong>：提交注册信息后，登录您的邮箱，找到来自 us.kg 的验证邮件，点击其中的验证链接以激活账号。</p>
+</li>
+</ol>
+<h2 id="2-通过-github-进行-kyc-验证">2. 通过 GitHub 进行 KYC 验证</h2>
+<ol>
+<li>
+<p><strong>登录 us.kg 账号</strong>：在 <a href="https://register.us.kg/">register.us.kg</a> 输入注册时的邮箱和密码，点击“Next”登录。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKl88d0_ks4lw9YfpA?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>选择 KYC 验证方式</strong>：首次登录需要完成 KYC 验证，选择三种方法中的第二种“GitHub KYC Verification”，再点击下方的“Proceed to Github”。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKl-mJRSNCd96bp_8A?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>提交 GitHub Issue</strong>：按照屏幕的指引，会自动跳转到Github并新增一个“issue”。请在描述栏（“description”）的下方，填写您的 us.kg 用户名和申请域名的理由（如个人博客、项目展示等），然后点击“Submit new issue”来完成提交 Issue。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKl9lMiIjsq32wuo1w?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>完成验证</strong>：提交后，勾选相关选项，并为项目点亮 Star。等待几分钟，审核通过后，您将在 Issue 中收到批准通知。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoC36lrY1-W048W4Q?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoIT_vernmJzBpmQA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+如果一下子没有找到刚才的issue，可以点击上方的“Issues”，并在“Filters”中选择“Your issues”，然后选择“Closed”，再点击标题就能看到批准通知：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoGC9Yfo8VjNOu_Kw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoFRWlBbTGA4XSZ5A?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoH7glDx_jIK5vmwA?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h2 id="3-申请并注册免费域名">3. 申请并注册免费域名</h2>
+<p>通过验证后，重新进入 us.kg 的控制面板，即可申请并注册免费域名。</p>
+<ol>
+<li>
+<p><strong>检查域名可用性</strong>：在 us.kg 控制面板中，选择“Domain Name Registration”，输入您想要的域名，点击“Check”检查其可用性，如果不可用，会出现以下画面：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoWGutX-hnEh4R4eg?embed=1&amp;width=645&amp;height=252" alt="" loading="lazy"><br>
+如果域名可用，会出现以下画面：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoXL7aHl34KpUBnbQ?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>获取 Cloudflare Name Server 信息</strong>：打开 <a href="https://www.cloudflare.com/">Cloudflare</a>，登录后选择“添加新网站”，再输入刚才在 us.kg 上申请的域名，选择最下方的免费计划，点击继续“Continue”，再点击“Continue to activation”。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoO3PMuDU1zl6drdg?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoP5d88z6YHH6lDlg?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoNtFKlXxK_gVOtew?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoYM-_VdkE5MVLGAQ?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>Cloudflare 将提供两条 Name Server 信息，请分别复制备用。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoQO7myBdy0EF3Oxg?embed=1&amp;width=660" alt="" loading="lazy"></p>
+<ol start="3">
+<li><strong>注册域名</strong>：返回 us.kg 的域名注册页面，在 Name Server 1 和 Name Server 2 中分别粘贴从 Cloudflare 获取的 Name Server 信息，点击“Register”完成域名注册。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoR4UOiIzbSsXz7sA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKl_QXyKylJoocXFJQ?embed=1&amp;width=660" alt="" loading="lazy"></li>
+</ol>
+<h2 id="4-将域名托管到-cloudflare">4. 将域名托管到 Cloudflare</h2>
+<ol>
+<li>
+<p><strong>完成 Cloudflare 设置</strong>：在 Cloudflare 中，继续设置您的域名，确保 DNS 记录正确配置。点击“继续”完成设置。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoZZ5kUNRx6HA_KGA?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>等待 DNS 配置生效</strong>：通常需要几分钟至数小时，您可以在 Cloudflare 中查看域名状态，显示“Active”即表示托管成功。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoB8sP5NhhVe5VUyQ?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoD1OuXw4izwMv_PA?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>在us.kg中查看域名状态</strong>：在 us.kg 的控制面板中，查看您的域名状态，在“My Domains”中会显示已经成功的域名。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoA8xXUKZkAsHM1gw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+以后，可以通过us.kg网站主页上方的“Get US KG”来进入域名管理页面，查看域名的状态和续期情况。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoSuBKZtdFTeEGCIQ?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+</ol>
+<h2 id="使用域名搭建个人网站">使用域名搭建个人网站</h2>
+<p>请注意，拥有域名并不意味着可以直接通过该域名访问您的网站。您需要将域名与实际的网站内容关联。以下是两种常见的方法：</p>
+<h3 id="方法一使用-github-pages-搭建静态网站">方法一：使用 GitHub Pages 搭建静态网站</h3>
+<ul>
+<li>使用 GitHub Pages 搭建静态网站：如果您计划创建一个静态网站，可以使用 GitHub Pages 服务。将您的网站代码上传至 GitHub 仓库，并在设置中启用 GitHub Pages 功能，即可将您的域名指向该静态网站。详细教程请参考我们的系列文章<a href="https://zhurong2020.github.io/post/github-pages-jiao-cheng-kai-qi-ni-de-bo-ke-xin-lu-cheng/">Github Pages教程：开启你的博客新旅程</a>。</li>
+</ul>
+<h3 id="方法二在自己的-vps-上使用-wordpress-搭建动态网站">方法二：在自己的 VPS 上使用 WordPress 搭建动态网站</h3>
+<ul>
+<li>在 VPS 上使用 WordPress 搭建网站：如果您希望搭建一个动态网站，如博客或企业站点，可以在 VPS（虚拟专用服务器）上安装 WordPress。完成安装和配置后，将您的域名解析至 VPS 的 IP 地址，即可通过域名访问您的 WordPress 网站。购买 VPS 教程可以参考<a href="https://zhurong2020.github.io/post/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu/">云端启航：轻松拥有自己的VPS开启你的云端之旅</a>，其它教程敬请期待。</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKovlZiBXpG0L3o-5w?embed=1&amp;width=660" alt="" loading="lazy"></figure>
+<h2 id="结论">结论</h2>
+<p>通过以上步骤，您已成功在 us.kg 注册了免费的域名，完成了 GitHub KYC 验证，并将域名托管至 Cloudflare。这不仅为您的云端生活增添了一份便利，也为未来的数字化探索奠定了基础。请记得每年提前 180 天登录 us.kg 账号进行域名续期，以保持域名的有效性。</p>
+<h2 id="常见问题解答faq">常见问题解答（FAQ）</h2>
+<ul>
+<li>
+<p><strong>us.kg 的域名真的永久免费吗？</strong></p>
+<ul>
+<li>是的，每个账号可以注册 3 个域名，需每年提前 180 天手动续期一次，续期也是免费的。</li>
+</ul>
+</li>
+<li>
+<p><strong>为什么需要使用 GitHub 进行 KYC 验证？</strong></p>
+<ul>
+<li>us.kg 采用 GitHub 进行 KYC 验证，以确保用户的真实性和域名的合理使用。</li>
+</ul>
+</li>
+<li>
+<p><strong>域名托管到 Cloudflare 有哪些优势？</strong></p>
+<ul>
+<li>Cloudflare 提供免费的 CDN 服务，提高网站加载速度，并提供安全防护功能，提升网站的稳定性和安全性。</li>
+</ul>
+</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKoxSRi9GUWDjL5IoA?embed=1&amp;width=660" alt="" loading="lazy"></figure>
+<h2 id="延伸阅读">延伸阅读</h2>
+<p>如果您对低成本搭建云端生活，并在此基础上搭建各类开源应用或者自动交易机器人等相关内容感兴趣，之前的部分文章可能对您有帮助：</p>
+<ul>
+<li>
+<p>使用VPS搭建个人网站：通过购买收费的VPS服务器（也可申请免费VPS服务器），您可以搭建个人网站、博客等，实现自我展示和知识分享。<br>
+<a href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-ru-men-cong-xiao-bai-dao-wang-luo-da-ren/">基础篇1-云端生活入门：从小白到网络达人</a><br>
+<a href="https://zhurong2020.github.io/post/yun-duan-qi-hang-qing-song-yong-you-zi-ji-de-vpskai-qi-ni-de-yun-duan-zhi-lu/">基础篇2-轻松拥有自己的VPS，开启你的云端之旅</a></p>
+</li>
+<li>
+<p>申请域名：拥有独立域名是展示个人品牌和项目的重要方式，通过收费或者免费的域名服务，您可以低成本甚至零成本拥有专属域名。<br>
+<a href="https://zhurong2020.github.io/post/ji-chu-pian-5-namesilo-yu-ming-zhu-ce-jiao-cheng-bu-zou-xiang-jie-rang-ni-qing-song-yong-you-hu-lian-wang-ming-pian/">基础篇5-NameSilo域名注册教程步骤详解</a><br>
+<a href="https://zhurong2020.github.io/post/ji-chu-pian-6-shi-yong-namesilo-jin-xing-yu-ming-jie-xi-pei-zhi/">基础篇6-使用NameSilo进行域名解析配置</a></p>
+</li>
+<li>
+<p>使用量化交易机器人：利用网格交易工具或者证券软件客户端的量化功能，创建可以量化机器人，实现仓位规划、自动交易和资产增值。<br>
+<a href="https://zhurong2020.github.io/post/shi-yong-wang-ge-jiao-yi-gong-ju-qing-song-jin-xing-cang-wei-guan-li-he-zi-dong-hua-jiao-yi/">使用网格交易工具轻松进行仓位管理和自动化交易</a><br>
+<a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-cong-mei-ri-cheng-pan-dao-qing-song-zi-dong-hua/">打造你的第一个量化交易机器人：从每日盯盘到轻松自动化</a><br>
+<a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan/">打造你的第一个量化交易机器人 - Moomoo平台环境搭建指南</a><br>
+<a href="https://zhurong2020.github.io/post/ai-zhu-li-liang-hua-jiao-yi-cong-0-dao-1-da-zao-moomoo-zi-dong-jiao-yi-ce-lue/">AI助力量化交易：从0到1打造Moomoo自动交易策略</a></p>
+</li>
+<li>
+<p>使用Github上免费的开源项目：搭建提升生活品质的各类工具，如云存储、媒体服务器、在线笔记、网络工具等。<br>
+<a href="https://zhurong2020.github.io/post/yun-duan-sheng-huo-chu-ti-yan-da-zao-zhuan-shu-de-duo-gong-neng-jia-ting-fu-wu-qi/">体验篇1-打造专属的多功能家庭服务器</a><br>
+<a href="https://zhurong2020.github.io/post/qing-song-shang-shou-yong-kai-yuan-zi-tuo-guan-xiang-mu-da-zao-ni-de-shu-zi-wang-guo/">体验篇2-用开源自托管项目打造你的数字王国</a><br>
+<a href="https://zhurong2020.github.io/post/nextchatge-xing-hua-nin-de-chatgpt-ti-yan-kai-yuan-kuai-su-bu-shu-yu-duo-yuan-ying-yong/">体验篇5-NextChat个性化您的ChatGPT体验</a><br>
+<a href="https://zhurong2020.github.io/post/tong-zhi-xin-wan-ju-shang-xian-la-kuai-lai-tan-suo-geng-da-de-ai-shi-jie/">体验篇6-使用Lobe Chat探索更大的AI世界</a></p>
+</li>
+</ul>
+<p>后续其它文章也敬请期待。另外以下是一些提供免费域名注册服务的机构，供您参考：</p>
+<ol>
+<li>
+<p><strong>EU.org</strong><br>
+自 1996 年以来，EU.org 提供免费的二级域名注册服务，如 <code>example.eu.org</code>。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoKUTtetCY3u1jMMg?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>Namecheap 学生计划</strong><br>
+Namecheap 为学生提供免费1年的 <code>.me</code> 顶级域名，可通过Github学生优惠申请。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKobKD_o9LaZxfoFIg?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>Freenom</strong><br>
+Freenom 用户可注册 <code>.tk</code>、<code>.ml</code>、<code>.cf</code>、<code>.gq</code> 和 <code>.ga</code> 等域名，但近期新注册用户有时会遇到问题，可自行尝试。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKoa2y5lJ9Tg5Wdzjg?embed=1&amp;width=660" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>请注意，免费域名服务可能存在限制，如需要定期续期、功能受限或审核时间较长。在选择时，建议根据自身需求和服务条款，谨慎评估，选择最适合自己的方案。</p>
+<figure data-type="image" tabindex="5"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKozIPSxnnCO1a-Xdw?embed=1&amp;width=320&amp;height=180" alt="" loading="lazy"></figure>
+<p>如果您对如何免费注册域名操作还有疑问，欢迎您加入我们的“云端生活交流群”，您可以添加以下微信，等待确认后会拉你入群，之后就可以和其他伙伴愉快交流了。我们将聚合一些志同道合的朋友，以便在知识探索的路上互相帮助，互相成就。另外您希望我下一篇写什么内容，也欢迎在评论区留言。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169811&authkey=%21ABRiiNUJymdww3o&height=256" alt="monty二维码" width="auto" height="256" />
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a></p>
+<img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" alt="请我喝咖啡" width="256" height="200" />
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/1y_Hi2uCv/" class="tag">
+                    开源
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/huSSbzfX6/" class="tag">
+                    云生活
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/vEGxriXjvW/" class="tag">
+                    免费
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/you-hua-liang-hua-jiao-yi-ce-lue-ru-he-tong-guo-can-shu-diao-zheng-ti-sheng-shou-yi/">
+                  <h3 class="post-title">
+                    优化量化交易策略：如何通过参数调整提升收益
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

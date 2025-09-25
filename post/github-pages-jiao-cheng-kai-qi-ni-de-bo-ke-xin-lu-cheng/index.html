@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Github Pages教程：开启你的博客新旅程 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="本文是云端生活系列的一部分，详细介绍了如何使用 GitHub Pages 从零开始创建个人博客的完整过程。内容包括注册 GitHub 账号、配置 Pages 网站、绑定自定义域名，以及利用 Jekyll 进行博客的简单定制。文章以实用性为核..." />
+    <meta name="keywords" content="云生活,免费,个人" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Github Pages教程：开启你的博客新旅程</h2>
+            <div class="post-date">2024-12-23</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/github-pages-jiao-cheng-kai-qi-ni-de-bo-ke-xin-lu-cheng.webp')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>本文是云端生活系列的一部分，详细介绍了如何使用 GitHub Pages 从零开始创建个人博客的完整过程。内容包括注册 GitHub 账号、配置 Pages 网站、绑定自定义域名，以及利用 Jekyll 进行博客的简单定制。文章以实用性为核心，通过详细的步骤和示例帮助读者轻松掌握 GitHub Pages 的使用技巧，开启属于自己的云端博客之旅。无论是初学者还是进阶用户，都能从中找到实用的解决方案！</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a></li>
+<li><a href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">前期准备</a>
+<ul>
+<li><a href="#1-%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7">1. 注册GitHub账号</a></li>
+<li><a href="#2-%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90">2. 工具推荐</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%9B%E5%BB%BAgithub-pages%E7%BD%91%E7%AB%99">创建GitHub Pages网站</a>
+<ul>
+<li><a href="#1-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93">1. 创建仓库</a></li>
+<li><a href="#2-%E8%AE%BE%E7%BD%AEpages%E7%BD%91%E7%AB%99">2. 设置Pages网站</a></li>
+<li><a href="#3-%E7%BC%96%E8%BE%91%E7%BD%91%E7%AB%99%E5%86%85%E5%AE%B9">3. 编辑网站内容</a></li>
+<li><a href="#4-%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%94%B9">4. 提交更改</a></li>
+</ul>
+</li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A">自定义域名绑定</a>
+<ul>
+<li><a href="#%E7%94%B3%E8%AF%B7%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D">申请免费域名</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1%E5%88%B0-cloudflare">配置域名托管到 Cloudflare</a></li>
+<li><a href="#%E5%9C%A8github-pages%E4%B8%AD%E9%85%8D%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">在Github Pages中配置自定义域名</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BD%BF%E7%94%A8jekyll%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2">使用Jekyll构建博客</a>
+<ul>
+<li><a href="#1-%E5%90%AF%E7%94%A8-jekyll">1. 启用 Jekyll</a></li>
+<li><a href="#2-%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98%E6%8F%92%E4%BB%B6">2. 使用主题插件</a></li>
+<li><a href="#3-%E4%BD%BF%E7%94%A8vs-code%E5%92%8C%E7%9B%B8%E5%85%B3%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%B7%B1%E5%BA%A6%E5%AE%9A%E5%88%B6">3. 使用VS Code和相关插件进行深度定制</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%B1%95%E6%9C%9B">总结与展望</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="引言">引言</h2>
+<p>在开源时代，GitHub不仅仅是代码的托管平台，它还是一个普通人轻松实现个人博客梦想的地方。不需要高超的技术，只需几个步骤，就可以将自己的想法永久记录在互联网上。本篇文章将带您创建个人博客，开启属于自己的云端生活。</p>
+<blockquote>
+<p>本文是云端生活系列的一部分。如果您尚未注册GitHub账号，请参考我们之前的文章：<a href="https://zhurong2020.github.io/post/github-ru-men-kai-yuan-shi-jie-de-di-yi-bu/">GitHub实用指南：打开云端协作新世界</a>。</p>
+</blockquote>
+<hr>
+<h2 id="前期准备">前期准备</h2>
+<h3 id="1-注册github账号">1. 注册GitHub账号</h3>
+<ol>
+<li>访问 <a href="https://github.com">GitHub官网</a>。</li>
+<li>点击右上角“Sign Up”按钮。</li>
+<li>按提示填写信息：
+<ul>
+<li><strong>电子邮箱</strong></li>
+<li><strong>密码</strong></li>
+<li><strong>用户名</strong>（将出现在您的博客地址中，请尽量选择简短、个性化的名称）。</li>
+</ul>
+</li>
+<li>完成邮箱验证并登录。</li>
+</ol>
+<blockquote>
+<p>提示：详细注册步骤请查看<a href="https://zhurong2020.github.io/post/github-ru-men-kai-yuan-shi-jie-de-di-yi-bu/">GitHub实用指南：打开云端协作新世界</a>。</p>
+</blockquote>
+<h3 id="2-工具推荐">2. 工具推荐</h3>
+<p>为了简化后续操作，我们强烈推荐安装 <strong>Visual Studio Code（VS Code）</strong>，它是一个强大的代码编辑器，可以帮助您更方便地管理和编辑博客内容。后续我们将推出 VS Code 的安装与使用教程，敬请期待。</p>
+<hr>
+<h2 id="创建github-pages网站">创建GitHub Pages网站</h2>
+<p>GitHub Pages 是一个强大的工具，可以通过简单的设置将 GitHub 仓库变成一个托管的静态网站。以下是创建 GitHub Pages 的具体步骤：</p>
+<h3 id="1-创建仓库">1. 创建仓库</h3>
+<ol>
+<li>登录 GitHub 后，点击页面中间的 “Github Pages”。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlbJ3K19zIH4LkpHw?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>在github-pages页面中往下拖动，找到并点击绿色按钮&quot;Start course&quot;。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlaXrseSzgyl_uGiw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlcYUDBMoX5ZOV9BA?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>在创建新仓库“Create a new repository”中点击绿色按钮“Create repository”，如果需要自定义相关选项的，可以自行输入比如仓库名称、描述等，本次演示均使用默认设置。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlVgsCORV8qOO626Q?embed=1&amp;width=660" alt="" loading="lazy"></li>
+</ol>
+<h3 id="2-设置pages网站">2. 设置Pages网站</h3>
+<ol>
+<li>完成仓库创建后，可以自行根据Github的操作步骤进行设置，这里先点击这个仓库的设置“Settings”，再点击左侧功能中的“Pages”，之后画面中均需要注意红色箭头。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlXKGnh-1_lAuakpQ?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlW7ZEzwI6ZUw4vdw?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>依次点击分支“Branch”中的“None”，选中“main”分支，再点击右侧的保存“Save”按钮。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlYlxGNqru1H0uG-g?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlZJZHlixXxuOaCLg?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>之后的画面需要稍等，会从以下的画面1切换到画面2，其中画面2中红框会显示出你的网址，这个网址就是你的博客地址，可以通过这个地址访问你的博客。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKk_8uZ7heghteW21Q?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlA5RU1pDU_bIbKxQ?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>如果成功设置的，再次回到仓库主页，你会看到Github给出的后续的步骤，注意这时候访问刚才的链接，可能会报错，我们这里先暂时继续完成后续的步骤。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlBzcEDz17cmFBwLQ?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlCU0rgH36lZ7sZfg?embed=1&amp;width=660" alt="" loading="lazy"></li>
+</ol>
+<h3 id="3-编辑网站内容">3. 编辑网站内容</h3>
+<ol>
+<li>让我们回到这个仓库的主页，点击“main”分支，选择“My-pages”分支，再点击“_config.yml”文件，点击编辑按钮，并按照屏幕内容输入“theme: minima”后，点击2次“Commit changes”，。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlDurjEzqv6klHv0A?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlEdbiqOg5ChACD5g?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlF9u0qazpaIpwcmw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlGqyNsyrgOGWDlLw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlHUBlO9MC6d8-IlA?embed=1&amp;width=480&amp;height=494" alt="" loading="lazy"></li>
+<li>同样的操作，也可以编辑“index.md”文件，依次点击文件，编辑，输入内容，提交更改（点击2次“Commit changes”），这些更改的内容都将在最后的网页中呈现。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlIS6MjbOyAnUBaCw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlJFhOqM8LRjVJoHQ?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlLmxFz-VwXp-gQVQ?embed=1&amp;width=482&amp;height=494" alt="" loading="lazy"></li>
+<li>再次回到仓库的主页，点击“my-pages”分支旁的加号“+”，在文件名处输入“_posts/2024-12-25-zr.md”，在文件内容处按格式输入，之后再点击“Commit changes”：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlKHP2qeWlRDEUtfg?embed=1&amp;width=425&amp;height=513" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlMTb68sdoSQOiE2g?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlNbx8y_MLzYdRcqg?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlOsSzusW8isH47VQ?embed=1&amp;width=480&amp;height=498" alt="" loading="lazy"></li>
+</ol>
+<h3 id="4-提交更改">4. 提交更改</h3>
+<ol>
+<li>完成后回到仓库主页，点击仓库上方的“Pull requests”，再点击“New pull request”，注意选择红框中的“my-pages”，再点击2次“Create pull request”，再点击“Merge pull request”，再点击“Confirm merge”，成功后点击“Delete branch”删除“my-pages”分支。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlPstTjTMONpTe8SA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlQfyz9f_pZs2HIzw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlRIlKSXjjAxJ8EaA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlSAtbmDlDyRgCrng?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlTuEq_vWMpRXhrww?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkrMHEvtEAFLusrkg?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkq8WzOiioj_FAI-A?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKksJcWK1Mw7rb96BA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKktWzFbI1xj9dEGhg?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKku3F0jBOvBY04p6g?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>这时再回到仓库主页，就能看到停留在“main”分支的完整的项目文件了，下方还有“Github Pages”已经设置完成的提示。如果你一直跟着上面的步骤操作，这时候已经能访问网址了，具体地址是“用户名.github.io/skills-github-pages”，刚才在第8步和第9步设置的内容能正常显示，你也可以试着用刚才的方法更改其中的内容。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkvkWQb0ZkK5hZQeQ?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkwlbq8qhODj1loZQ?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkxokvCZaQNKXyT4g?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>至此为止，你已经成功创建了一个GitHub Pages网站，可以通过网址访问你的博客，也可以通过客户端的VS Code等工具编辑你的博客内容。建议查看GitHub Pages的官方文档，了解更多关于GitHub Pages的内容。</li>
+</ol>
+<hr>
+<h2 id="自定义域名绑定">自定义域名绑定</h2>
+<p>默认情况下，您的博客地址是 <code>https://username.github.io/skills-github-pages</code>，比如使用arong.eu.org访问网站，可以参考以下步骤：</p>
+<h3 id="申请免费域名">申请免费域名</h3>
+<p>推荐通过 <a href="https://eu.org">eu.org</a> 申请一个免费的域名，具体步骤可以关注我们以后的教程，申请批准后，您将获得一个类似 <code>yourname.eu.org</code> 的域名，比如我的域名是 <code>arong.eu.org</code>，设置DNS指向Cloudflare的服务器。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKk4KRVf8QGrGTRyjw?embed=1&amp;width=660" alt="" loading="lazy"></p>
+<h3 id="配置域名托管到-cloudflare">配置域名托管到 Cloudflare</h3>
+<p>注册并登录 <a href="https://www.cloudflare.com">Cloudflare</a>，添加您的域名到 Cloudflare 并完成 DNS 验证，如果对这个步骤不熟悉的，请关注我们后续的教程。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKk1Wb023p-Snc6rsg?embed=1&amp;width=660" alt="" loading="lazy"></p>
+<h3 id="在github-pages中配置自定义域名">在Github Pages中配置自定义域名</h3>
+<ol>
+<li>如果你已经完成了上述的域名申请并成功托管到了Cloudflare，那么可以在Cloudflare中完成DNS设置，增加4条A记录和1条CNAME记录就可以了，其中A记录的值是Github Pages的IP地址，CNAME记录的值是Github Pages的网址，这个网址应该是“username.github.io”。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKldDSTK8daGGI3nMw?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>回到Github项目仓库的Pages设置，在Custom domain中输入你的域名，点击Save保存。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkyd_mC_ctjNFxCHA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkzxN48AQZ-dJPIcw?embed=1&amp;width=639&amp;height=309" alt="" loading="lazy"><br>
+成功后在Github项目仓库的Pages中会显示如下画面：<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKk747-wxivzcSdg_g?embed=1&amp;width=660" alt="" loading="lazy"></li>
+<li>这时候，你就可以使用你的域名访问你的博客了，比如我的域名是“arong.eu.org”，那么访问“arong.eu.org”就能访问到我的博客了。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKk66JLIlzccM9sDMQ?embed=1&amp;width=660" alt="" loading="lazy"></li>
+</ol>
+<hr>
+<h2 id="使用jekyll构建博客">使用Jekyll构建博客</h2>
+<p>为了让博客更具个性化，您可以使用 Jekyll 和丰富的主题插件对你的博客进行定制操作。</p>
+<h3 id="1-启用-jekyll">1. 启用 Jekyll</h3>
+<p>GitHub Pages 自带 Jekyll 支持，无需额外安装，按照我们之前的步骤，已经完成了最简单的Jekyll设置。<br>
+Jekyll的介绍和使用方法可以参考<a href="https://github.com/jekyll/jekyll">Jekyll的Github仓库</a>。</p>
+<h3 id="2-使用主题插件">2. 使用主题插件</h3>
+<ol>
+<li>Jekyll支持丰富的主题插件，您可以在 <a href="https://jekyllrb.com/docs/themes/">Jekyll Themes</a> 中选择适合的主题，我们以后将介绍这部分的内容。</li>
+<li>使用主题后，你的博客将拥有更加美观的外观，更加丰富的功能，比如搜索、评论等，以下是使用了Chirpy主题的演示网站。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKk8hZZWXsVdpAUyjQ?embed=1&amp;width=6600" alt="" loading="lazy"></li>
+</ol>
+<h3 id="3-使用vs-code和相关插件进行深度定制">3. 使用VS Code和相关插件进行深度定制</h3>
+<p>虽然本篇文章未深入探讨主题美化，但以下是使用 Chirpy 主题创建的博客页面效果图，您可以借助 VS Code 编写符合标准的 Front Matter 语法，并通过 WordPress 插件 Git it Write 实现跨平台更新。比如当你完成了一篇博文后，你可以通过VS Code和相关插件，实现同时在两个不同的域名上更新博文，附件提供了博文的Front Matter语法可以参考。</p>
+<figure data-type="image" tabindex="1"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKk-TcR3kA6bfRNovA?embed=1&amp;width=660" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="总结与展望">总结与展望</h2>
+<p>通过以上步骤，您已经成功创建了属于自己的 GitHub Pages 博客。从基础的配置到个性化的域名，再到简单的 Jekyll 定制，这一切都是云端生活的起点。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKlfexAC5__P9V-KSw?embed=1&amp;width=660" alt="" loading="lazy"></p>
+<blockquote>
+<p><strong>后续计划</strong>：</p>
+<ul>
+<li>如何通过 VS Code 深度管理博客内容。</li>
+<li>免费域名申请与托管到Cloudflare的教程。</li>
+<li>使用 WordPress 与 GitHub Pages 同步更新的进阶指南。</li>
+</ul>
+</blockquote>
+<p>欢迎在评论区分享您的博客作品或疑问，让我们一起在云端生活中成长！</p>
+<p>好了，今天就到这里，如果你对本文中的内容有兴趣，欢迎在评论区分享您的高见。</p>
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a></p>
+<img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" alt="请我喝咖啡" width="256" height="200" />
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+<p>附件：同步更新github pages和wordpress网站文章的Front Matter语法样例</p>
+<pre><code class="language-yaml">
+---
+# layout: post
+title: &quot;VPS管理指南：掌握PuTTY与WinSCP的协同魔法&quot;
+date: 2024-04-27 11:17:48 +0000
+categories: [技术实践, 工具]
+tags: [vps, putty, winscp, ssh, telnet, linux]
+pin: false
+image:
+  # 1200px*630px，860px*780px
+  path: &quot;/assets/img/202404/puttywinscp.png&quot;
+  lqip: &quot;/assets/img/202404/puttywinscp.png&quot;
+  alt: &quot;两款管理VPS的神器Putty和WinSCP&quot;
+# 以下文章中涉及的所有的图片均需要增加alt描述
+
+# 下面是WordPress插件Git it Write的字段
+post_status: publish
+# post_status: draft
+post_excerpt: 两款管理VPS的神器Putty和WinSCP
+featured_image: /assets/img/202404/puttywinscp.png
+taxonomy:
+  category:
+    - 技术实践
+    - 工具
+  post_tag:
+    - vps
+    - putty
+    - winscp
+    - ssh
+    - telnet
+    - linux
+# custom_fields:
+# field1: value 1
+# field2: value 2
+comment_status: open
+stick_post: no
+---
+
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/huSSbzfX6/" class="tag">
+                    云生活
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/vEGxriXjvW/" class="tag">
+                    免费
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/_5VL4sIV2/" class="tag">
+                    个人
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/ti-yan-pian-7-lm-studioni-de-ben-di-ai-shi-yan-shi/">
+                  <h3 class="post-title">
+                    体验篇7-LM Studio：你的本地 AI 实验室
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

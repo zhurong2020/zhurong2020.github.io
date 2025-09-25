@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>基础篇4-掌握PuTTY与WinSCP的协同魔法 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="在管理VPS时，Putty和WinSCP是最重要的二个工具，帮助Windows用户实现远程登录VPS和文件传输。本文涉及这两个工具的功能介绍、下载、安装和配套使用案例，另外文末还附上了Linux Ubuntu下的常用命令。
+
+
+
+
+
+
+引言..." />
+    <meta name="keywords" content="云生活,免费" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">基础篇4-掌握PuTTY与WinSCP的协同魔法</h2>
+            <div class="post-date">2024-04-26</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/vps-guan-li-zhi-nan-zhang-wo-putty-yu-winscp-de-xie-tong-mo-fa.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>在管理VPS时，Putty和WinSCP是最重要的二个工具，帮助Windows用户实现远程登录VPS和文件传输。本文涉及这两个工具的功能介绍、下载、安装和配套使用案例，另外文末还附上了Linux Ubuntu下的常用命令。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言：</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E8%BF%99%E4%B8%A4%E6%AC%BE%E5%B7%A5%E5%85%B7">为什么选择这两款工具</a></li>
+<li><a href="#putty%E7%AF%87%E7%AB%A0">Putty篇章：</a>
+<ul>
+<li><a href="#putty%E6%98%AF%E4%BB%80%E4%B9%88">Putty是什么</a>
+<ul>
+<li><a href="#%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BDputty">如何下载Putty</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85">如何安装</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">基本使用方法</a></li>
+<li><a href="#%E8%BF%9B%E9%98%B6%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB">进阶技巧分享</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#winscp%E7%AF%87%E7%AB%A0">WinSCP篇章：</a>
+<ul>
+<li><a href="#winscp%E6%98%AF%E4%BB%80%E4%B9%88">WinSCP是什么</a>
+<ul>
+<li><a href="#%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BDwinscp">如何下载WinSCP</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85winscp">如何安装WinSCP</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-2">基本使用方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8putty%E5%92%8Cwinscp">结合使用Putty和WinSCP：</a>
+<ul>
+<li><a href="#%E5%85%88%E4%BD%BF%E7%94%A8putty%E7%99%BB%E5%BD%95%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8">先使用putty登录自己的服务器</a></li>
+<li><a href="#%E6%8E%A5%E7%9D%80%E6%89%93%E5%BC%80winscp%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8">接着打开winscp登录服务器</a></li>
+<li><a href="#%E4%BB%8E%E6%9C%AC%E5%9C%B0%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%88%B0vps">从本地复制文件到VPS</a></li>
+<li><a href="#%E5%85%B6%E5%AE%83">其它</a>
+<ul>
+<li><a href="#%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7">高级技巧</a></li>
+<li><a href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B">实战案例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%BB%93%E8%AF%AD">结语：</a></li>
+<li><a href="#%E9%99%84%E4%BB%B6%E4%BB%A5%E4%B8%8B%E4%B8%BA%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5">附件（以下为百度网盘下载链接）：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h3 id="引言">引言：</h3>
+<p>云计算时代让服务器管理不再是遥不可及的技术壁垒。不论是IT初学者还是资深用户，两款神器——PuTTY和WinSCP——能令你的虚拟私人服务器（VPS）管理工作变得简单而高效。本文将介绍这两款工具的核心功能、下载与安装过程，并通过实例帮助你快速入门。此外，文末还精心准备了Linux Ubuntu下的常用命令指南，让你的云端操作得心应手。</p>
+<figure data-type="image" tabindex="1"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169897&amp;authkey=%21AA48lEQjPg-XcKw&amp;width=660" alt="" loading="lazy"></figure>
+<h3 id="为什么选择这两款工具">为什么选择这两款工具</h3>
+<p>拥有VPS后，你需要进行各种远程操作——从软件安装到日常维护，它们是你与服务器沟通的桥梁。PuTTY提供稳定的命令行访问，使你能够在VPS上运行各种操作，而WinSCP则简化了文件的上传与下载过程。它们的结合带来了直观高效的服务器管理体验，特别是在数据安全和操作便利性方面，它们比市面上其他工具更加出色。</p>
+<h3 id="putty篇章">Putty篇章：</h3>
+<h4 id="putty是什么">Putty是什么</h4>
+<p>PuTTY，这个适用于Windows的SSH和telnet客户端，是远程服务器管理的利器。简单几步，你就可以通过它登录VPS并执行所需命令。当您掌握了它的基本功能后，建议学习如何通过PuTTYgen生成SSH密钥对，实现更加安全的无密码登录体验。</p>
+<figure data-type="image" tabindex="2"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169891&amp;authkey=%21AFppTKcu8cfS2Eo&amp;width=660" alt="" loading="lazy"></figure>
+<p>比如，当你需要查看VPS的硬盘容量，操作系统信息时，你就需要先通过Putty来登录VPS，然后执行相应的指令。</p>
+<figure data-type="image" tabindex="3"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169894&amp;authkey=%21AAQe7bvCcv0ZAMg&amp;width=660" alt="" loading="lazy"></figure>
+<h5 id="如何下载putty">如何下载Putty</h5>
+<p>首先进入Putty官网：https://www.putty.org/，点击“Download Putty”。<br>
+根据自己机器的情况，选择合适的版本进行下载安装。我在文末提供了64位windows版本（0.81）的安装文件。</p>
+<figure data-type="image" tabindex="4"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169893&amp;authkey=%21AAhNnTuuzWjx57M&amp;width=660" alt="" loading="lazy"></figure>
+<h5 id="如何安装">如何安装</h5>
+<p>运行刚才下载的windows下的安装文件，根据屏幕提示点击，很快就能完成安装。</p>
+<figure data-type="image" tabindex="5"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169892&amp;authkey=%21AP4tETGqIc2pBDc&amp;width=621&amp;height=486" alt="" loading="lazy"></figure>
+<h5 id="基本使用方法">基本使用方法</h5>
+<ol>
+<li>连接到VPS：介绍如何利用Putty输入你的VPS IP地址和SSH端口来建立连接。</li>
+</ol>
+<figure data-type="image" tabindex="6"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169901&amp;authkey=%21AB6UjS6nu__2fa8&amp;width=619&amp;height=551" alt="" loading="lazy"></figure>
+<ol start="2">
+<li>常用命令和操作：连接到VPS后，你需要熟悉Linux的一些基本命令，如更新软件包、安装应用程序等，文末我附上了Linux下的8类命令，你可以逐一尝试，具体命令详见附件。</li>
+</ol>
+<h5 id="进阶技巧分享">进阶技巧分享</h5>
+<p>自动登录设置：教导如何在Putty中保存会话，以提高效率。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169909&amp;authkey=%21AKluovpN148Tggw&amp;width=619&amp;height=551" alt="" loading="lazy"></p>
+<p>文末提供了Putty的帮助文档。</p>
+<h3 id="winscp篇章">WinSCP篇章：</h3>
+<h4 id="winscp是什么">WinSCP是什么</h4>
+<p>WinSCP，一款功能强大的文件管理工具，让文件在本地与服务器之间的传输变得轻而易举。此外，它的同步功能能有效管理文件版本，确保数据的一致性和完整性。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169995&amp;authkey=%21AI1HMr5jnFokoCQ&amp;width=660" alt="" loading="lazy"></p>
+<h5 id="如何下载winscp">如何下载WinSCP</h5>
+<p>首先进入<a href="https://winscp.net/">WinSCP的官网</a>：https://winscp.net/，点击“Download”。<br>
+选择合适的方式进行下载安装。我在文末提供了WinSCP6.3.3的安装文件。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169994&amp;authkey=%21ADN8miBvroI2tTo&amp;width=660" alt="" loading="lazy"></p>
+<h5 id="如何安装winscp">如何安装WinSCP</h5>
+<p>运行刚才下载的windows下的安装文件，根据屏幕提示点击，很快就能完成安装。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169996&amp;authkey=%21AIDXkk0S0PpIapo&amp;width=660" alt="" loading="lazy"></p>
+<h5 id="基本使用方法-2">基本使用方法</h5>
+<p>安装完成后，运行winscp，会出现以下画面：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169898&amp;authkey=%21AF_TbjZHTZJ_tBI&amp;width=660" alt="" loading="lazy"></p>
+<ol>
+<li>
+<p>连接到VPS，和putty类似，输入目标服务器的IP地址，用户名，继续：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169899&amp;authkey=%21AIBL9O4eQcJptyQ&amp;width=480&amp;height=380" alt="" loading="lazy"><br>
+成功登录后，会出现这样：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169900&amp;authkey=%21ABhq1zmcSa2dk5g&amp;height=660" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>使用鼠标拖放既能完成文件操作<br>
+画面左面是本地的目录文件，右面是服务器端的文件，如果需要复制文件，只要拖动就可以了。</p>
+</li>
+</ol>
+<h3 id="结合使用putty和winscp">结合使用Putty和WinSCP：</h3>
+<p>通过PuTTY和WinSCP的协作，你可以在WinSCP中轻松管理文件，同时在PuTTY中执行必要的命令操作。例如，使用WinSCP的图形界面上传文件，然后在PuTTY中执行服务器上的安装脚本，两者的协同工作使得VPS的维护和管理变得无比简便。</p>
+<h4 id="先使用putty登录自己的服务器">先使用putty登录自己的服务器</h4>
+<p>连接并登录服务器后，可以看到命令行的窗口，我们使用常用命令，切换一个目录并列出当前目录下的文件：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169998&amp;authkey=%21AEOPj5-BvOpgyUE&amp;width=660" alt="" loading="lazy"><br>
+对Linux不熟悉的伙伴，注意观察屏幕，绿色光标为可以输入命令的提示符，光标之前分别能看出登录用户、VPS的主机名称和当前目录。<br>
+我在文末附上了Linux Ubuntu下经常使用的命令，小伙伴们可以逐个练习。后期我们安装开源软件时，可能用到的命令并不多，但需要习惯Linux下命令的输入和回显形式。</p>
+<h4 id="接着打开winscp登录服务器">接着打开winscp登录服务器</h4>
+<p>使用Putty连接VPS后，你就可以在VPS端输入各种命令了。不过当你需要进行文件操作时，新手对Linux下的命令行可能一头雾水，这时候你可以使用WinSCP来操作，同样使用WinSCP先登录服务器，注意观察以下画面：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169999&amp;authkey=%21AFJJc5KfQDOdcsk&amp;height=660" alt="" loading="lazy"></p>
+<h4 id="从本地复制文件到vps">从本地复制文件到VPS</h4>
+<p>WinSCP画面中有很多要素，最重要的是当前目录，注意屏幕的左半部分是本地目录，右半部分是VPS目录。如果你想从本地向VPS传输文件，选择好对应的目录后，把在左面需要复制的文件，拖动到右面窗口，就可以了，如果遇到这个画面：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169997&amp;authkey=%21AFZb0R_niJQ8mq8&amp;width=621&amp;height=300" alt="" loading="lazy"><br>
+是服务器上的目录没有权限，你需要在VPS上使用命令更改权限，或者更换换一个自己有权限的目录，权限正常后，你就能看到复制进度：</p>
+<figure data-type="image" tabindex="7"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170000&amp;authkey=%21AFXEFgh1DMYbfeQ&amp;width=442&amp;height=255" alt="" loading="lazy"></figure>
+<h4 id="其它">其它</h4>
+<h5 id="高级技巧">高级技巧</h5>
+<p>Putty和WinSCP都有更高级的技巧，比如通过创建SSH密钥对以实现免密码登录，共享会话，使用WinSCP进行定时备份服务器文件,直接从WinSCP中拖放文件到Putty窗口等。<br>
+在熟悉使用基本功能后，可以深入探索上述高级技巧。</p>
+<h5 id="实战案例">实战案例</h5>
+<p>今天，我们提供一个具体的案例，让大家练习上面提到的工具以及常用Linux命令。通过这个案例，我们可以实现将在线的帮助文档保存到本地的功能，如果你掌握了这个案例的用法，还可以玩出很多新花样。</p>
+<p>WinSCP目前没有提供离线的帮助文档，但我们使用Linux的wget命令，再综合利用本文提到的Putty和WinSCP，可以实现从WinSCP网站的在线文档“https://winscp.net/eng/docs/”中下载所有页面，再通过WinSCP软件传输到Windows，实现本地查看。答案见文末。</p>
+<h3 id="结语">结语：</h3>
+<p>今天，我们介绍了Putty和WinSCP这两个免费软件的功能、下载安装方法，并对软件使用进行了简单演示，文末还提供了一些资源链接，旨在帮助你快速上手VPS管理。如果您对今天介绍的软件还有疑问，欢迎您加入我们的“云端生活交流群”。<br>
+您可以添加以下微信，等待确认后会拉你入群，请先查看群公告完成群代办，之后就可以和其他伙伴愉快交流了。我们将聚合一些志同道合的朋友，以便在知识探索的路上互相帮助，互相成就。另外您希望我下一篇写什么内容，也欢迎在评论区留言。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169811&authkey=%21ABRiiNUJymdww3o&height=256" width="auto" height="256" />
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a></p>
+<img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" alt="请我喝咖啡" width="256" height="200" />
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+<h3 id="附件以下为百度网盘下载链接">附件（以下为百度网盘下载链接）：</h3>
+<p><a href="https://pan.baidu.com/s/1rqTE1YxkeJvCStnUmeuPqQ?pwd=hhyp">Putty Windows 64 0.81 提取码：hhyp</a></p>
+<p><a href="https://pan.baidu.com/s/1KlThDxnC91weq03x1w48Pg?pwd=b3yl">Putty帮助文档 提取码：b3yl</a></p>
+<p><a href="https://pan.baidu.com/s/1PMw9hjCbeBHw8WD3-9R9vQ?pwd=wp3c">WinSCP 6.3.3（Windows）提取码：wp3c</a></p>
+<p><a href="https://pan.baidu.com/s/10KVbtlHgH_5vVI8VFzARow?pwd=3q3t">WinSCP帮助文档 提取码：3q3t</a></p>
+<p><a href="https://pan.baidu.com/s/1lB0MHBjADbrxRWc1Whwzww?pwd=7ekv">Linux常用的操作命令 提取码：7ekv</a></p>
+<p>关于实战案例的答案：</p>
+<ol>
+<li>使用Putty登录VPS</li>
+<li>查看WinSCP的在线文档结构
+<ol>
+<li>发现这些文档都是在这个网址：https://winscp.net/eng/docs/</li>
+<li>比如介绍页面是：“https://winscp.net/eng/docs/introduction”</li>
+<li>比如配置要求页面是：“https://winscp.net/eng/docs/requirements”</li>
+</ol>
+</li>
+<li>使用wget下载WinSCP的在线文档
+<ol>
+<li>如果没有wget，可以先安装
+<ol>
+<li>sudo apt update</li>
+<li>sudo apt install wget</li>
+</ol>
+</li>
+<li>使用wget命令下载：
+<ol>
+<li>wget -r -np -p -k --adjust-extension --no-check-certificate -H -Dwinscp.net -I /eng/docs https://winscp.net/eng/docs</li>
+<li>参数详解：
+<ol>
+<li>-r (--recursive): 递归下载，表示wget将递归地下载所有遇到的链接。</li>
+<li>-np (--no-parent): 在递归下载时不爬行父目录。这样，wget不会返回到/eng/docs之上的目录层次去下载内容。</li>
+<li>-p (--page-requisites): 下载显示HTML页面所需要的所有资源，包括图片、CSS、JavaScript等。</li>
+<li>-k (--convert-links): 转换页面中的链接，下载后可以离线查看。它会尝试将每个页面的链接转换为本地相对链接，这样本地浏览时所有链接都能正确指向。</li>
+<li>--adjust-extension: 如果下载的文件是HTML或CSS，并且URL没有以.html或.css结尾，wget将自动添加相应的扩展名。这有助于本地文件与其原有的MIME类型相匹配。</li>
+<li>--no-check-certificate: 跳过SSL证书验证。这在你访问的服务器证书无效或者你的环境中缺少必要的CA证书时很有用。</li>
+<li>-H (--span-hosts): 允许递归下载操作跨越到不同的主机。这是必须的，因为某些页面的资源可能托管在与页面不同的域上。</li>
+<li>-Dwinscp.net: 限制-H，使wget只在winscp.net域内跨越主机下载。</li>
+<li>-I /eng/docs: 限制wget的递归下载到指定的目录路径。这意味着只有当URL路径以/eng/docs开始时，wget才会下载。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>使用WinSCP登录VPS，并切换到争取的目录</li>
+<li>通过WinSCP将已经下载后的文档（目录）复制到Windows本地</li>
+<li>找到目录中的Index.html，双击查看</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/huSSbzfX6/" class="tag">
+                    云生活
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/vEGxriXjvW/" class="tag">
+                    免费
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/shen-ru-liao-jie-racknerd-vpsgong-neng-guan-li-yu-you-hua/">
+                  <h3 class="post-title">
+                    基础篇3-深入了解RackNerd VPS功能及管理
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

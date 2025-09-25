@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>优化量化交易策略：如何通过参数调整提升收益 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="本文围绕量化交易中的回测优化展开，深入探讨如何通过调整交易周期、单次交易数量等参数提升策略表现，并结合实际案例分析不同设置对收益的影响。同时，文章介绍了利用AI工具（如ChatGPT）和Python脚本实现参数自动化探索的实践方法，以及回测..." />
+    <meta name="keywords" content="投资,股票,AI" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">优化量化交易策略：如何通过参数调整提升收益</h2>
+            <div class="post-date">2024-12-24</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/you-hua-liang-hua-jiao-yi-ce-lue-ru-he-tong-guo-can-shu-diao-zheng-ti-sheng-shou-yi.webp')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>本文围绕量化交易中的回测优化展开，深入探讨如何通过调整交易周期、单次交易数量等参数提升策略表现，并结合实际案例分析不同设置对收益的影响。同时，文章介绍了利用AI工具（如ChatGPT）和Python脚本实现参数自动化探索的实践方法，以及回测中“非日内模式”和“持仓同步逻辑”两个关键参数的作用和应用场景。最后，文章鼓励用户分享最佳参数探索经验，共同推进量化交易策略的优化。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a></li>
+<li><a href="#">!</a></li>
+<li><a href="#%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA">风险提示</a></li>
+<li><a href="#%E5%9B%9E%E9%A1%BE%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5%E5%9B%9E%E6%B5%8B%E6%AD%A5%E9%AA%A4">回顾量化交易策略回测步骤</a>
+<ul>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A41">回测设置步骤1</a></li>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A42">回测设置步骤2</a></li>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A43">回测设置步骤3</a></li>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A44">回测设置步骤4</a></li>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A45">回测设置步骤5</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E7%AD%96%E7%95%A5%E5%9B%9E%E6%B5%8B%E7%BB%93%E6%9E%9C">查看策略回测结果</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9E%E6%B5%8B%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%8F%82%E6%95%B0%E6%8E%A2%E7%B4%A2">回测中的关键参数探索</a>
+<ul>
+<li><a href="#1-%E4%B8%8D%E5%90%8C%E4%BA%A4%E6%98%93%E5%91%A8%E6%9C%9F%E7%9A%84%E5%9B%9E%E6%B5%8B%E8%A1%A8%E7%8E%B0%E6%97%A5%E7%BA%BF1%E5%B0%8F%E6%97%B6%E7%BA%BF30%E5%88%86%E9%92%9F%E7%BA%BF">1. 不同交易周期的回测表现（日线，1小时线，30分钟线）</a></li>
+<li><a href="#2-%E8%B0%83%E6%95%B4%E5%8D%95%E6%AC%A1%E4%BA%A4%E6%98%93%E8%82%A1%E6%95%B0%E5%AF%B9%E5%9B%9E%E6%B5%8B%E6%94%B6%E7%9B%8A%E7%9A%84%E5%BD%B1%E5%93%8D">2. 调整单次交易股数对回测收益的影响</a></li>
+<li><a href="#3-%E6%9B%B4%E6%8D%A2%E4%B8%BA%E5%85%B6%E5%AE%83%E6%A0%87%E7%9A%84%E7%9A%84%E5%9B%9E%E6%B5%8B%E7%BB%93%E6%9E%9C">3. 更换为其它标的的回测结果</a></li>
+</ul>
+</li>
+<li><a href="#%E5%80%9F%E5%8A%A9ai%E5%92%8C%E8%84%9A%E6%9C%AC%E8%BF%9B%E8%A1%8C%E5%8F%82%E6%95%B0%E6%8E%A2%E7%B4%A2">借助AI和脚本进行参数探索</a>
+<ul>
+<li><a href="#%E8%84%9A%E6%9C%AC%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><strong>脚本设计思路</strong></a></li>
+<li><a href="#%E8%84%9A%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%95%88%E6%9E%9C"><strong>脚本功能与效果</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%8F%E5%8C%96%E7%AD%96%E7%95%A5%E4%B8%AD%E4%B8%A4%E4%B8%AA%E5%85%B3%E9%94%AE%E5%9B%9E%E6%B5%8B%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90">量化策略中两个关键回测参数解析</a>
+<ul>
+<li><a href="#%E5%90%AF%E7%94%A8%E9%9D%9E%E6%97%A5%E5%86%85%E6%A8%A1%E5%BC%8Fenable_non_intraday_mode">启用非日内模式（enable_non_intraday_mode）</a></li>
+<li><a href="#%E6%8C%81%E4%BB%93%E5%90%8C%E6%AD%A5%E9%80%BB%E8%BE%91enable_position_sync_in_backtest">持仓同步逻辑（enable_position_sync_in_backtest）</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E4%BA%92%E5%8A%A8">总结与互动</a>
+<ul>
+<li><a href="#%E6%AC%A2%E8%BF%8E%E4%BA%92%E5%8A%A8">欢迎互动：</a></li>
+<li><a href="#%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA%E6%80%BB%E7%BB%93%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%B9%B6%E9%9D%9E%E4%B8%87%E6%97%A0%E4%B8%80%E5%A4%B1%E5%8F%82%E6%95%B0%E7%9A%84%E8%A1%A8%E7%8E%B0%E5%8F%AF%E8%83%BD%E9%9A%8F%E5%B8%82%E5%9C%BA%E7%8E%AF%E5%A2%83%E5%92%8C%E6%97%B6%E9%97%B4%E6%AE%B5%E5%8F%98%E5%8C%96-%E5%BB%BA%E8%AE%AE%E4%BB%8E%E5%B0%8F%E8%A7%84%E6%A8%A1%E8%B5%84%E9%87%91%E5%BC%80%E5%A7%8B%E9%80%90%E6%AD%A5%E9%AA%8C%E8%AF%81%E7%AD%96%E7%95%A5%E7%A8%B3%E5%AE%9A%E6%80%A7%E9%81%BF%E5%85%8D%E7%9B%B2%E7%9B%AE%E6%89%A9%E5%A4%A7%E6%8A%95%E5%85%A5">风险提示总结：量化交易并非万无一失，参数的表现可能随市场环境和时间段变化。建议从小规模资金开始，逐步验证策略稳定性，避免盲目扩大投入。</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<blockquote>
+<p>免责声明：本文仅供学习交流使用，不构成任何投资建议。作者非专业人士，提醒读者：量化交易存在风险，投资需谨慎，请结合个人风险承受能力做出决策。</p>
+</blockquote>
+<h2 id="引言">引言</h2>
+<p>量化交易的核心目标是通过不断优化策略参数，提升回测表现并实现最大收益。在本文中，我们将结合具体回测数据，探讨如何利用回测参数进行收益优化，同时介绍如何借助AI工具如ChatGPT和Python脚本进行自动化的参数探索。</p>
+<h2 id=""><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkfZAeZk6Zny9Hg-A?embed=1&amp;width=660" alt="" loading="lazy"></h2>
+<h2 id="风险提示">风险提示</h2>
+<p>在开始讨论之前，特别提醒读者：</p>
+<ul>
+<li>本文展示的回测结果基于特定策略版本、特定时间段和参数设置，并不代表策略在其他时间段的表现。</li>
+<li>不同的标的、市场环境和时间周期可能会对参数的最优选择产生重大影响。</li>
+<li>请结合自身投资目标和风险偏好，在尝试不同参数组合时，注意控制风险。</li>
+</ul>
+<p>量化交易虽然为我们提供了系统化的交易方法，但其效果依赖于市场环境和参数优化结果。因此，我们鼓励用户在尝试过程中多进行不同时间段的测试，以获得更稳定可靠的结果。</p>
+<hr>
+<h2 id="回顾量化交易策略回测步骤">回顾量化交易策略回测步骤</h2>
+<p>以下内容均使用Moomoo的量化交易功能中的“运行策略”-“历史回测”，假定读者已经导入了我提供的量化策略，或者设计并实现了自己的量化策略。如果您还没有相关经验，可参考之前的文章进行学习。</p>
+<figure data-type="image" tabindex="1"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkgMuMs_bb7tcn04g?embed=1&amp;width=660" alt="" loading="lazy"></figure>
+<h3 id="回测设置步骤1">回测设置步骤1</h3>
+<p>选择“交易策略”，（回测使用的）账户，回测区间，初始资金。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkR7MCOTWzlYiNRnQ?embed=1&amp;width=596&amp;height=652" alt="回测区间和初始资金" loading="lazy"></p>
+<h3 id="回测设置步骤2">回测设置步骤2</h3>
+<p>勾选“及时行情触发运行”。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkLeSOnmZb1MqDbAA?embed=1&amp;width=596&amp;height=653" alt="及时行情触发" loading="lazy"></p>
+<h3 id="回测设置步骤3">回测设置步骤3</h3>
+<p>选择“标的”，回测的交易周期。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkJN_rNK5IxEe2iHw?embed=1&amp;width=596&amp;height=652" alt="标的和周期" loading="lazy"><br>
+注意周期可以有多种选择，比如日线、1小时线、15分钟线等。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkKGlofYqwZXuzepA?embed=1&amp;width=223&amp;height=313" alt="周期选择" loading="lazy"></p>
+<h3 id="回测设置步骤4">回测设置步骤4</h3>
+<p>设置策略参数中的“最大持仓”，“每次（最小）购买数量”，“（单网格）仓位上限”，“非日内交易”。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkMqlagAQ6tDZ_SmQ?embed=1&amp;width=596&amp;height=652" alt="设置策略参数" loading="lazy"></p>
+<h3 id="回测设置步骤5">回测设置步骤5</h3>
+<p>在参数预览中，回顾刚才的设置，如果是实盘运行，这些参数请务必仔细确认。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkORoqjjnKwCAPTEw?embed=1&amp;width=596&amp;height=652" alt="确认参数设置" loading="lazy"></p>
+<h3 id="查看策略回测结果">查看策略回测结果</h3>
+<p>上述步骤完成后，点击“开始运行”，经过运行就能看到回测结果。回测结果包括策略运行后的资产净值、收益率、最大回撤、夏普比率、回测耗时、股价周期及买卖情况、资产走势、订单持仓和运行日志等。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkTXrowqdLAcPXumA?embed=1&amp;width=660" alt="回测结果" loading="lazy"></p>
+<hr>
+<h2 id="回测中的关键参数探索">回测中的关键参数探索</h2>
+<p>在多次的回测中，通过调整网格交易策略的关键参数，如交易周期、单次交易数量，可以看到这些参数对回测收益有着巨大的影响。以下是几个典型的回测案例，其中的固定参数是：标的Mara，初始资金10000美元，回测区间2024年11月13日至2024年12月13日，最大持仓500股，网格（盈利）间距3%，网格数量10个，其余默认。注意可以将回测结果和在此期间，买入并持有策略的收益-6.54%进行对比。</p>
+<h3 id="1-不同交易周期的回测表现日线1小时线30分钟线">1. 不同交易周期的回测表现（日线，1小时线，30分钟线）</h3>
+<table>
+<thead>
+<tr>
+<th><strong>周期</strong></th>
+<th><strong>收益率</strong></th>
+<th><strong>最大回撤</strong></th>
+<th><strong>交易次数</strong></th>
+<th><strong>持仓数量</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日线</td>
+<td>2.14%</td>
+<td>4.27%</td>
+<td>30次</td>
+<td>140股</td>
+</tr>
+<tr>
+<td>1小时线</td>
+<td>3.23%</td>
+<td>10.13%</td>
+<td>214次</td>
+<td>240股</td>
+</tr>
+<tr>
+<td>30分钟线</td>
+<td>3.51%</td>
+<td>10.37%</td>
+<td>411次</td>
+<td>380股</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkUIqzJirt_pAIpVw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkXTBlPnKOWSu2MVA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkVrYLNQ_CFLKRiVg?embed=1&amp;width=660" alt="" loading="lazy"></p>
+<p><em>以上为三个不同回测周期的回测收益对比图，展示不同周期下的收益率和最大回撤等结果。</em></p>
+<p>可以看到，交易周期越短，交易次数越多，收益有提升，但伴随更高的回撤风险。<br>
+你可以通过回测结果画面右上角的“回测记录”，查看之前的回测结果。截止目前，Moomoo并未对回测进行限制，包括开盘和盘前盘后都可以进行回测，包括回测时还可以切换至交易，也未发现回测需要付费，所以在实盘前，可以多次回测，尽量找到最佳参数组合。</p>
+<p><strong>风险提示</strong>：短周期交易虽然可能带来更高的收益，但也伴随更高的市场波动风险。原因一部分因为网格交易的原则为低买高卖，如果标的价格在某个周期内一直存在合适的波动，那么就会有非常多的交易机会，但交易机会多并不意味着一定盈利，相反可能在单边下跌趋势中迅速积累亏损的持仓，在单边上升趋势中不断减少盈利筹码，并且因为目前策略中同步验证持仓的逻辑，回测时间段越长，回测会非常耗时，用户需要根据自身资金规模、风险承受能力和市场环境，合理选择交易周期。</p>
+<h3 id="2-调整单次交易股数对回测收益的影响">2. 调整单次交易股数对回测收益的影响</h3>
+<p>以MARA股票为例，在固定初始资金和最大持仓的前提下，通过调整单次交易的股数（如20股、50股），观察策略表现的变化。注意从单次交易股数和其它参数的约束关系来看，单次交易股数越大，达到单网格持仓上限越快，达到既定初始资金决定的总持仓限制也越快，意味着可能会错过更多的交易机会。以下为初始资金10000美元，最大持仓500股，其它默认参数的回测结果：</p>
+<table>
+<thead>
+<tr>
+<th><strong>周期</strong></th>
+<th><strong>单次/单格股数</strong></th>
+<th><strong>收益率</strong></th>
+<th><strong>最大回撤</strong></th>
+<th><strong>交易次数</strong></th>
+<th><strong>持仓数量</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日线</td>
+<td>40/120</td>
+<td>4.27%</td>
+<td>8.09%</td>
+<td>30次</td>
+<td>280股</td>
+</tr>
+<tr>
+<td>1小时</td>
+<td>40/120</td>
+<td>6.84%</td>
+<td>23.27%</td>
+<td>177次</td>
+<td>480股</td>
+</tr>
+<tr>
+<td>日线</td>
+<td>50/150</td>
+<td>5.34%</td>
+<td>9.84%</td>
+<td>30次</td>
+<td>350股</td>
+</tr>
+<tr>
+<td>1小时</td>
+<td>50/150</td>
+<td>7.69%</td>
+<td>25.86%</td>
+<td>143次</td>
+<td>500股</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkW0Da_39RD1T1cMA?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkY8p2SxL_oH7YJBw?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkahqTg6Ao6wjp2pQ?embed=1&amp;width=660" alt="" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkZdX0LG_vLy9wPUQ?embed=1&amp;width=660" alt="" loading="lazy"></p>
+<p><em>以上为四个不同单次交易股数的回测收益对比图，展示不同单次股数下的收益率和最大回撤等结果。</em></p>
+<p>可以看到，更改单次交易股数（对应也更改单网格持股上限），对收益率和最大回撤都有显著影响。在实际应用中，需要根据标的特点和市场环境，合理调整单次交易股数，以平衡收益和风险。注意达到持仓数量的限制后，策略将不再进行交易，这可能意味着错过了一些交易机会。</p>
+<p><strong>风险提示</strong>：以上结果仅限于特定时间段和标的，不同的网格间距在其他时间段可能表现出完全不同的收益和风险，请结合标的特点多进行测试。</p>
+<h3 id="3-更换为其它标的的回测结果">3. 更换为其它标的的回测结果</h3>
+<p>在Moomoo量化交易中，用户可以选择不同的标的进行回测，比如SOXL或者TSLA，只需要合理设置总持仓和每次购买股数，以下为不同标的在11月13日-12月13日的回测结果。</p>
+<table>
+<thead>
+<tr>
+<th><strong>标的名称</strong></th>
+<th><strong>周期</strong></th>
+<th><strong>单次/单格股数</strong></th>
+<th><strong>收益率</strong></th>
+<th><strong>最大回撤</strong></th>
+<th><strong>交易次数</strong></th>
+<th><strong>持仓数量</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SOXL</strong></td>
+<td>日线</td>
+<td>20/80</td>
+<td>3.01%</td>
+<td>3.70%</td>
+<td>29次</td>
+<td>60股</td>
+</tr>
+<tr>
+<td><strong>SOXL</strong></td>
+<td>1小时</td>
+<td>20/80</td>
+<td>2.01%</td>
+<td>12.66%</td>
+<td>144次</td>
+<td>40股</td>
+</tr>
+<tr>
+<td><strong>TSLA</strong></td>
+<td>日线</td>
+<td>2/8</td>
+<td>5.18%</td>
+<td>1.30%</td>
+<td>36次</td>
+<td>4股</td>
+</tr>
+<tr>
+<td><strong>TSLA</strong></td>
+<td>1小时</td>
+<td>2/8</td>
+<td>24.68%</td>
+<td>9.06%</td>
+<td>222次</td>
+<td>4股</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkcjNUjLJEIi_shQA?embed=1&amp;width=660" alt="SOXL日线回测" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKke2jANwkFTrl8ObQ?embed=1&amp;width=660" alt="SOXL1小时线回测" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkdQk1QqRjvRgC4AA?embed=1&amp;width=660" alt="TSLA日线回测" loading="lazy"><br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkb-2tu4Mr8qmAfOw?embed=1&amp;width=660" alt="TSLA1小时线回测" loading="lazy"></p>
+<p><em>以上为两个不同标的，两个不同周期的回测收益对比图，注意因为标的股价的关系，因此需要调整总持仓、每次购买股数、单网格持仓上限。</em></p>
+<p>可以看到，针对不同的标的，回测的收益有非常大的区别。三倍杠杆的SOXL日线和1小时线的收益基本相同，但TSLA的1小时收益达到了近25%。<br>
+当然TSLA回测收益很高，主要是近期TSLA正处于上涨趋势，如果你长期看好并愿意一直持有，那么买入并持有策略可能会更好，但如果你也在这段时间“卖飞”了，又焦虑重新入场点位是否合适，那么从1小时的收益和持仓数来看，网格交易不失为一个不错的选择。<br>
+考虑到TSLA的股性，那么如果调整一些参数，比如更短的周期，或者单次更大的投入，是否收益会更可观呢，欢迎你在评论区分享你的回测结果。<br>
+更改单次交易股数（对应也要更改单网格持股上限），对收益率和最大回撤都有显著影响。在实际应用中，需要根据标的特点和市场环境，合理调整单次交易股数，以平衡收益和风险。注意达到持仓数量的限制后，策略将不再进行交易，这可能意味着错过了一些交易机会。<br>
+<img src="https://1drv.ms/i/s!AhDarymx2kRWhKkhA4Q8BF0V9LLZXA?embed=1&amp;width=660" alt="" loading="lazy"></p>
+<p><strong>风险提示</strong>：以上结果仅限于特定时间段和标的，不同的网格间距在其他时间段可能表现出完全不同的收益和风险，请结合标的特点多进行测试。</p>
+<hr>
+<h2 id="借助ai和脚本进行参数探索">借助AI和脚本进行参数探索</h2>
+<p>随着量化交易工具的普及，手动调整参数的效率显得不足，而且Moomoo量化功能中的自定义策略代码属于Python的子集，并不能体现出Python科学计算的强大威力。利用ChatGPT等AI工具的支持，我正在设计一套基于Windows端可以直接运行的Python的脚本，这样如果有本地的交易数据，比如之前我通过Yahoo Finance下载了部分标的的日线数据，就可以实现脱离Moomoo环境的自动化地测试参数组合并分析表现。</p>
+<figure data-type="image" tabindex="2"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKki9N75i63JBQwMaA?embed=1&amp;width=660" alt="" loading="lazy"></figure>
+<h3 id="脚本设计思路"><strong>脚本设计思路</strong></h3>
+<p>脚本设计的思路主要是通过在本地运行的python脚本，实现基于参数约束条件下的最佳参数探索。具体设计思路如下：</p>
+<ol>
+<li><strong>参数约束关系</strong>：设定参数的取值范围和约束条件，如初始资金、最大持仓、网格间距、单网格持仓限制、单次购买数量等。</li>
+<li><strong>参数组合生成</strong>：根据参数间的约束关系，生成所有可能的参数组合，用于后续回测。</li>
+<li><strong>回测执行</strong>：利用本地化的日线数据，执行回测并记录最佳参数的结果。</li>
+<li><strong>应用最佳参数</strong>：根据回测结果，将最佳参数输入Moomoo量化策略，进行更广泛的回测并指导实盘运行。</li>
+</ol>
+<h3 id="脚本功能与效果"><strong>脚本功能与效果</strong></h3>
+<ol>
+<li><strong>参数自动化探索</strong>：
+<ul>
+<li>测试多种参数组合，如交易周期、网格间距、持仓限制等。</li>
+<li>输出最佳参数的详细分析报告。</li>
+</ul>
+</li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkQQq3qCK_5YtdXhw?embed=1&amp;height=660" alt="最佳参数探索" loading="lazy"></figure>
+<ol start="2">
+<li><strong>可视化结果</strong>：
+<ul>
+<li>生成收益曲线、持仓变化和交易点分布图表。</li>
+<li>帮助用户直观理解策略表现。</li>
+</ul>
+</li>
+</ol>
+<figure data-type="image" tabindex="4"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkSzhdNqAIYzFuLaw?embed=1&amp;height=660" alt="可视化结果" loading="lazy"></figure>
+<ol start="3">
+<li><strong>未来扩展</strong>：
+<ul>
+<li>结合机器学习算法，优化参数搜索效率。</li>
+<li>支持多标的、多周期的回测分析。</li>
+<li>自动生成策略代码，缩短开发周期。</li>
+</ul>
+</li>
+</ol>
+<h2 id="量化策略中两个关键回测参数解析">量化策略中两个关键回测参数解析</h2>
+<p>在量化交易回测中，有两个重要参数会显著影响策略的收益表现和回测效率：</p>
+<figure data-type="image" tabindex="5"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkju3tRGTTBRZ3d9Q?embed=1&amp;width=660" alt="2个重要参数" loading="lazy"></figure>
+<h3 id="启用非日内模式enable_non_intraday_mode">启用非日内模式（enable_non_intraday_mode）</h3>
+<p>功能：限制周期内交易，比如应用到日线交易时，每天仅允许一次交易，这样就不会被标注为日内交易（PDT）。<br>
+适用场景：适合非日内交易者（注意Moomoo的日内交易需要至少25000美元的账户余额），或者希望同时获得Cash Sweep利息和实现自动交易的用户。</p>
+<h3 id="持仓同步逻辑enable_position_sync_in_backtest">持仓同步逻辑（enable_position_sync_in_backtest）</h3>
+<p>功能：决定回测过程中是否严格模拟持仓同步逻辑，特别当选择短周期如5分钟线交易时，回测会非常耗时，此时将此参数设置为“False”。<br>
+适用场景：高频交易策略回测时使用，但注意没有持仓同步逻辑，可能会影响一系列其它相关参数并最终影响收益估算。</p>
+<hr>
+<h2 id="总结与互动">总结与互动</h2>
+<p>通过本文的探讨，我们发现合理调整回测参数可以显著提升策略表现，而借助AI和自动化脚本进一步优化参数探索过程，将成为量化交易的重要趋势。</p>
+<figure data-type="image" tabindex="6"><img src="https://1drv.ms/i/s!AhDarymx2kRWhKkk9skhmoMh-9aY8Q?embed=1&amp;width=660" alt="" loading="lazy"></figure>
+<h3 id="欢迎互动">欢迎互动：</h3>
+<ul>
+<li>试试脚本探索您标的的最佳参数，并将结果分享到评论区！</li>
+<li>如果有其他关于策略优化的建议或问题，也欢迎留言讨论。</li>
+</ul>
+<h3 id="风险提示总结量化交易并非万无一失参数的表现可能随市场环境和时间段变化-建议从小规模资金开始逐步验证策略稳定性避免盲目扩大投入">风险提示总结：量化交易并非万无一失，参数的表现可能随市场环境和时间段变化。建议从小规模资金开始，逐步验证策略稳定性，避免盲目扩大投入。</h3>
+<p>好了，今天就到这里，如果你对本文中的内容有兴趣，欢迎在评论区分享您的高见。</p>
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a></p>
+<img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" alt="请我喝咖啡" width="256" height="200" />
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/VI3oOVxe0w/" class="tag">
+                    投资
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/csH7KUJGVb/" class="tag">
+                    股票
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/1sEGD1rJY/" class="tag">
+                    AI
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/github-pages-jiao-cheng-kai-qi-ni-de-bo-ke-xin-lu-cheng/">
+                  <h3 class="post-title">
+                    Github Pages教程：开启你的博客新旅程
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

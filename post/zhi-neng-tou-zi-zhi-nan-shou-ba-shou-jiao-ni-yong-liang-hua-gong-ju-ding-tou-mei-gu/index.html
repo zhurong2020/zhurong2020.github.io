@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>智能投资指南：手把手教你用量化工具定投美股 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="定投是一种被广泛认可的投资方式，通过定期投入资金分摊风险，从而获取稳健的长期收益。在本文中，我们将通过Moomoo量化工具（自定义代码策略），结合美股的实际标的，指导你如何轻松实现特定美股标的的定投，同时了解Moomoo量化功能的更多潜力。..." />
+    <meta name="keywords" content="投资,股票,AI" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">智能投资指南：手把手教你用量化工具定投美股</h2>
+            <div class="post-date">2025-01-13</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/zhi-neng-tou-zi-zhi-nan-shou-ba-shou-jiao-ni-yong-liang-hua-gong-ju-ding-tou-mei-gu.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>定投是一种被广泛认可的投资方式，通过定期投入资金分摊风险，从而获取稳健的长期收益。在本文中，我们将通过Moomoo量化工具（自定义代码策略），结合美股的实际标的，指导你如何轻松实现特定美股标的的定投，同时了解Moomoo量化功能的更多潜力。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E9%87%8F%E5%8C%96%E5%B7%A5%E5%85%B7%E5%AE%9A%E6%8A%95">为什么选择量化工具定投？</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E7%BE%8E%E8%82%A1%E4%BD%9C%E4%B8%BA%E6%8A%95%E8%B5%84%E6%A0%87%E7%9A%84">为什么选择美股作为投资标的？</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-moomoo">为什么选择 Moomoo？</a>
+<ul>
+<li><a href="#moomoo%E7%9A%84%E4%BC%98%E5%8A%BF">Moomoo的优势：</a></li>
+<li><a href="#moomoo%E7%9A%84%E6%88%90%E5%B0%B1">Moomoo的成就：</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%8F%E5%8C%96%E5%AE%9A%E6%8A%95%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B">量化定投操作流程</a>
+<ul>
+<li><a href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">前期准备</a>
+<ul>
+<li><a href="#%E8%B4%A6%E6%88%B7%E5%BC%80%E8%AE%BE%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">账户开设与软件安装</a></li>
+<li><a href="#%E4%BA%86%E8%A7%A3moomoo%E8%BD%AF%E4%BB%B6%E5%B8%B8%E8%A7%84%E6%93%8D%E4%BD%9C">了解Moomoo软件常规操作</a></li>
+<li><a href="#%E4%BA%86%E8%A7%A3moomoo%E9%87%8F%E5%8C%96%E5%8A%9F%E8%83%BD%E5%B9%B6%E5%AF%BC%E5%85%A5%E5%AE%9A%E6%8A%95%E7%AD%96%E7%95%A5">了解Moomoo量化功能并导入定投策略</a></li>
+<li><a href="#%E8%B5%84%E9%87%91%E8%A7%84%E5%88%92">资金规划</a></li>
+</ul>
+</li>
+<li><a href="#%E6%97%A5%E5%B8%B8%E6%93%8D%E4%BD%9C">日常操作</a>
+<ul>
+<li><a href="#%E8%BF%90%E8%A1%8Cmoomoo%E8%BD%AF%E4%BB%B6">运行Moomoo软件</a></li>
+<li><a href="#%E5%90%AF%E5%8A%A8%E9%87%8F%E5%8C%96%E7%AD%96%E7%95%A5">启动量化策略</a></li>
+<li><a href="#%E7%9B%91%E6%8E%A7%E7%AD%96%E7%95%A5%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5">监控策略运行情况</a></li>
+<li><a href="#%E6%A0%B9%E6%8D%AE%E7%AD%96%E7%95%A5%E5%9B%9E%E6%B5%8B%E7%BB%93%E6%9E%9C%E8%B0%83%E6%95%B4%E5%8F%82%E6%95%B0">根据策略回测结果调整参数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%AE%9A%E6%8A%95%E7%AD%96%E7%95%A5%E4%BB%8B%E7%BB%8D%E5%92%8C%E6%A1%88%E4%BE%8B">定投策略介绍和案例</a>
+<ul>
+<li><a href="#%E5%AE%9A%E6%8A%95%E7%AD%96%E7%95%A5%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">定投策略简单介绍</a></li>
+<li><a href="#%E5%AE%9E%E9%99%85%E6%A1%88%E4%BE%8B%E6%AF%8F%E5%91%A8%E5%AE%9A%E6%8A%95-abr">实际案例：每周定投 ABR</a></li>
+<li><a href="#%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6">风险控制</a>
+<ul>
+<li><a href="#%E9%87%8F%E5%8C%96%E5%B7%A5%E5%85%B7%E8%99%BD%E7%84%B6%E8%83%BD%E6%8F%90%E9%AB%98%E6%8A%95%E8%B5%84%E6%95%88%E7%8E%87%E4%BD%86%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81">量化工具虽然能提高投资效率，但风险控制同样重要：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93%E5%BC%80%E5%90%AF%E4%BD%A0%E7%9A%84%E6%99%BA%E8%83%BD%E6%8A%95%E8%B5%84%E4%B9%8B%E6%97%85">总结：开启你的智能投资之旅</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<blockquote>
+<p>免责声明：本文仅供学习交流使用，不构成任何投资建议。作者非专业人士，提醒读者：量化交易存在风险，投资需谨慎，请结合个人风险承受能力做出决策。</p>
+</blockquote>
+<h2 id="为什么选择量化工具定投">为什么选择量化工具定投？</h2>
+<p>传统定投需要手动操作，容易受到情绪波动影响。而量化工具通过程序化方式执行交易策略，具备以下优势：</p>
+<ul>
+<li>
+<p>自动化执行：减少人工干预，节省时间。</p>
+</li>
+<li>
+<p>数据驱动决策：精准分析市场数据，优化买入点。</p>
+</li>
+<li>
+<p>纪律性强：严格按照策略执行，不被情绪干扰。</p>
+</li>
+</ul>
+<p>更重要的是，Moomoo量化功能不仅支持定投，还能和其它策略互相配合，而且可用于美股市场中的任何标的，提供更广泛的投资机会。</p>
+<figure data-type="image" tabindex="1"><img src="https://1drv.ms/i/c/5644dab129afda10/IQSE5cgAl_JSTqaQTW2nLvvOAXzUSdT9gy_HVzwKQGrDUYo?width=660" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="为什么选择美股作为投资标的">为什么选择美股作为投资标的？</h2>
+<p>如果你想寻找全球资本市场中最有活力的投资标的，美股无疑是首选。这里汇聚了苹果（Apple）、微软（Microsoft）、谷歌（Google）、特斯拉（Tesla）和亚马逊（Amazon）等全球最知名的科技和消费公司。</p>
+<p>美股不仅代表了全球创新的前沿，更是普通投资者实现财富增长的重要途径。以下是美股吸引投资者的主要原因：</p>
+<ol>
+<li>
+<p>成长潜力巨大：科技巨头和创新企业的持续增长为投资者带来丰厚回报。</p>
+</li>
+<li>
+<p>流动性强：美股市场规模庞大，交易活跃，进出方便。</p>
+</li>
+<li>
+<p>分散风险：投资美股可以覆盖多个行业和公司，降低单一标的的风险。</p>
+</li>
+</ol>
+<p>对于个人投资者，量化工具的出现让定投美股变得更加简单高效，是迈向更复杂量化策略的第一步。</p>
+<p>下图是一个分板块的个股热力图，你可以找找看，有多少你知道的知名公司在图片里面（图中的英文缩写为公司的股票代码）。</p>
+<figure data-type="image" tabindex="2"><img src="https://1drv.ms/i/c/5644dab129afda10/IQTDVC-t4zekQbeYCDpnEZtvAbXhwJItfG4k1NnersUqkdE?width=660" alt="" loading="lazy"></figure>
+<h2 id="为什么选择-moomoo">为什么选择 Moomoo？</h2>
+<p>Moomoo致力于打造一个“让每个人都能轻松投资的世界”，其平台不仅提供专业级的投资工具和数据支持，还为投资者提供了一个全球性社区，鼓励用户分享和学习。</p>
+<h3 id="moomoo的优势">Moomoo的优势：</h3>
+<ol>
+<li>
+<p>一站式工具与数据：从实时市场数据到150+专业分析工具，Moomoo为投资者提供全方位支持。</p>
+</li>
+<li>
+<p>便捷易用：无论是新手还是资深投资者，都能通过Moomoo轻松获取投资所需的资源和灵感。</p>
+</li>
+<li>
+<p>全球化支持：Moomoo不仅为美股投资者提供服务，还覆盖全球市场，包括中国、新加坡、澳大利亚等多个国家。</p>
+</li>
+</ol>
+<h3 id="moomoo的成就">Moomoo的成就：</h3>
+<ol>
+<li>
+<p>全球用户数超过2400万，用户资产管理规模达892亿美元。</p>
+</li>
+<li>
+<p>每年交易量超过5000亿美元。</p>
+</li>
+<li>
+<p>超过2000门投资教育课程和900万用户分享的投资灵感，帮助用户不断提升。</p>
+</li>
+<li>
+<p>获得100多个全球奖项，深受投资者信赖。</p>
+</li>
+</ol>
+<p>另外我觉得特别重要的是，Moomoo的量化工具门槛较低，可以帮助普通投资者实现自动化交易，提高投资效率。</p>
+<figure data-type="image" tabindex="3"><img src="https://1drv.ms/i/c/5644dab129afda10/IQR7s3s86rDrRp704PNdFH_nAUYL_6k-U9OuZ7U_hxaZwbs?width=660" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="量化定投操作流程">量化定投操作流程</h2>
+<h3 id="前期准备">前期准备</h3>
+<h4 id="账户开设与软件安装">账户开设与软件安装</h4>
+<ul>
+<li>开设支持量化交易的Moomoo账户，通过<a href="https://j.moomoo.com/01priX">此链接开户</a>，可享受多项福利。</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://1drv.ms/i/c/5644dab129afda10/IQSRtwCVMbFoQ559G39BFuC8AZPPp79L-8r5YgkVnxfTb30?width=660" alt="" loading="lazy"></figure>
+<ul>
+<li><a href="https://www.moomoo.com/us/hans/download">安装Moomoo客户端</a>并配置量化工具，熟悉基础操作能力。</li>
+</ul>
+<figure data-type="image" tabindex="5"><img src="https://1drv.ms/i/c/5644dab129afda10/IQQWCbgjEKhwSo8uXuG_e7geARY13Iwb20YlN9aWHgEkMO4?width=660" alt="" loading="lazy"></figure>
+<p>请选择适合自己的客户端，注意量化策略相关功能只能在电脑端使用。</p>
+<h4 id="了解moomoo软件常规操作">了解Moomoo软件常规操作</h4>
+<ul>
+<li>关于Moomoo客户端的操作<br>
+如果对客户端使用不熟悉的，可以尝试学习Moomoo的<a href="https://www.moomoo.com/us/hans/learn/list/moomoo-27333372527247377?_ftsdk=1736031485548337&amp;_ga=2.226595610.689775111.1736878652-1229011274.1729781230&amp;_gac=1.92166632.1736975103.Cj0KCQiA1p28BhCBARIsADP9HrP3by7L5xCO0KSQdu3Nwm1UNilY4dBSIh7Zl7UNCe92wJvwpVTm2z4aAoULEALw_wcB">操作手册</a></li>
+<li><a href="https://www.moomoo.com/us/hans/learn/detail-how-to-view-today-s-p-l-transaction-statement-80082-241263027?global_content=%7B%22promote_id%22%3A10,%22sub_promote_id%22%3A1584%7D">新用户指南</a></li>
+<li><a href="https://www.moomoo.com/us/hans/learn/detail-overview-113312-230855055?global_content=%7B%22promote_id%22%3A10,%22sub_promote_id%22%3A1584%7D">开始使用Moomoo</a></li>
+<li><a href="https://www.moomoo.com/us/hans/learn/detail-how-to-use-institutional-tracker-117829-250136041?global_content=%7B%22promote_id%22%3A10,%22sub_promote_id%22%3A1584%7D">快速入门指南</a></li>
+</ul>
+<h4 id="了解moomoo量化功能并导入定投策略">了解Moomoo量化功能并导入定投策略</h4>
+<ul>
+<li>
+<p>了解Moomoo量化功能的基本操作，包括策略导入、参数设置、回测等。</p>
+</li>
+<li>
+<p>导入已经准备好的定投策略，根据自己的需求调整参数（文末有下载链接）。</p>
+</li>
+<li>
+<p>在回测模式下，测试策略的效果，根据回测结果优化策略参数。</p>
+</li>
+</ul>
+<p>如果你对上述过程不熟悉，可以参考这篇文章：<a href="https://zhurong2020.github.io/post/ai-zhu-li-liang-hua-jiao-yi-cong-0-dao-1-da-zao-moomoo-zi-dong-jiao-yi-ce-lue/">AI助力量化交易：从0到1打造Moomoo自动交易策略</a></p>
+<h4 id="资金规划">资金规划</h4>
+<ul>
+<li>
+<p>根据你自己选择的标的目前价格情况，确定初始投资金额和定投周期。如每周定投一次ABR（详见以下案例），每周只需要1股的资金，即15美元左右，如果你每周的标的是TSLA，那么每周需要约425美元。</p>
+</li>
+<li>
+<p>设置合理的总投资预算，也可以根据情况及时调整仓位。</p>
+</li>
+<li>
+<p>如果你使用我提供的定投策略，考虑到该策略会根据回撤幅度分层加仓，建议账户中多保留一些现金，以备加仓时使用。</p>
+</li>
+</ul>
+<h3 id="日常操作">日常操作</h3>
+<p>有了现成的定投策略，日常操作主要包括以下几个步骤：<br>
+<img src="https://1drv.ms/i/c/5644dab129afda10/IQRGMiuSoOI-SYEqSY5puVa1ATllSjuEWIZG7OFhYerMAPw?width=660" alt="" loading="lazy"></p>
+<h4 id="运行moomoo软件">运行Moomoo软件</h4>
+<p>每天的投资工作从打开Moomoo软件开始，确保软件正常运行，保持网络畅通。</p>
+<h4 id="启动量化策略">启动量化策略</h4>
+<p>在量化功能中选择已经导入定投策略，“运行策略”，先“历史回测”，多次回测成功后小范围开始“实盘运行”。</p>
+<h4 id="监控策略运行情况">监控策略运行情况</h4>
+<p>根据最优参数实盘运行后，关注“标的走势”和“运行日志”等信息。</p>
+<h4 id="根据策略回测结果调整参数">根据策略回测结果调整参数</h4>
+<p>根据实际情况及时调整策略参数，不断通过回测优化策略效果，再将策略应用于实盘。</p>
+<hr>
+<h2 id="定投策略介绍和案例">定投策略介绍和案例</h2>
+<h3 id="定投策略简单介绍">定投策略简单介绍</h3>
+<p>为了方便大家上手，我已经开发好了一套定投策略。只需下载并导入Moomoo的量化功能，即可快速开始定投操作。这个定投策略有以下几个特点：</p>
+<ol>
+<li>
+<p>固定周期定投</p>
+</li>
+<li>
+<p>动态回撤加仓</p>
+</li>
+<li>
+<p>账户余额检查</p>
+</li>
+<li>
+<p>标的灵活适配</p>
+</li>
+</ol>
+<p>关于定投策略具体介绍和相关参数，可以<a href="https://github.com/znhskzj/moomoo_custom_strategies/tree/main/strategies/strategy_v1">查看我的Github仓库</a>。</p>
+<p>有了这个策略，你要做的，就是定期打开电脑端的Moomoo软件，在量化功能中启动定投策略，如果你希望实现全自动定投，可以继续关注我们《量化交易机器人》的系列文章，我们将通过这些文章介绍实现基于VPS的7*24小时无人值守的机器人交易。</p>
+<figure data-type="image" tabindex="6"><img src="https://1drv.ms/u/c/5644dab129afda10/IQRodauYnp_eT6m7RWKdhyhjAV28knIC-0w2QypGdxTwPaE?width=660" alt="" loading="lazy"></figure>
+<p>提示：本文所述的定投策略是Moomoo量化功能的一种试水方式，当你熟悉这种方法后，可将此策略推广至任何在Moomoo中可交易的标的。</p>
+<h3 id="实际案例每周定投-abr">实际案例：每周定投 ABR</h3>
+<p>假设我们准备每周定投 1 股美股 ABR：</p>
+<ol>
+<li>
+<p>资金准备：</p>
+<ul>
+<li>每周准备约 15 美元。</li>
+<li>注意定投策略在标的回撤时会分层加仓，请根据自己情况灵活安排资金。</li>
+</ul>
+</li>
+<li>
+<p>潜在收益：</p>
+<ul>
+<li>当前价格 13.55 美元，该股票每年会有6%左右的分红。</li>
+<li>符合条件的活期资金存放在Moomoo账户里，有4.1%的年化收益。</li>
+<li>如果正股有价格上涨，还有资本增值的可能。</li>
+</ul>
+</li>
+</ol>
+<p>下面截图是我按照这个定投策略，回测了一年的收益情况，可以看到一年投资8000美元，年化策略收益为 2% ：</p>
+<figure data-type="image" tabindex="7"><img src="https://1drv.ms/i/c/5644dab129afda10/IQTfnlBhkRY9Q4oTDWYpEMA3AdsYEwqt9mBFHq8NHhyXxPc?width=660" alt="" loading="lazy"></figure>
+<p>如果你资金足够，还可以考虑按天定投，同样8000美元，年化策略收益为8.73%：</p>
+<figure data-type="image" tabindex="8"><img src="https://1drv.ms/i/c/5644dab129afda10/IQTgx_D1p8HSQYWDnOq3uctKAUZ21kUSlWTkLPvLlt7Vp-g?width=660" alt="" loading="lazy"></figure>
+<p>通过定投美股 ABR，我们可以享受稳定的股息收入，同时在价格回撤时加仓，为未来的资本增长奠定基础。</p>
+<p>当然如果你对其它标的感兴趣的，也可以自己试着修改策略参数，看看不同的标的，不同的策略参数，会有怎样的效果。<br>
+这里还有一个极端的案例的截图，你能看出是如何定投的吗？答案在文末供你参考。</p>
+<figure data-type="image" tabindex="9"><img src="https://1drv.ms/i/c/5644dab129afda10/IQQGq-kFFkyoRJGpf51kHZ9nAV8QrEzpVqdU9AoG4Np4RWA?width=660" alt="" loading="lazy"></figure>
+<hr>
+<h3 id="风险控制">风险控制</h3>
+<h4 id="量化工具虽然能提高投资效率但风险控制同样重要">量化工具虽然能提高投资效率，但风险控制同样重要：</h4>
+<p>量化交易可以实现全自动的投资管理，目前我们的定投策略只是最简单的一种，并没有考虑资金管理、止损机制等风险控制因素。以下是一些风险控制的建议：</p>
+<ol>
+<li>资金管理：</li>
+</ol>
+<ul>
+<li>
+<p>限制单次交易金额，避免过度集中投资。</p>
+</li>
+<li>
+<p>设置资金使用上限，留有应急资金。</p>
+</li>
+</ul>
+<ol start="2">
+<li>止损机制：</li>
+</ol>
+<ul>
+<li>设定合理止损点，当价格跌破网格下限时触发止损。</li>
+</ul>
+<ol start="3">
+<li>定期检查：</li>
+</ol>
+<ul>
+<li>
+<p>查看交易日志，确保策略正常运行。</p>
+</li>
+<li>
+<p>根据市场变化优化策略参数。</p>
+</li>
+</ul>
+<p>在AI的帮助下，你完全可以自己修改量化策略，加入止盈止损或者其他的风控机制，这样可能会形成一个更好的资金，即能控制风险，又能进一步提高收益。当然，如果你觉得自行修改量化策略有困难，也可以将量化策略和手工操作相结合，实现更好的风险控制。</p>
+<figure data-type="image" tabindex="10"><img src="https://1drv.ms/i/c/5644dab129afda10/IQQDmvCF4-v_QpfDUL4rFezgAY6vlZmHR2ql5WAxSQzlsbw?width=660" alt="" loading="lazy"></figure>
+<p>欢迎您在评论区分享您的策略修改、风险控制经验，让更多投资者受益。</p>
+<hr>
+<h2 id="总结开启你的智能投资之旅">总结：开启你的智能投资之旅</h2>
+<p>通过量化工具结合定投策略，可以帮助普通投资者实现低成本、自动化的资产增值。Moomoo量化功能不仅适用于美股，还能扩展至美股市场甚至其它市场的更多标的，为投资者提供更多可能性。</p>
+<p>如果你对量化交易感兴趣，推荐阅读我们这个系列的其它相关文章：</p>
+<ol>
+<li>
+<p><a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan/">打造你的第一个量化交易机器人</a></p>
+</li>
+<li>
+<p><a href="https://zhurong2020.github.io/post/liang-hua-jiao-yi-ji-qi-ren-de-can-shu-she-zhi-yu-shi-zhan-zhi-nan-cong-hui-ce-dao-shi-pan-de-wan-zheng-gong-lue/">量化交易机器人的参数调优与实战指南</a></p>
+</li>
+<li>
+<p><a href="https://zhurong2020.github.io/post/you-hua-liang-hua-jiao-yi-ce-lue-ru-he-tong-guo-can-shu-diao-zheng-ti-sheng-shou-yi/">如何通过参数调整提升收益</a></p>
+</li>
+</ol>
+<p>量化交易的过程也是一个不断学习和改进提高的过程，希望这篇文章能为你的投资之路提供启发！</p>
+<figure data-type="image" tabindex="11"><img src="https://1drv.ms/i/c/5644dab129afda10/IQR5Y9el4ZSHRK3veVLHJ1O2ARLTolvWqO7-EhrKzrM31ug?width=660" alt="" loading="lazy"></figure>
+<p>如果你喜欢这篇文章，欢迎分享或留言交流，祝你投资顺利！</p>
+<hr>
+<p>附件：</p>
+<p>1.<a href="https://j.moomoo.com/01priX">Moomoo开户-高达8.1%APY和赠送美股</a></p>
+<p>2.<a href="https://github.com/znhskzj/moomoo_custom_strategies/tree/main/strategies/strategy_v1">自定义定投策略查看</a></p>
+<p>3.<a href="https://pan.baidu.com/s/1HA0Yf7VFvWnfMtmNDhh5iQ?pwd=qwfa">自定义定投策略下载（客户端需要导入）</a></p>
+<p>4.定投问题答案：本金20万美元，每日定投特斯拉，按照上述定投策略回撤分层自动加仓，一年的收益为88.52%，期末资产净值为37.7万美元。注意这是一个极端案例，TSLA正股当年涨幅为61.5%，但定投至少给了一个可操作的购买优质标的的方案，如果是自己操作，我可能会一直纠结，因为TSLA波动比较大，当股价太高时不敢跟，股价回调时又担心没到底部。</p>
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a></p>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="zhurong052Q" data-color="#5F7FFF" data-emoji="😛"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/VI3oOVxe0w/" class="tag">
+                    投资
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/csH7KUJGVb/" class="tag">
+                    股票
+                  </a>
+                
+                  <a href="https://zhurong2020.github.io/tag/1sEGD1rJY/" class="tag">
+                    AI
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/ling-cheng-ben-da-zao-yun-duan-sheng-huo-mian-fei-yu-ming-zhu-ce-yu-cloudflare-tuo-guan-quan-gong-lue/">
+                  <h3 class="post-title">
+                    零成本打造云端生活：免费域名注册与Cloudflare托管全攻略
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

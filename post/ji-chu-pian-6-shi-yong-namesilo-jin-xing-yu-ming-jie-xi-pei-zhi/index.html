@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>基础篇6-使用NameSilo进行域名解析配置 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="购买了VPS和域名后，您已经获得了属于自己的公网的IP地址和顶级域名，您需要将他们绑定，以便用户能通过域名直接访问你在VPS上提供的各项服务。这篇文章，我将介绍如何在NameSilo网站上配置域名解析。
+
+
+
+
+
+
+引言
+什么是域名解析？
+..." />
+    <meta name="keywords" content="云生活" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">基础篇6-使用NameSilo进行域名解析配置</h2>
+            <div class="post-date">2024-05-08</div>
+            
+              <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ji-chu-pian-6-shi-yong-namesilo-jin-xing-yu-ming-jie-xi-pei-zhi.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>购买了VPS和域名后，您已经获得了属于自己的公网的IP地址和顶级域名，您需要将他们绑定，以便用户能通过域名直接访问你在VPS上提供的各项服务。这篇文章，我将介绍如何在NameSilo网站上配置域名解析。</p>
+<!-- more -->
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90">什么是域名解析？</a></li>
+<li><a href="#%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E7%9A%84%E4%BD%9C%E7%94%A8">域名解析的作用</a></li>
+<li><a href="#%E5%9C%A8namesilo%E4%B8%8A%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90">在NameSilo上配置域名解析</a>
+<ul>
+<li><a href="#%E7%99%BB%E5%BD%95namesilo">登录NameSilo</a></li>
+<li><a href="#%E8%BF%9B%E5%85%A5%E5%9F%9F%E5%90%8D%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2">进入域名管理页面</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90">配置域名解析</a></li>
+<li><a href="#%E9%AA%8C%E8%AF%81%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90">验证域名解析</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90">1. 为什么需要配置域名解析？</a></li>
+<li><a href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%B7%BB%E5%8A%A0a%E8%AE%B0%E5%BD%95%E5%92%8Ccname%E8%AE%B0%E5%BD%95">2. 为什么要添加A记录和CNAME记录？</a></li>
+<li><a href="#3-%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E7%94%9F%E6%95%88%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85">3. 域名解析生效需要多久？</a></li>
+<li><a href="#4-%E5%A6%82%E4%BD%95%E9%AA%8C%E8%AF%81%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E6%98%AF%E5%90%A6%E7%94%9F%E6%95%88">4. 如何验证域名解析是否生效？</a></li>
+<li><a href="#5-%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%95%86">5. 如何选择域名解析服务商？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h3 id="引言">引言</h3>
+<p>在上一篇文章中，我们介绍了如何采购适合自己需求的RackNerd的VPS，并在NameSilo上购买了域名。接下来，我们将介绍如何在NameSilo上配置域名解析，以便将域名指向我们的VPS服务器。</p>
+<h3 id="什么是域名解析">什么是域名解析？</h3>
+<p>域名解析是将域名（例如：www.example.com）转换为IP地址（例如：1.2.3.4）的过程。互联网上的所有资源都是通过IP地址进行访问的，但域名更容易被人记忆。因此，我们需要通过域名解析将域名解析到对应的IP地址，才能访问到相应的资源。</p>
+<h3 id="域名解析的作用">域名解析的作用</h3>
+<p>域名解析的作用主要有以下几点：</p>
+<ul>
+<li>方便用户记忆和访问网站：用户只需输入域名，即可访问网站，而无需记住复杂的IP地址。</li>
+<li>提高网站的可访问性：域名解析可以将域名解析到多个IP地址，实现负载均衡，提高网站的可访问性。</li>
+<li>隐藏网站的真实IP地址：域名解析可以隐藏网站的真实IP地址，提高网站的安全性。</li>
+</ul>
+<h3 id="在namesilo上配置域名解析">在NameSilo上配置域名解析</h3>
+<p>下面我们就来看看如何在NameSilo上配置域名解析。</p>
+<h4 id="登录namesilo">登录NameSilo</h4>
+<p>首先登录到<a href="https://www.namesilo.com/?rid=8e1f221hr">NameSilo LLC</a>，点击右上角的按钮（如下图），在之后的页面中输入你的账号和密码，再点击“Sign In”登录。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170128&amp;authkey=%21AI6MaMpIrl3ujiA&amp;width=660" alt="namesilo-login.png" loading="lazy"><br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170121&amp;authkey=%21AK9Jfh53SkmW8CY&amp;width=660" alt="namesilo-login2.png" loading="lazy"></p>
+<h4 id="进入域名管理页面">进入域名管理页面</h4>
+<p>登录成功后，点击右上角的“My Account”按钮，就能进入管理控制面板（Dashboard）。<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170122&amp;authkey=%21AMWMil4jKQHVR3M&amp;width=660" alt="namesilo-account" loading="lazy"></p>
+<p>在控制面板中，点击左侧的“Domain Manager”，或者点击中间位置的“Manage”，就能进入域名管理页面。</p>
+<figure data-type="image" tabindex="1"><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170123&amp;authkey=%21ABBSG7ZJ3DvtQH4&amp;width=660" alt="namesilo-domainmanager" loading="lazy"></figure>
+<h4 id="配置域名解析">配置域名解析</h4>
+<p>进入域名管理页面后，初始界面是这样的：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170124&amp;authkey=%21ACaBphwBuAKlfp8&amp;width=660" alt="namesilo-dns1" loading="lazy"></p>
+<p>找到你要配置解析的域名，点击域名前面的复选框，相关的管理功能就会出现：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170126&amp;authkey=%21ACcQUuDnxNoRPco&amp;width=660" alt="namesilo-dns2" loading="lazy"></p>
+<p>点击域名右侧的蓝色地球图标，进入域名解析页面：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170125&amp;authkey=%21AK40o1Y1J-eGnJs&amp;width=660" alt="namesilo-dns4" loading="lazy"></p>
+<p>在这个页面中，你可以看到域名的解析记录，包括A记录、CNAME记录、MX记录等。<br>
+依次点击“A”按钮和“CNAME”按钮，添加2条新的解析记录。</p>
+<ul>
+<li>A记录：将域名解析到VPS的公网IP地址，比如“1.2.3.4”。</li>
+<li>CNAME记录：比如将www.example.com解析到example.com。</li>
+</ul>
+<p><img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170130&amp;authkey=%21AA0EceCMPeTUMZo&amp;width=660" alt="namesilo-adda" loading="lazy"><br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170129&amp;authkey=%21AF_SQGJRvuT9frQ&amp;width=660" alt="namesilo-addcname" loading="lazy"></p>
+<p>假定你在RackNerd中购买的VPS的公网IP地址是<code>1.2.3.4</code>，那么添加A记录时，只需要在“IPV4 ADDRESS”中填入“1.2.3.4”，点击“SUBMIT”（提交）即可。<br>
+添加CNAME记录时，只需要在“HOSTNAME”中填入“www”，在“TARGET HOSTNAME”中填入“example.com”，点击“SUBMIT”即可。</p>
+<p>添加完成后，你的域名解析记录会变成类似下图，应该有2行记录：<br>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2170127&amp;authkey=%21ALfM-3mVI9LD5ak&amp;width=660" alt="namesilo-dns5" loading="lazy"></p>
+<p>这样，用户不需要记忆你的VPS的IP地址（假定是1.2.3.4），而且无论输入example.com还是www.example.com，都能访问到你安装在RackNerd VPS上的WordPress网站了。<br>
+注：目前我们还没有在VPS上安装WordPress，下一篇会介绍，现在先完成域名解析的配置。</p>
+<h4 id="验证域名解析">验证域名解析</h4>
+<p>为了验证域名解析是否生效，可以在本地电脑上打开命令提示符（CMD），使用<code>ping</code>命令来查看域名解析是否成功。例如，输入以下命令：</p>
+<pre><code>nslookup example.com
+nslookup www.example.com
+</code></pre>
+<p>如果域名解析成功，会显示域名对应的IP地址。</p>
+<h3 id="总结">总结</h3>
+<p>在本文中，我们介绍了如何在NameSilo上配置域名解析，将域名指向我们的VPS服务器。这样，用户就可以通过域名访问我们的网站，而不需要记忆VPS的IP地址。</p>
+<h3 id="faq">FAQ</h3>
+<h4 id="1-为什么需要配置域名解析">1. 为什么需要配置域名解析？</h4>
+<p>域名解析是将域名转换为IP地址的过程，当你完成了域名解析后，其它用户就可以通过域名访问你的网站，而无需记忆复杂的IP地址。</p>
+<h4 id="2-为什么要添加a记录和cname记录">2. 为什么要添加A记录和CNAME记录？</h4>
+<p>A记录用于将域名解析到IP地址，CNAME记录用于将www域名解析到主域名。添加这两条记录后，可以实现无论用户输入域名（example.com）还是www域名(www.example.com)，都能访问到你的网站。</p>
+<h4 id="3-域名解析生效需要多久">3. 域名解析生效需要多久？</h4>
+<p>域名解析的生效时间通常为24-48小时，具体时间取决于DNS服务器的刷新时间。在域名解析生效之前，用户可能无法访问到你的网站，这是正常现象。</p>
+<h4 id="4-如何验证域名解析是否生效">4. 如何验证域名解析是否生效？</h4>
+<p>你可以在本地电脑上使用<code>ping</code>命令或者<code>nslookup</code>命令来验证域名解析是否生效。如果域名解析成功，会显示域名对应的IP地址。</p>
+<h4 id="5-如何选择域名解析服务商">5. 如何选择域名解析服务商？</h4>
+<p>域名解析服务商有很多，如<a href="https://www.namesilo.com/?rid=8e1f221hr">NameSilo LLC</a>、GoDaddy、Namecheap等。你可以根据自己的需求和预算选择合适的域名解析服务商。后续我还会介绍一种可以免费申请的域名解析服务商Cloudflare，敬请期待。</p>
+<p>在下一篇文章中，我们将介绍如何在RackNerd VPS服务器上安装WordPress，实现你自己云服务器的第一个功能-基于WordPress的个人网站。敬请期待！</p>
+<p>好了，今天就到这里，如果您按照上述步骤完成了域名解析，欢迎在评论区分享您的经验。</p>
+<p>如果您对域名解析还有疑问，欢迎您加入我们的“云端生活交流群”，您可以添加以下微信，等待确认后会拉你入群，之后就可以和其他伙伴愉快交流了。我们将聚合一些志同道合的朋友，以便在知识探索的路上互相帮助，互相成就。另外您希望我下一篇写什么内容，也欢迎在评论区留言。</p>
+<img src="https://onedrive.live.com/embed?resid=5644DAB129AFDA10%2169811&authkey=%21ABRiiNUJymdww3o&height=256" alt="monty二维码" width="auto" height="256" />
+<p>如果你觉得我的文章对你有帮助，可以<a href="https://www.buymeacoffee.com/zhurong052Q">请我喝咖啡</a></p>
+<img src="https://sat02pap005files.storage.live.com/y4m1bQmI2HjlYf8y0-p5ILDLqV4klxYZjjhDZYzn60HpwCTOEot0HfRqsp5RrXVXKechgLZmehuN6udGTqYc3Qudqo73s1tqUAIJul__ZG1-YBMQGkzr8FC9gRj_ywS7n9a_Vpp87CQm1enxUNgrZSKE5wIDvhjixZA3QdOTcwjGnYZRk62QXEWOOAg83tq7Mu1?width=256&height=200&cropmode=none" alt="请我喝咖啡" width="256" height="200" />
+<blockquote>
+<p>💬 <strong>发表评论</strong>: 本博客的评论功能由 Gitalk 提供，您需要有一个 GitHub 账号来发表评论。如果您还没有账号，请访问 <a href="https://github.com/join">GitHub</a> 免费注册。注册后，您不仅可以在这里参与讨论，还可以在 GitHub 上发现无数精彩项目和技术交流的机会！</p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zhurong2020.github.io/tag/huSSbzfX6/" class="tag">
+                    云生活
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://zhurong2020.github.io/post/ji-chu-pian-5-namesilo-yu-ming-zhu-ce-jiao-cheng-bu-zou-xiang-jie-rang-ni-qing-song-yong-you-hu-lian-wang-ming-pian/">
+                  <h3 class="post-title">
+                    基础篇5-NameSilo域名注册教程步骤详解
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfb33dec63e12f0857fa',
+        clientSecret: '62831ca21aa581cf2ea39893caa723bcbd375d27',
+        repo: 'zhurong2020.github.io',
+        owner: 'zhurong2020',
+        admin: ['zhurong2020'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

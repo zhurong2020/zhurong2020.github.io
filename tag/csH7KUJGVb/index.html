@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>股票 | 有心言者</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zhurong2020.github.io/favicon.ico?v=1758813317211">
+<link rel="stylesheet" href="https://zhurong2020.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH117GE51W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WH117GE51W');
+</script>
+
+
+    <meta name="description" content="学习 分享 进步">
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zhurong2020.github.io">
+        <img src="https://zhurong2020.github.io/images/avatar.png?v=1758813317211" class="site-logo">
+        <h1 class="site-title">有心言者</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://zhurong2020.github.io/youxinyanzhe/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/zhurong0525" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/younisanshu" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/zhurong-36" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://www.facebook.com/zhu.rong.520" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      学习 分享 进步
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3677908378517538" crossorigin="anonymous"></script> | <a class="rss" href="https://zhurong2020.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: 股票</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/kai-yuan-ding-tou-ce-lue-gai-zao-zhi-nan-cong-shi-yong-zhe-dao-chuang-zao-zhe/">
+                  <h2 class="post-title">开源定投策略改造指南：从使用者到创造者</h2>
+                </a>
+                <div class="post-date">
+                  2025-09-24
+                </div>
+                <div class="post-abstract">
+                  <p>授人以鱼不如授人以渔。本文不会直接给你代码，而是通过一系列思考题，引导你自主探索、理解和改造策略。从突破限制到个性化设计，让我们一起踏上从使用者到创造者的进阶之路。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/kai-yuan-ding-tou-ce-lue-gai-zao-zhi-nan-cong-shi-yong-zhe-dao-chuang-zao-zhe/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/kai-yuan-ding-tou-ce-lue-gai-zao-zhi-nan-cong-shi-yong-zhe-dao-chuang-zao-zhe.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/2025-nian-tqqq-ding-tou-hui-ce-fen-xi-cong-60hui-che-dao-ying-li-de-ni-xi-zhi-lu/">
+                  <h2 class="post-title">2025年TQQQ定投回测分析：从-60%回撤到盈利的逆袭之路</h2>
+                </a>
+                <div class="post-date">
+                  2025-09-21
+                </div>
+                <div class="post-abstract">
+                  <p>今年TQQQ一度暴跌60%，许多投资者在恐慌中割肉离场。然而，那些坚持定投的人如今却收获了超过20%的回报。本文将揭示，一个智能定投策略是如何在市场恐慌中捕捉机遇，将危机转化为财富的。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/2025-nian-tqqq-ding-tou-hui-ce-fen-xi-cong-60hui-che-dao-ying-li-de-ni-xi-zhi-lu/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/2025-nian-tqqq-ding-tou-hui-ce-fen-xi-cong-60hui-che-dao-ying-li-de-ni-xi-zhi-lu.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/qi-quan-jie-tao-wan-quan-zhi-nan-cong-tao-lao-dao-jie-fang-de-zhi-neng-ce-lue/">
+                  <h2 class="post-title">期权解套完全指南：从套牢到解放的智能策略</h2>
+                </a>
+                <div class="post-date">
+                  2025-09-20
+                </div>
+                <div class="post-abstract">
+                  <p>当股票被套23.9%时，传统选择无非是死扛或割肉。然而，借助期权轮动策略，不仅有机会在6至10个月内解套，还能在过程中赚取稳定的权利金收入。这套策略已经过华尔街50年的实战检验。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/qi-quan-jie-tao-wan-quan-zhi-nan-cong-tao-lao-dao-jie-fang-de-zhi-neng-ce-lue/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/qi-quan-jie-tao-wan-quan-zhi-nan-cong-tao-lao-dao-jie-fang-de-zhi-neng-ce-lue.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/mei-gu-bei-dong-shou-ru-zhi-nan-cong-gu-xi-dao-qi-quan-de-wu-chong-cai-fu-mi-ma/">
+                  <h2 class="post-title">美股被动收入指南：从股息到期权的五重财富密码</h2>
+                </a>
+                <div class="post-date">
+                  2025-09-16
+                </div>
+                <div class="post-abstract">
+                  <p>从股息贵族到高收益ETF，从股票回购到期权策略——五种被动收入方法，让你的美股投资告别“买入等涨”，实现每月现金流。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/mei-gu-bei-dong-shou-ru-zhi-nan-cong-gu-xi-dao-qi-quan-de-wu-chong-cai-fu-mi-ma/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/mei-gu-bei-dong-shou-ru-zhi-nan-cong-gu-xi-dao-qi-quan-de-wu-chong-cai-fu-mi-ma.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/te-si-la-gai-nian-gu-tou-zi-quan-jing-tu-cong-dan-yi-gu-piao-dao-chan-ye-sheng-tai-de-cai-fu-bu-ju-ce-lue/">
+                  <h2 class="post-title">特斯拉概念股投资全景图——从单一股票到产业生态的财富布局策略</h2>
+                </a>
+                <div class="post-date">
+                  2025-08-18
+                </div>
+                <div class="post-abstract">
+                  <p>在全球科技投资的浪潮中，特斯拉已超越了电动汽车制造商的单一身份，成为一个融合新能源、人工智能与自动驾驶等前沿领域的科技巨擘。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/te-si-la-gai-nian-gu-tou-zi-quan-jing-tu-cong-dan-yi-gu-piao-dao-chan-ye-sheng-tai-de-cai-fu-bu-ju-ce-lue/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/te-si-la-gai-nian-gu-tou-zi-quan-jing-tu-cong-dan-yi-gu-piao-dao-chan-ye-sheng-tai-de-cai-fu-bu-ju-ce-lue.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/qdii-ji-jin-tou-zi-hai-wai-shi-chang-de-bian-jie-fang-shi/">
+                  <h2 class="post-title">QDII基金，投资海外市场的便捷方式</h2>
+                </a>
+                <div class="post-date">
+                  2025-07-11
+                </div>
+                <div class="post-abstract">
+                  <p>继《为何普通人应该现在就开始投资美股》后，本文详细介绍如何通过QDII基金，让中国投资者轻松参与全球市场，分享经济增长红利。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/qdii-ji-jin-tou-zi-hai-wai-shi-chang-de-bian-jie-fang-shi/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/qdii-ji-jin-tou-zi-hai-wai-shi-chang-de-bian-jie-fang-shi.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/wei-shi-me-pu-tong-ren-ying-gai-xian-zai-jiu-kai-shi-tou-zi-mei-gu-yi-ge-you-ni-zhong-nian-de-zhen-shi-zhuan-xing-ji/">
+                  <h2 class="post-title">为什么普通人应该现在就开始投资美股？</h2>
+                </a>
+                <div class="post-date">
+                  2025-06-12
+                </div>
+                <div class="post-abstract">
+                  <p>本文作者从国内银行中层管理者的视角出发，分享了自己移居美国后的投资转型经历。文章详细分析了美国生活成本现状，探讨了美股投资作为普通人实现财务自由的重要途径。通过标普500指数近10年11.06%的年化收益率数据，结合不同风险偏好的投资组合建议，为读者提供了清晰的投资思路。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/wei-shi-me-pu-tong-ren-ying-gai-xian-zai-jiu-kai-shi-tou-zi-mei-gu-yi-ge-you-ni-zhong-nian-de-zhen-shi-zhuan-xing-ji/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/wei-shi-me-pu-tong-ren-ying-gai-xian-zai-jiu-kai-shi-tou-zi-mei-gu-yi-ge-you-ni-zhong-nian-de-zhen-shi-zhuan-xing-ji.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/zhi-neng-tou-zi-zhi-nan-shou-ba-shou-jiao-ni-yong-liang-hua-gong-ju-ding-tou-mei-gu/">
+                  <h2 class="post-title">智能投资指南：手把手教你用量化工具定投美股</h2>
+                </a>
+                <div class="post-date">
+                  2025-01-13
+                </div>
+                <div class="post-abstract">
+                  <p>定投是一种被广泛认可的投资方式，通过定期投入资金分摊风险，从而获取稳健的长期收益。在本文中，我们将通过Moomoo量化工具（自定义代码策略），结合美股的实际标的，指导你如何轻松实现特定美股标的的定投，同时了解Moomoo量化功能的更多潜力。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/zhi-neng-tou-zi-zhi-nan-shou-ba-shou-jiao-ni-yong-liang-hua-gong-ju-ding-tou-mei-gu/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/zhi-neng-tou-zi-zhi-nan-shou-ba-shou-jiao-ni-yong-liang-hua-gong-ju-ding-tou-mei-gu.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/you-hua-liang-hua-jiao-yi-ce-lue-ru-he-tong-guo-can-shu-diao-zheng-ti-sheng-shou-yi/">
+                  <h2 class="post-title">优化量化交易策略：如何通过参数调整提升收益</h2>
+                </a>
+                <div class="post-date">
+                  2024-12-24
+                </div>
+                <div class="post-abstract">
+                  <p>本文围绕量化交易中的回测优化展开，深入探讨如何通过调整交易周期、单次交易数量等参数提升策略表现，并结合实际案例分析不同设置对收益的影响。同时，文章介绍了利用AI工具（如ChatGPT）和Python脚本实现参数自动化探索的实践方法，以及回测中“非日内模式”和“持仓同步逻辑”两个关键参数的作用和应用场景。最后，文章鼓励用户分享最佳参数探索经验，共同推进量化交易策略的优化。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/you-hua-liang-hua-jiao-yi-ce-lue-ru-he-tong-guo-can-shu-diao-zheng-ti-sheng-shou-yi/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/you-hua-liang-hua-jiao-yi-ce-lue-ru-he-tong-guo-can-shu-diao-zheng-ti-sheng-shou-yi.webp')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/ai-zhu-li-liang-hua-jiao-yi-cong-0-dao-1-da-zao-moomoo-zi-dong-jiao-yi-ce-lue/">
+                  <h2 class="post-title">AI助力量化交易：从0到1打造Moomoo自动交易策略</h2>
+                </a>
+                <div class="post-date">
+                  2024-11-26
+                </div>
+                <div class="post-abstract">
+                  <p>量化交易的普及一直受限于编程门槛，本文提供了一种创新的解决方案：利用AI助手开发Moomoo量化交易策略。本文详细介绍了从环境配置到策略部署的完整流程，包括AI辅助开发技巧、策略优化方法和风险控制要点。通过掌握与AI的有效沟通方法，即使没有编程基础的投资者，也能将交易思路转化为可执行的策略代码。文章还提供了实盘部署的注意事项和持续优化的方法，帮助读者构建可持续运行的量化交易系统。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/ai-zhu-li-liang-hua-jiao-yi-cong-0-dao-1-da-zao-moomoo-zi-dong-jiao-yi-ce-lue/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ai-zhu-li-liang-hua-jiao-yi-cong-0-dao-1-da-zao-moomoo-zi-dong-jiao-yi-ce-lue.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/liang-hua-jiao-yi-ji-qi-ren-de-can-shu-she-zhi-yu-shi-zhan-zhi-nan-cong-hui-ce-dao-shi-pan-de-wan-zheng-gong-lue/">
+                  <h2 class="post-title">量化交易机器人的参数设置与实战指南-从回测到实盘的完整攻略</h2>
+                </a>
+                <div class="post-date">
+                  2024-11-25
+                </div>
+                <div class="post-abstract">
+                  <p>使用Moomoo软件中提供的量化交易功能，我们可以轻松定制自己的量化策略，从而实现自动交易机器人。<br>
+本文就将从下载和导入自定义策略开始，一步一步介绍Moomoo的量化框架，如何编码，核心代码结构，如何调整参数，回测操作以及最后的实盘运行。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/liang-hua-jiao-yi-ji-qi-ren-de-can-shu-she-zhi-yu-shi-zhan-zhi-nan-cong-hui-ce-dao-shi-pan-de-wan-zheng-gong-lue/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/liang-hua-jiao-yi-ji-qi-ren-de-can-shu-she-zhi-yu-shi-zhan-zhi-nan-cong-hui-ce-dao-shi-pan-de-wan-zheng-gong-lue.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan/">
+                  <h2 class="post-title">打造你的第一个量化交易机器人 - Moomoo平台环境搭建指南</h2>
+                </a>
+                <div class="post-date">
+                  2024-11-24
+                </div>
+                <div class="post-abstract">
+                  <p>量化交易，听上去是不是有点高大上？其实不然，量化交易就是通过计算机程序来执行交易策略，实现自动化交易。在券商软件、AI等工具的帮助下，我们普通人也可以快速搭建自己的量化交易系统。<br>
+本文将介绍如何在券商软件Moomoo平台上搭建量化交易环境，让我们一起来看看吧！</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-moomoo-ping-tai-huan-jing-da-jian-zhi-nan.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-cong-mei-ri-cheng-pan-dao-qing-song-zi-dong-hua/">
+                  <h2 class="post-title">打造你的第一个量化交易机器人：从每日盯盘到轻松自动化</h2>
+                </a>
+                <div class="post-date">
+                  2024-11-22
+                </div>
+                <div class="post-abstract">
+                  <p>股票交易中盯盘时间长，下单容易受到情绪波动是困扰每个交易者的痛点，但如果能简单地通过量化交易实现自动化操作，是不是普通人能做到的呢？<br>
+本文简单介绍了通过Moomoo这个证券软件的量化功能，结合自定义的量化策略实现自动交易机器人的步骤。后续还将介绍通过网格交易原则实现的量化策略、如何设置量化参数、回测收益和实盘运行等内容，让我们一步步揭开量化交易的神秘面纱！</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-cong-mei-ri-cheng-pan-dao-qing-song-zi-dong-hua/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/da-zao-ni-de-di-yi-ge-liang-hua-jiao-yi-ji-qi-ren-cong-mei-ri-cheng-pan-dao-qing-song-zi-dong-hua.jpeg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/shi-yong-wang-ge-jiao-yi-gong-ju-qing-song-jin-xing-cang-wei-guan-li-he-zi-dong-hua-jiao-yi/">
+                  <h2 class="post-title">使用网格交易工具轻松进行仓位管理和自动化交易</h2>
+                </a>
+                <div class="post-date">
+                  2024-08-23
+                </div>
+                <div class="post-abstract">
+                  <p>探索网格交易策略的魅力！本文介绍一款开源的网格交易工具，帮助投资者轻松实现自动化交易和智能仓位管理。该工具支持多种资金分配方式，可获取实时股票价格，并能与证券账户API集成实现自动下单。<br>
+文章详细讲解了网格交易的原理、优缺点，以及如何使用这款工具创建个性化的交易计划。无论您是交易新手还是经验丰富的投资者，都能从中获益。立即下载体验，开启您的智能交易之旅！</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/shi-yong-wang-ge-jiao-yi-gong-ju-qing-song-jin-xing-cang-wei-guan-li-he-zi-dong-hua-jiao-yi/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/shi-yong-wang-ge-jiao-yi-gong-ju-qing-song-jin-xing-cang-wei-guan-li-he-zi-dong-hua-jiao-yi.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://zhurong2020.github.io/post/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao/">
+                  <h2 class="post-title">巴伦周刊公布了2024年十大股票榜单（中英文对照）</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-30
+                </div>
+                <div class="post-abstract">
+                  <p>巴伦周刊去年选出的股票，平均回报约为31%，这次又选出了10只股票，让我们来看看有哪些公司。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://zhurong2020.github.io/post/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao/">
+                  <div class="feature-container" style="background-image: url('https://zhurong2020.github.io/post-images/ba-lun-zhou-kan-gong-bu-liao-2024-nian-shi-da-gu-piao-bang-dan-zhong-ying-wen-dui-zhao.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
