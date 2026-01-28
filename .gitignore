@@ -1,0 +1,50 @@
+# Environment variables (for local development)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Security - Keys and credentials
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+*-credentials.json
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler
+.bundle/
+vendor/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+*.bak
+*~
+
+# Build artifacts
+node_modules/
+.cache/
+
+# Gridea (if still used locally)
+config.json
+images-output/
+output/
