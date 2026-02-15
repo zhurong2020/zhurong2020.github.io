@@ -41,10 +41,16 @@
 
 此站点为**只读存档**，新内容发布到主站 [arong.eu.org](https://www.arong.eu.org)。
 
+**博客平台演进历程：**
+1. **Gridea 静态博客** → 本站点 zhurong2020.github.io (86篇历史文章存档)
+2. **Jekyll + GitHub Pages** → [workshop](https://github.com/zhurong2020/workshop) (创作工具和发布系统)
+3. **WordPress** → [arong.eu.org](https://www.arong.eu.org) (当前主站，通过 Remote SSH 管理 VPS 上的 WordPress)
+
 ## 相关项目
 
-- [workshop](https://github.com/zhurong2020/workshop) - Jekyll 博客系统
-- [vpsserver](https://github.com/zhurong2020/vpsserver) - VPS 服务器配置
+- [workshop](https://github.com/zhurong2020/workshop) - Jekyll 博客创作工具和多平台发布系统
+- [vpsserver](https://github.com/zhurong2020/vpsserver) - VPS 服务器配置（含 WordPress 后端管理）
+- [arong.eu.org](https://www.arong.eu.org) - 当前博客主站 (WordPress)
 
 ---
 
