@@ -1,6 +1,6 @@
 # Gridea-Blog 项目待办清单
 
-**最后更新**: 2026-01-11
+**最后更新**: 2026-04-15
 **项目状态**: 维护模式（新内容已迁移至 WordPress）
 **负责人**: zhurong
 
@@ -45,11 +45,32 @@
 - [x] **创建 sitemap.xml** (2026-01-11)
   - 包含 84 个页面（首页、归档、标签 + 81 篇文章 + 3 个新页面）
 
-### P2 - 本月任务
+### P1 - 本周任务（2026-04 批次）
 
-- [ ] **重新提交 AdSense 审核**
-  - 前提: P0 任务全部完成
-  - 在 AdSense 后台点击"我确认已解决相关问题"
+- [x] **AdSense 低价值内容第二轮整改** (commit 6259c08, 2026-04-14)
+  - 触发: AdSense 后台 2026-02-10 标记 "需要注意 · 低价值内容"
+  - 9 篇薄内容旧文注入 `<meta name="robots" content="noindex,follow">`:
+    - `du-cai-yu-...ba-fei-te-fen-shou` (1337 字)
+    - `ps-xue-xi-ji-lu` (1397 字)
+    - `tui-jian-yi-ge-ying-yu-...-aboboo` (1441 字)
+    - `jin-nian-yao-ren-zhen-wan-cheng-de-du-shu-ren-wu-qing-jian-du` (1677 字)
+    - `jin-ri-qi-dong-youtube-de-a-rong-excel-pin-dao-...` (1801 字)
+    - `wei-yi-ji-hua-kai-shi-ben-wen-zhi-gei-zi-ji-kan-...` (2131 字，"本文只给自己看")
+    - `chong-qi-boox-de-guan-jian-gong-neng-chuan-shu` (2136 字)
+    - `ps-xue-xi-ji-lu-shang-ye-she-ji-shi-zhan-zhu-tu-pian-02` (2163 字)
+    - `you-wto-guan-yu-xin-guan-yi-miao-...-de-xin-wen-xiang-dao-de` (2185 字)
+  - sitemap.xml 同步剔除：87 → 78 URL
+  - 隐私政策扩写：2396 → 4421 字符（新增 DART Cookie / NAI / DAA / GDPR / CCPA / GA4 退出）
+  - 服务条款扩写：补全投资风险/技术工具免责、责任限制、适用法律
+  - 成效：AdSense 状态由 "需要注意" 变为 "正在准备"
+
+- [ ] **AdSense ads.txt 抓取状态复核（72h 后）**
+  - 当前: ads.txt 列显示 "未找到"（Google AdsBot 滞后抓取，非实际问题）
+  - 实际: `https://zhurong2020.github.io/ads.txt` HTTP 200 + text/plain + `ca-pub-3677908378517538` ✓
+  - 复核日期: 2026-04-17
+  - 同步 arong.eu.org 一起复核，详见 /home/zhurong/vps-server/TODO.md P1
+
+### P2 - 本月任务
 
 - [ ] **添加 Open Graph Meta Tags**
   - 改善社交媒体分享预览效果
@@ -59,25 +80,34 @@
 - [ ] **强化投资文章免责声明**
   - 在所有 16 篇投资相关文章顶部添加显著免责声明
 
+- [ ] **重审通过后的后续动作**
+  - 决定是否删除（而非仅 noindex）9 篇薄文
+  - 评估其余 <2500 字旧文（about / contact / privacy / terms 除外）是否也要 noindex 或补充内容
+  - 考虑把 9 篇薄文的 noindex 在重审通过后保留一段时间再决定
+
 ---
 
-## 当前网站状态
+## 当前网站状态（2026-04-15 更新）
 
 | 检查项 | 状态 | 说明 |
 |--------|------|------|
-| 文章数量 | 81 篇 | 符合要求 |
+| 文章数量 | 84 篇（9 篇 noindex） | 可索引 75 篇 |
 | About 页面 | 存在 | `/post/about` |
-| 隐私政策 | 缺失 | 需创建 |
-| 服务条款 | 缺失 | 需创建 |
-| 联系页面 | 缺失 | 需创建 |
+| 隐私政策 | ✅ 完善版 (4421 字符) | DART/NAI/DAA/GDPR/CCPA 齐全 |
+| 服务条款 | ✅ 完善版 (3867 字符) | 投资/技术免责 + 责任限制 |
+| 联系页面 | 存在 | `/post/contact` |
 | AdSense 代码 | 已安装 | ca-pub-3677908378517538 |
-| ads.txt | 存在 | 正确配置 |
-| robots.txt | 缺失 | 需创建 |
-| sitemap.xml | 缺失 | 需创建 |
+| ads.txt | 存在 | 正确配置（AdSense 后台显示 "未找到" 为抓取滞后） |
+| robots.txt | 存在 | 允许全部爬取 |
+| sitemap.xml | 78 URL | 剔除 9 个 noindex 薄文后的数量 |
+| AdSense 审核 | 正在准备 | 2026-04-14 重新提交 |
 
 ---
 
 ## 已完成任务
+
+### 2026-04-14
+- [x] 第二轮 AdSense 低价值内容整改（9 篇薄文 noindex + 隐私/条款扩写，commit 6259c08）
 
 ### 2026-01-08
 - [x] 部署 AdSense ads.txt
