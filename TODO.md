@@ -16,7 +16,16 @@
 
 ## 待办事项
 
-### P0 - AdSense 当前跟进（2026-10-04 最新口径）
+### P0 - 2026-11-01 定为「方案 A：历史存档，指向主站」
+
+盘点结论：80 篇文章在 arong.eu.org 上全部有同名文章，本站没有一篇独有内容（详见 findata `content/ADSENSE_GITHUB_IO_INVENTORY_2026-11-01.md`）。作者 11-01 选定方案 A：
+- [x] WP 已撤回（private/draft）的 17 篇加 noindex 并移出 sitemap（noindex 共 26 篇，sitemap 78→61 条）
+- [x] WP 上仍公开的 54 篇加 `rel="canonical"`，指向主站对应网址（54/54 目标网址匿名访问 200）
+- [x] 首页加存档说明，指向 arong.eu.org
+- [ ] AdSense：本站不再申请审核；是否从 AdSense 删除该站点条目由作者本人决定
+- [ ] atom.xml 仍含全部旧文全文（包括 17 篇撤回文章），视需要再处理
+
+### P0 - AdSense 跟进（2026-10-04 口径，已被上方取代）
 
 [统一交接](../findata/content/SESSION_CLOSEOUT_2026-10-04_RONGSHUO_ADSENSE.md)与 [运维 TODO](../vpsserver/TODO.md)覆盖原 10/3 建议：收款资料完整、税务通过，账号尚待网站审核激活；填银行资料不能保证解除停用提醒。10/2 邮件“30 天后”的风险窗口约 11/1，10/28 先复查。
 
