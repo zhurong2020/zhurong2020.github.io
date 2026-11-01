@@ -20,7 +20,7 @@ GitHub Pages 静态博客站点，由 Gridea 生成的历史文章存档。
 ### 当前定位
 - 作为 SEO 引流页面
 - 保留历史文章存档
-- 通过 AdSense 进行变现尝试
+- 历史存档（2026-11-01 起）：文章 canonical 指向 arong.eu.org，WP 已撤回的文章 noindex；不再为本站申请 AdSense
 
 ## 项目特点
 
@@ -62,8 +62,7 @@ zhurong2020.github.io/
 - 无需构建步骤
 
 ### AdSense 状态
-- 已提交审核
-- 验证文件: ads.txt
+- 2026-11-01：方案 A，不再申请审核（见 TODO.md 顶部）；ads.txt 保留
 
 ## 注意事项
 
